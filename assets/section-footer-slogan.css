@@ -1,0 +1,8 @@
+.footer-slogan__text-container {
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-slogan__text {
+  margin-top: 0;
+}
