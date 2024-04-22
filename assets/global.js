@@ -488,6 +488,7 @@ class HeaderDrawer extends MenuDrawer {
 
   openMenuDrawer(summaryElement) {
     this.header = this.header || document.querySelector('.section-header');
+    this.headerWrapper= document.querySelector('.header-wrapper');
     this.borderOffset =
       this.borderOffset || this.closest('.header-wrapper').classList.contains('header-wrapper--border-bottom') ? 1 : 0;
     document.documentElement.style.setProperty(
@@ -495,6 +496,9 @@ class HeaderDrawer extends MenuDrawer {
       `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`
     );
     this.header.classList.add('menu-open');
+    this.headerWrapper.classList.remove('color-scheme-1')
+    this.headerWrapper.classList.add('color-scheme-2')
+    console.log(this.headerWrapper);
 
     setTimeout(() => {
       this.mainDetailsToggle.classList.add('menu-opening');
@@ -510,6 +514,8 @@ class HeaderDrawer extends MenuDrawer {
     if (!elementToFocus) return;
     super.closeMenuDrawer(event, elementToFocus);
     this.header.classList.remove('menu-open');
+     this.headerWrapper.classList.add('color-scheme-1')
+    this.headerWrapper.classList.remove('color-scheme-2')
     window.removeEventListener('resize', this.onResize);
   }
 
