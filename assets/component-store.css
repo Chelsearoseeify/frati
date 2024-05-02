@@ -1,0 +1,373 @@
+.store .grid {
+  margin-bottom: 0;
+}
+
+.store .grid__item {
+  position: relative;
+}
+
+@media screen and (min-width: 750px) {
+  .store__grid--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.store__media {
+  min-height: 100%;
+  overflow: visible;
+}
+
+.store__media--small {
+  height: 19.4rem;
+}
+
+.store__media--medium {
+  height: 29.6rem;
+}
+
+.store__media--large {
+  height: 43.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .store__media--small {
+    height: 31.4rem;
+  }
+
+  .store__media--medium {
+    height: 46rem;
+  }
+
+  .store__media--large {
+    height: 69.5rem;
+  }
+}
+
+.store__media--placeholder {
+  position: relative;
+  overflow: hidden;
+}
+
+.store__media--placeholder:after {
+  content: '';
+  position: absolute;
+  background: rgba(var(--color-foreground), 0.04);
+}
+
+.store__media--placeholder.store__media--adapt {
+  height: 20rem;
+}
+
+@media screen and (min-width: 750px) {
+  .store__media--placeholder.store__media--adapt {
+    height: 30rem;
+  }
+}
+
+.store__media--placeholder>svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.store__media--placeholder:is(.animate--ambient, .animate--zoom-in)>svg {
+  top: 0;
+  left: 0;
+  transform: translate(0);
+}
+
+.store__content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-self: center;
+  padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.store .grid__item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.store:not(.store--overlap) .store__media-item:after {
+  border-radius: var(--media-radius);
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
+}
+
+.store:not(.store--overlap) .store__text-item:after {
+  border-radius: var(--text-boxes-radius);
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+}
+
+.store .store__media-item>* {
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
+}
+
+.store .global-media-settings {
+  overflow: hidden !important;
+}
+
+.store .store__text-item>* {
+  border-radius: var(--text-boxes-radius);
+  overflow: hidden;
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+}
+
+.store:not(.store--overlap) .store__media-item>*,
+.store:not(.store--overlap) .store__text-item>* {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 749px) {
+
+  .store.collapse-corners:not(.store--overlap) .store__media-item:after,
+  .store.collapse-corners:not(.store--overlap) .grid__item .store__media,
+  .store.collapse-corners:not(.store--overlap) .store__media img,
+  .store.collapse-corners:not(.store--overlap) .store__media .placeholder-svg {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .store.collapse-corners:not(.store--overlap) .store__text-item:after,
+  .store.collapse-corners:not(.store--overlap) .grid__item .store__content {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .store.collapse-borders:not(.store--overlap) .store__content {
+    border-top: 0;
+  }
+}
+
+.store__content--mobile-right>* {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.store__content--mobile-center>* {
+  align-self: center;
+  text-align: center;
+}
+
+.store--overlap .store__content {
+  width: 90%;
+  margin: -3rem auto 0;
+}
+
+@media screen and (min-width: 750px) {
+  .store__grid--reverse .store__content {
+    margin-left: auto;
+  }
+
+  .store__content--bottom {
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+
+  .store__content--top {
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
+
+  .store__content--desktop-right>* {
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  .store__content--desktop-left>* {
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .store__content--desktop-center>* {
+    align-self: center;
+    text-align: center;
+  }
+
+  .store--overlap .store__text-item {
+    display: flex;
+    padding: 3rem 0;
+  }
+
+  .store--overlap .store__content {
+    height: auto;
+    width: calc(100% + 4rem);
+    min-width: calc(100% + 4rem);
+    margin-top: 0;
+    margin-left: -4rem;
+  }
+
+  .store--overlap .store__grid--reverse .store__content {
+    margin-left: 0;
+    margin-right: -4rem;
+  }
+
+  .store--overlap .store__grid--reverse .store__text-item {
+    justify-content: flex-end;
+  }
+
+  .store--overlap .store__media-item--top {
+    align-self: flex-start;
+  }
+
+  .store--overlap .store__media-item--middle {
+    align-self: center;
+  }
+
+  .store--overlap .store__media-item--bottom {
+    align-self: flex-end;
+  }
+
+  .store__media-item--small,
+  .store__media-item--large+.store__text-item {
+    flex-grow: 0;
+  }
+
+  .store.collapse-corners:not(.store--overlap) .grid:not(.store__grid--reverse) .store__media-item:after,
+  .store.collapse-corners:not(.store--overlap) .grid:not(.store__grid--reverse) .store__media,
+  .store.collapse-corners:not(.store--overlap) .grid:not(.store__grid--reverse) .store__media img,
+  .store.collapse-corners:not(.store--overlap) .grid:not(.store__grid--reverse) .store__media .placeholder-svg,
+  .store.collapse-corners:not(.store--overlap) .store__grid--reverse .store__text-item:after,
+  .store.collapse-corners:not(.store--overlap) .store__grid--reverse .store__content,
+  .store.collapse-corners:not(.store--overlap) .store__grid--reverse .store__content:after {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .store.collapse-corners:not(.store--overlap) .grid:not(.store__grid--reverse) .store__text-item:after,
+  .store.collapse-corners:not(.store--overlap) .grid:not(.store__grid--reverse) .store__content,
+  .store.collapse-corners:not(.store--overlap) .grid:not(.store__grid--reverse) .store__content:after,
+  .store.collapse-corners:not(.store--overlap) .store__grid--reverse .store__media-item:after,
+  .store.collapse-corners:not(.store--overlap) .store__grid--reverse .store__media,
+  .store.collapse-corners:not(.store--overlap) .store__grid--reverse .store__media img,
+  .store.collapse-corners:not(.store--overlap) .store__grid--reverse .store__media .placeholder-svg {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .store.collapse-borders:not(.store--overlap) .grid:not(.store__grid--reverse) .store__content {
+    border-left: 0;
+  }
+
+  .store.collapse-borders:not(.store--overlap) .store__grid--reverse .store__content {
+    border-right: 0;
+  }
+}
+
+.store:not(.collapse-corners, .store--overlap) .store__media-item {
+  z-index: 2;
+}
+
+/* Needed for gradient continuity with or without animation so that transparent PNG images come up as we would expect */
+.store.store--overlap .backround-transparent,
+.store:not(.store--overlap) .background-transparent {
+  background: transparent;
+}
+
+/* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
+.store .gradient {
+  transform: perspective(0);
+}
+
+.store__content {
+  border-radius: var(--text-boxes-radius);
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+  word-break: break-word;
+}
+
+@media screen and (min-width: 990px) {
+  .store__content {
+    padding: 6rem 7rem 7rem;
+  }
+}
+
+.store__content>*+* {
+  margin-top: 2rem;
+}
+
+.store__content>.store__text:empty~a {
+  margin-top: 2rem;
+}
+
+.store__content> :first-child:is(.store__heading),
+.store__text--caption+.store__heading,
+.store__text--caption:first-child {
+  margin-top: 0;
+}
+
+.store__content :last-child:is(.store__heading),
+.store__text--caption {
+  margin-bottom: 0;
+}
+
+.store__content .button+.store__text {
+  margin-top: 2rem;
+}
+
+.store__content .store__text+.button {
+  margin-top: 3rem;
+}
+
+.store__heading {
+  margin-bottom: 0;
+}
+
+.store__text p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 749px) {
+  .collapse-padding .store__grid .store__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .collapse-padding .store__grid:not(.store__grid--reverse) .store__content:not(.store__content--desktop-center) {
+    padding-right: 0;
+  }
+
+  .collapse-padding .store__grid--reverse .store__content:not(.store__content--desktop-center) {
+    padding-left: 0;
+  }
+}
+
+/* check for flexbox gap in older Safari versions */
+@supports not (inset: 10px) {
+  .store .grid {
+    margin-left: 0;
+  }
+}
+
+/*
+  Multirow
+  note: consider removing from this stylesheet if multirow-specific styles increase signficantly
+*/
+.multirow__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--grid-mobile-vertical-spacing);
+}
+
+@media screen and (min-width: 750px) {
+  .multirow__inner {
+    row-gap: var(--grid-desktop-vertical-spacing);
+  }
+}
