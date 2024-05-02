@@ -111,6 +111,110 @@
         "padding_bottom": 12
       }
     },
+    "store_tDdgDF": {
+      "type": "store",
+      "blocks": {
+        "heading_hBzT3R": {
+          "type": "heading",
+          "settings": {
+            "heading": "Quartiere Montanara",
+            "heading_size": "h1"
+          }
+        },
+        "caption_4rwmJn": {
+          "type": "caption",
+          "settings": {
+            "caption": "Panificio, pasticceria, caffetteria, pranzi",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        },
+        "address_NRT4pg": {
+          "type": "address",
+          "settings": {
+            "store_address": "Strada Langhirano 379 (43124 - PR)"
+          }
+        },
+        "phone_prUYhf": {
+          "type": "phone",
+          "settings": {
+            "store_phone": "+39 0521 1830387"
+          }
+        },
+        "day_time_schedule_WHTdHW": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Monday",
+            "time": "8:00 - 15:00"
+          }
+        },
+        "day_time_schedule_E8arPA": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Tuesday",
+            "time": "8:00 - 18:00"
+          }
+        },
+        "day_time_schedule_EzdHcq": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Wednesday",
+            "time": "8:00 - 18:00"
+          }
+        },
+        "day_time_schedule_a7jPM4": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Thursday",
+            "time": "8:00 - 18:00"
+          }
+        },
+        "day_time_schedule_RxJK46": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Friday",
+            "time": "8:00 - 18:00"
+          }
+        },
+        "day_time_schedule_mtCUXT": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Saturday",
+            "time": "8:00 - 18:00"
+          }
+        },
+        "day_time_schedule_cCn3jK": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Sunday",
+            "time": "8:00 - 18:00"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hBzT3R",
+        "caption_4rwmJn",
+        "address_NRT4pg",
+        "phone_prUYhf",
+        "day_time_schedule_WHTdHW",
+        "day_time_schedule_E8arPA",
+        "day_time_schedule_EzdHcq",
+        "day_time_schedule_a7jPM4",
+        "day_time_schedule_RxJK46",
+        "day_time_schedule_mtCUXT",
+        "day_time_schedule_cCn3jK"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
     "form": {
       "type": "contact-form",
       "settings": {
@@ -125,6 +229,7 @@
   "order": [
     "main",
     "store",
+    "store_tDdgDF",
     "form"
   ]
 }
