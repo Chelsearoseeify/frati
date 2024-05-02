@@ -96,12 +96,12 @@
                     </div>
                   </div>
                 {%- when 'caption' -%}
-                  <p
+                  <h3
                     class="store__text store__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
                     {{ block.shopify_attributes }}
                   >
                     {{ block.settings.caption | escape }}
-                  </p>
+                  </h3>
                 {%- when 'text' -%}
                   <div class="store__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                     {{ block.settings.text }}
