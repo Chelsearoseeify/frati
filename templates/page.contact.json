@@ -65,6 +65,20 @@
             "day": "Friday",
             "time": "8:00 - 18:00"
           }
+        },
+        "day_time_schedule_p8YAhJ": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Saturday",
+            "time": "8:00 - 18:00"
+          }
+        },
+        "day_time_schedule_CYgBaT": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Sunday",
+            "time": "8:00 - 18:00"
+          }
         }
       },
       "block_order": [
@@ -75,7 +89,9 @@
         "day_time_schedule_GyPVBy",
         "day_time_schedule_GHkAFE",
         "day_time_schedule_Tabkdc",
-        "day_time_schedule_wgQUmF"
+        "day_time_schedule_wgQUmF",
+        "day_time_schedule_p8YAhJ",
+        "day_time_schedule_CYgBaT"
       ],
       "settings": {
         "height": "adapt",
