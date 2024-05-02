@@ -24,11 +24,58 @@
             "text_style": "subtitle",
             "text_size": "large"
           }
+        },
+        "address_T6Cqrr": {
+          "type": "address",
+          "settings": {
+            "store_address": "Strada Langhirano 379 (43124 - PR)"
+          }
+        },
+        "day_time_schedule_fCNLMP": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Monday",
+            "time": "8:00 - 18:00"
+          }
+        },
+        "day_time_schedule_GyPVBy": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Tuesday",
+            "time": "8:00 - 18:00"
+          }
+        },
+        "day_time_schedule_GHkAFE": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Wednesday",
+            "time": "8:00 - 18:00"
+          }
+        },
+        "day_time_schedule_Tabkdc": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Thursday",
+            "time": "8:00 - 18:00"
+          }
+        },
+        "day_time_schedule_wgQUmF": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Friday",
+            "time": "8:00 - 18:00"
+          }
         }
       },
       "block_order": [
         "heading_hDhbYW",
-        "caption_jGxCae"
+        "caption_jGxCae",
+        "address_T6Cqrr",
+        "day_time_schedule_fCNLMP",
+        "day_time_schedule_GyPVBy",
+        "day_time_schedule_GHkAFE",
+        "day_time_schedule_Tabkdc",
+        "day_time_schedule_wgQUmF"
       ],
       "settings": {
         "height": "adapt",
