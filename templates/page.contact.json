@@ -9,7 +9,33 @@
     },
     "store": {
       "type": "store",
+      "blocks": {
+        "heading_hDhbYW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Corcagnano",
+            "heading_size": "h1"
+          }
+        },
+        "caption_jGxCae": {
+          "type": "caption",
+          "settings": {
+            "caption": "Panificio, pasticceria, caffetteria, pranzi",
+            "text_style": "subtitle",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hDhbYW",
+        "caption_jGxCae"
+      ],
       "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "content_layout": "no-overlap",
         "color_scheme": "scheme-1",
         "padding_top": 12,
         "padding_bottom": 12
