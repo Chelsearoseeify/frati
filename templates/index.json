@@ -1,1 +1,82 @@
-{"sections":{"image_banner_zkQjDt":{"type":"image-banner","blocks":{"heading_LQQMUJ":{"type":"heading","settings":{"heading":"Un momento di autentica bontà per il corpo e per la mente.","heading_size":"h0"}}},"block_order":["heading_LQQMUJ"],"settings":{"image":"shopify:\/\/shop_images\/Screenshotfrom2024-04-1919-23-35_724b83b8-904d-46f1-9ff5-c74200b21af1.png","image_overlay_opacity":0,"image_height":"large","desktop_content_position":"bottom-left","show_text_box":false,"desktop_content_alignment":"left","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}}},"order":["image_banner_zkQjDt"]}
+{
+  "sections": {
+    "image_banner_zkQjDt": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_LQQMUJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Un momento di autentica bontà per il corpo e per la mente.",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LQQMUJ"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Screenshotfrom2024-04-1919-23-35_724b83b8-904d-46f1-9ff5-c74200b21af1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_with_text_ktrLdg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_tQFkaC": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Parma dal 1947",
+            "heading_size": "h1"
+          }
+        },
+        "text_maJ6qn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_eAgtiY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Cosa ci rende unici",
+            "button_link": "shopify:\/\/pages\/chi-siamo-1",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tQFkaC",
+        "text_maJ6qn",
+        "button_eAgtiY"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_zkQjDt",
+    "image_with_text_ktrLdg"
+  ]
+}
