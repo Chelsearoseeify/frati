@@ -135,12 +135,59 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
+    },
+    "image_with_text_qXw7qP": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_qJLVQj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Le nostre sedi",
+            "heading_size": "h1"
+          }
+        },
+        "text_7C9GMp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_aJTmTN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Scopri le nostre sedi",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qJLVQj",
+        "text_7C9GMp",
+        "button_aJTmTN"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner_zkQjDt",
     "image_with_text_ktrLdg",
     "image_banner_way7yp",
-    "image_banner_zNYUVX"
+    "image_banner_zNYUVX",
+    "image_with_text_qXw7qP"
   ]
 }
