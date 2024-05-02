@@ -31,6 +31,12 @@
             "store_address": "Strada Langhirano 379 (43124 - PR)"
           }
         },
+        "phone_CJ838U": {
+          "type": "phone",
+          "settings": {
+            "store_phone": "+39 0521 1830387"
+          }
+        },
         "day_time_schedule_fCNLMP": {
           "type": "day_time-schedule",
           "settings": {
@@ -85,6 +91,7 @@
         "heading_hDhbYW",
         "caption_jGxCae",
         "address_T6Cqrr",
+        "phone_CJ838U",
         "day_time_schedule_fCNLMP",
         "day_time_schedule_GyPVBy",
         "day_time_schedule_GHkAFE",
