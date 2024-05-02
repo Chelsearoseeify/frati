@@ -64,12 +64,37 @@
                     {{ block.settings.store_type | escape }}
                   </p>
                 {%- when 'address' -%}
-                  <p
-                    class="store__text store__text--subtitle h3"
-                    {{ block.shopify_attributes }}
+                  <div
+                    style="
+                      display: flex;
+                      gap: 2rem;
+                      margin-bottom: 1rem;
+                    "
                   >
-                    {{ block.settings.store_address | escape }}
-                  </p>
+                    <div style="min-width: 10rem;">Address</div>
+                    <div
+                      class=""
+                      {% comment %} {{ block.shopify_attributes }} {% endcomment %}
+                    >
+                      {{ block.settings.store_address | escape }}
+                    </div>
+                  </div>
+                {%- when 'phone' -%}
+                  <div
+                    style="
+                      display: flex;
+                      gap: 2rem;
+                      margin-bottom: 1rem;
+                    "
+                  >
+                    <div style="min-width: 10rem;">Phone</div>
+                    <div
+                      class=""
+                      {% comment %} {{ block.shopify_attributes }} {% endcomment %}
+                    >
+                      {{ block.settings.store_address | escape }}
+                    </div>
+                  </div>
                 {%- when 'caption' -%}
                   <p
                     class="store__text store__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
@@ -82,8 +107,14 @@
                     {{ block.settings.text }}
                   </div>
                 {%- when 'day_time-schedule' -%}
-                  <div class="day-time-schedule">
-                    <div class="day-time-schedule__day">
+                  <div
+                    class="day-time-schedule"
+                    style="
+                      display: flex;
+                      gap: 2rem;
+                    "
+                  >
+                    <div class="day-time-schedule__day" style="min-width: 10rem;">
                       {{ block.settings.day }}
                     </div>
                     <div class="day-time-schedule__time">
@@ -313,6 +344,18 @@
           "id": "store_address",
           "default": "Strada Langhirano 379 (43124 - PR)",
           "label": "Address"
+        }
+      ]
+    },
+    {
+      "type": "phone",
+      "name": "phone",
+      "settings": [
+        {
+          "type": "text",
+          "id": "store_phone",
+          "default": "+39 0521 1830387",
+          "label": "Phone"
         }
       ]
     },

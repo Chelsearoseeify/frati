@@ -297,7 +297,7 @@
 }
 
 .store__content>*+* {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .store__content>.store__text:empty~a {
