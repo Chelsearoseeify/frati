@@ -101,7 +101,7 @@
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-family: "Queens" !important{% comment %} {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }} {% endcomment %};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
@@ -242,6 +242,11 @@
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
+      }
+
+        @font-face {
+        font-family: "Queens";
+        src: url(https://cdn.shopify.com/s/files/1/0683/8756/9892/files/Queens_W-Regular.woff2?v=1714754442) format('woff2');
       }
 
       @media screen and (min-width: 750px) {
