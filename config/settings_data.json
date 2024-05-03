@@ -2,9 +2,9 @@
   "current": {
     "logo_width": 100,
     "type_header_font": "mariposa_sans_n4",
-    "heading_scale": 150,
+    "heading_scale": 100,
     "type_body_font": "sans-serif",
-    "body_scale": 105,
+    "body_scale": 100,
     "page_width": 1400,
     "spacing_sections": 20,
     "spacing_grid_horizontal": 24,
@@ -173,8 +173,8 @@
           "background": "{{ shop.brand.colors.secondary[1].background }}",
           "background_gradient": "",
           "text": "#1f1e1e",
-          "button": "#fcfcfc",
-          "button_label": "#020912",
+          "button": "#020912",
+          "button_label": "#fff",
           "secondary_button_label": "#fcfcfc",
           "shadow": "#020912"
         }
