@@ -7,7 +7,7 @@
           "type": "heading",
           "settings": {
             "heading": "Un momento di autentica bontà per il corpo e per la mente.",
-            "heading_size": "h0"
+            "heading_size": "h2"
           }
         }
       },
@@ -35,7 +35,7 @@
           "type": "heading",
           "settings": {
             "heading": "A Parma dal 1947",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_maJ6qn": {
@@ -143,7 +143,7 @@
           "type": "heading",
           "settings": {
             "heading": "Le nostre sedi",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_7C9GMp": {
@@ -186,7 +186,7 @@
       "type": "featured-blog",
       "settings": {
         "heading": "Dalla nostra rivista",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "blog": "",
         "post_limit": 3,
         "columns_desktop": 3,
