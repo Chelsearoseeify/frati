@@ -402,6 +402,9 @@
       },
       "heading_size": {
         "label": "Heading size",
+        "options__0": {
+          "label": "Extra Small"
+        },
         "options__1": {
           "label": "Small"
         },

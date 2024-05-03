@@ -384,6 +384,9 @@
       },
       "heading_size": {
         "label": "Dimensione titolo",
+        "options__0": {
+          "label": "Extra piccola"
+        },
         "options__1": {
           "label": "Piccola"
         },
