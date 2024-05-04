@@ -52,7 +52,7 @@
           "type": "heading",
           "settings": {
             "heading": "Cosa ci rende unici",
-            "heading_size": "hxl"
+            "heading_size": "h3"
           }
         }
       },
@@ -141,7 +141,7 @@
           "type": "heading",
           "settings": {
             "heading": "La nostra storia",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         }
       },
@@ -180,8 +180,7 @@
         "text_b8NTU4"
       ],
       "custom_css": [
-        ".image-with-text__content {display: flex; flex-direction: row; gap: 1rem; align-items: center; justify-content: center;}",
-        ".image-with-text__heading {width: 90%;}"
+
       ],
       "settings": {
         "height": "small",
@@ -221,8 +220,7 @@
         "text_zAtKdJ"
       ],
       "custom_css": [
-        ".image-with-text__content {display: flex; flex-direction: row; gap: 1rem; align-items: center; justify-content: center;}",
-        ".image-with-text__heading {width: 90%;}"
+
       ],
       "settings": {
         "height": "small",
@@ -262,8 +260,7 @@
         "text_UFe3xU"
       ],
       "custom_css": [
-        ".image-with-text__content {display: flex; flex-direction: row; gap: 1rem; align-items: center; justify-content: center;}",
-        ".image-with-text__heading {width: 90%;}"
+
       ],
       "settings": {
         "height": "small",
