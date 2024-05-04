@@ -13,7 +13,8 @@
         "text_CkzpJH": {
           "type": "text",
           "settings": {
-            "text": "<h3>Esistiamo per coronare il vostro quotidiano<br\/>con semplicità, genuina e raffinata.<br\/>Con una bontà che si esprime attraverso<br\/>il gusto.<\/h3>"
+            "text": "<h3>Esistiamo per coronare il vostro quotidiano<br\/>con semplicità, genuina e raffinata.<br\/>Con una bontà che si esprime attraverso<br\/>il gusto.<\/h3>",
+            "desktop_content_alignment": "center"
           }
         }
       },
@@ -187,8 +188,8 @@
 
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshotfrom2024-04-1919-23-35_f70802d7-f51b-48d6-928d-2694da5024de.png",
-        "height": "small",
+        "image": "shopify:\/\/shop_images\/Rectangle_29.png",
+        "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "middle",
