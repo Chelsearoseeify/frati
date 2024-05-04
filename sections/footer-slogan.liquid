@@ -5,91 +5,89 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="page-width">
-    <div class="footer-slogan">
-      <div
-        class="footer-slogan__image_container"
-      >
-        {%- if section.settings.image_1 != blank -%}
-          <div class="footer-slogan__image image-1">
-            {{
-              section.settings.image_1
-              | image_url: width: 300
-              | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
-            }}
-          </div>
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
-        {%- if section.settings.image_2 != blank -%}
-          <div class="footer-slogan__image image-2">
-            {{
-              section.settings.image_2
-              | image_url: width: 300
-              | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
-            }}
-          </div>
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
-        {%- if section.settings.image_3 != blank -%}
-          <div class="footer-slogan__image image-3">
-            {{
-              section.settings.image_3
-              | image_url: width: 300
-              | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
-            }}
-          </div>
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
-        {%- if section.settings.image_4 != blank -%}
-          <div class="footer-slogan__image image-4">
-            {{
-              section.settings.image_4
-              | image_url: width: 300
-              | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
-            }}
-          </div>
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
-        {%- if section.settings.image_5 != blank -%}
-          <div class="footer-slogan__image image-5">
-            {{
-              section.settings.image_5
-              | image_url: width: 300
-              | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
-            }}
-          </div>
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
-        {%- if section.settings.image_6 != blank -%}
-          <div class="footer-slogan__image image-6">
-            {{
-              section.settings.image_6
-              | image_url: width: 300
-              | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
-            }}
-          </div>
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
-      </div>
-      <div class="footer-slogan__heading-container">
-        {%- for block in section.blocks -%}
-          {% case block.type %}
-            {%- when 'heading' -%}
-              <h2
-                class="{{ block.settings.heading_size }} footer-slogan__heading"
-                {{ block.shopify_attributes }}
-              >
-                {{ block.settings.heading }}
-              </h2>
-          {%- endcase -%}
-        {%- endfor -%}
-      </div>
+  <div class="footer-slogan">
+    <div
+      class="footer-slogan__image_container"
+    >
+      {%- if section.settings.image_1 != blank -%}
+        <div class="footer-slogan__image image-1">
+          {{
+            section.settings.image_1
+            | image_url: width: 300
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </div>
+      {%- else -%}
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+      {%- if section.settings.image_2 != blank -%}
+        <div class="footer-slogan__image image-2">
+          {{
+            section.settings.image_2
+            | image_url: width: 210
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </div>
+      {%- else -%}
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+      {%- if section.settings.image_3 != blank -%}
+        <div class="footer-slogan__image image-3">
+          {{
+            section.settings.image_3
+            | image_url: width: 270
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </div>
+      {%- else -%}
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+      {%- if section.settings.image_4 != blank -%}
+        <div class="footer-slogan__image image-4">
+          {{
+            section.settings.image_4
+            | image_url: width: 300
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </div>
+      {%- else -%}
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+      {%- if section.settings.image_5 != blank -%}
+        <div class="footer-slogan__image image-5">
+          {{
+            section.settings.image_5
+            | image_url: width: 220
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </div>
+      {%- else -%}
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+      {%- if section.settings.image_6 != blank -%}
+        <div class="footer-slogan__image image-6">
+          {{
+            section.settings.image_6
+            | image_url: width: 280
+            | image_tag: sizes: sizes, widths: widths, fetchpriority: fetch_priority
+          }}
+        </div>
+      {%- else -%}
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+    <div class="footer-slogan__heading-container">
+      {%- for block in section.blocks -%}
+        {% case block.type %}
+          {%- when 'heading' -%}
+            <h2
+              class="{{ block.settings.heading_size }} footer-slogan__heading"
+              {{ block.shopify_attributes }}
+            >
+              {{ block.settings.heading }}
+            </h2>
+        {%- endcase -%}
+      {%- endfor -%}
     </div>
   </div>
 </div>
