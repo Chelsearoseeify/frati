@@ -1,0 +1,37 @@
+.timeline-element {
+  display: flex;
+  flex-direction: row;
+}
+
+.timeline-element__content {
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  gap: 4rem;
+  padding: 4rem 0;
+  border-top: solid 1px rgb(var(--color-foreground));
+}
+
+.timeline-element__heading {
+  line-height: 1;
+  margin: 0;
+}
+
+.timeline-element__heading-container {
+  min-width: fit-content;
+  flex-grow: 2;
+}
+
+.timeline-element__text {
+  display: flex;
+  align-items: start;
+  flex-grow: 1;
+  padding: 2rem 0;
+}
+
+.timeline-element__media {
+  width: 35rem;
+  height: 20rem;
+  flex-grow: 1;
+}
