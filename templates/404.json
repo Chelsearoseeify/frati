@@ -1,1 +1,57 @@
-{"sections":{"main":{"type":"main-404","disabled":true,"settings":{}},"rich_text_bgaJUk":{"type":"rich-text","blocks":{"heading_A9KAF9":{"type":"heading","settings":{"heading":"Oh no!","heading_size":"h1"}},"heading_DtbezQ":{"type":"heading","settings":{"heading":"Qualcuno ha fatto colazione con questa pagina.","heading_size":"h1"}},"button_yqpAnC":{"type":"button","settings":{"button_label":"Torna alla homepage","button_link":"","button_style_secondary":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_A9KAF9","heading_DtbezQ","button_yqpAnC"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}}},"order":["main","rich_text_bgaJUk"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "rich_text_bgaJUk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_A9KAF9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Oh no!",
+            "heading_size": "h2"
+          }
+        },
+        "heading_DtbezQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Qualcuno ha fatto colazione con questa pagina.",
+            "heading_size": "h2"
+          }
+        },
+        "button_yqpAnC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Torna alla homepage",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_A9KAF9",
+        "heading_DtbezQ",
+        "button_yqpAnC"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_bgaJUk"
+  ]
+}
