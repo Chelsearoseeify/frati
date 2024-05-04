@@ -1,8 +1,61 @@
-.footer-slogan__text-container {
-  flex-direction: column;
-  gap: 0;
+.footer-slogan {
+  position: relative;
 }
 
-.footer-slogan__text {
-  margin-top: 0;
+.footer-slogan__heading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.footer-slogan__heading {
+  margin: 0;
+  text-align: center;
+
+}
+
+.footer-slogan__image_container {
+  position: relative;
+  height: 60rem;
+}
+
+.footer-slogan__image {
+  position: absolute;
+
+}
+
+.image-1 {
+
+  top: 29px;
+  left: 214px;
+}
+
+.image-2 {
+  top: 96px;
+  left: -71px;
+}
+
+.image-3 {
+  top: 333px;
+  left: 40px;
+
+}
+
+.image-4 {
+  top: 21px;
+  left: 936px;
+
+}
+
+.image-5 {
+  top: 108px;
+  left: 1209px;
+
+}
+
+.image-6 {
+  top: 315px;
+  left: 1102px;
 }
