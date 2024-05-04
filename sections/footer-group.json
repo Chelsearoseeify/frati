@@ -4,6 +4,26 @@
   "sections": {
     "footer-slogan": {
       "type": "footer-slogan",
+      "blocks": {
+        "heading_XBC6eQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Frati.",
+            "heading_size": "h1"
+          }
+        },
+        "heading_cfRhNh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ricca semplicità.",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XBC6eQ",
+        "heading_cfRhNh"
+      ],
       "settings": {
         "image_1": "shopify:\/\/shop_images\/Pasticceria_Cestino.png",
         "image_2": "shopify:\/\/shop_images\/Pasticceria_Cestino.png",
