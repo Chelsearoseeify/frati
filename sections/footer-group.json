@@ -5,6 +5,11 @@
     "footer-slogan": {
       "type": "footer-slogan",
       "settings": {
+        "image_1": "shopify:\/\/shop_images\/Pasticceria_Cestino.png",
+        "image_2": "shopify:\/\/shop_images\/Pasticceria_Cestino.png",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "footer": {
