@@ -25,8 +25,12 @@
         "heading_cfRhNh"
       ],
       "settings": {
-        "image_1": "shopify:\/\/shop_images\/Pasticceria_Cestino.png",
-        "image_2": "shopify:\/\/shop_images\/Pasticceria_Cestino.png",
+        "image_1": "shopify:\/\/shop_images\/Pasticceria_Brioche.png",
+        "image_2": "shopify:\/\/shop_images\/Pane_all_Olio.png",
+        "image_3": "shopify:\/\/shop_images\/Pane_Miracolo.png",
+        "image_4": "shopify:\/\/shop_images\/Pasta_Tortello_1.png",
+        "image_5": "shopify:\/\/shop_images\/Pasticceria_Mignon.png",
+        "image_6": "shopify:\/\/shop_images\/Pasticceria_Cestino.png",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
