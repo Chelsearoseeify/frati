@@ -162,6 +162,7 @@
                     show_vendor: section.settings.show_vendor,
                     show_rating: section.settings.show_rating,
                     show_price: section.settings.show_price,
+                    show_collection: section.settings.show_collection,
                     lazy_load: lazy_load,
                     show_quick_add: section.settings.enable_quick_add,
                     section_id: section.id
@@ -302,6 +303,13 @@
       "id": "show_price",
       "default": true,
       "label": "Mostra prezzo",
+      "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection",
+      "default": false,
+      "label": "Mostra la collezione",
       "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
     },
     {
