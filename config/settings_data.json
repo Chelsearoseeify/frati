@@ -142,7 +142,7 @@
           "background_gradient": "",
           "text": "#1f1e1e",
           "button": "#1f1e1e",
-          "button_label": "#fcfcfc",
+          "button_label": "#faf0f0",
           "secondary_button_label": "#020912",
           "shadow": "#020912"
         }
@@ -153,7 +153,7 @@
           "background_gradient": "",
           "text": "{{ shop.brand.colors.primary[0].foreground }}",
           "button": "#020912",
-          "button_label": "#e4f6ff",
+          "button_label": "#faf0f0",
           "secondary_button_label": "#020912",
           "shadow": "#020912"
         }
@@ -164,7 +164,7 @@
           "background_gradient": "",
           "text": "{{ shop.brand.colors.primary[0].foreground }}",
           "button": "#020912",
-          "button_label": "#dbe9e0",
+          "button_label": "#faf0f0",
           "secondary_button_label": "#020912",
           "shadow": "#020912"
         }
@@ -175,8 +175,8 @@
           "background_gradient": "",
           "text": "#1f1e1e",
           "button": "#020912",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#fcfcfc",
+          "button_label": "#faf0f0",
+          "secondary_button_label": "#020912",
           "shadow": "#020912"
         }
       },
@@ -186,7 +186,7 @@
           "background_gradient": "",
           "text": "#020912",
           "button": "#020912",
-          "button_label": "#ffdfb8",
+          "button_label": "#faf0f0",
           "secondary_button_label": "#020912",
           "shadow": "#020912"
         }
@@ -197,7 +197,7 @@
           "background_gradient": "",
           "text": "#020912",
           "button": "#020912",
-          "button_label": "#ffffff",
+          "button_label": "#faf0f0",
           "secondary_button_label": "#020912",
           "shadow": "#020912"
         }
