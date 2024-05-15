@@ -6,8 +6,7 @@
         "collection_UbPWDh": {
           "type": "collection",
           "settings": {
-            "text": "Collection",
-            "text_style": "body"
+            "text": "Collection"
           }
         },
         "title": {
@@ -15,11 +14,10 @@
           "settings": {
           }
         },
-        "vendor": {
-          "type": "text",
+        "caption_FRikDB": {
+          "type": "caption",
           "settings": {
-            "text": "This is the caption",
-            "text_style": "subtitle"
+            "text": "{{ product.metafields.custom.caption.value }}"
           }
         },
         "price": {
@@ -105,7 +103,7 @@
       "block_order": [
         "collection_UbPWDh",
         "title",
-        "vendor",
+        "caption_FRikDB",
         "price",
         "quantity_selector",
         "variant_picker",
