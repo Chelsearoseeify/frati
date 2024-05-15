@@ -1539,3 +1539,7 @@ a.product__text {
   border-top: 1px solid rgba(var(--color-foreground), 1);
   border-bottom: none;
 }
+
+.product__collection {
+  text-transform: uppercase;
+}
