@@ -3,11 +3,11 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "text_aGnBT8": {
-          "type": "text",
+        "collection_UbPWDh": {
+          "type": "collection",
           "settings": {
             "text": "Collection",
-            "text_style": "uppercase"
+            "text_style": "body"
           }
         },
         "title": {
@@ -94,10 +94,16 @@
             "content": "<p>{{ product.metafields.custom.conservation_tips | metafield_tag }}<\/p>",
             "page": ""
           }
+        },
+        "where_to_buy_RabwYN": {
+          "type": "where_to_buy",
+          "settings": {
+            "where_to_buy_label": "Dove aquistarlo"
+          }
         }
       },
       "block_order": [
-        "text_aGnBT8",
+        "collection_UbPWDh",
         "title",
         "vendor",
         "price",
@@ -109,7 +115,8 @@
         "collapsible_tab_Jchztx",
         "collapsible_tab_NKYjda",
         "collapsible_tab_nWYgQU",
-        "collapsible_tab_C8R4qp"
+        "collapsible_tab_C8R4qp",
+        "where_to_buy_RabwYN"
       ],
       "settings": {
         "enable_sticky_info": true,
