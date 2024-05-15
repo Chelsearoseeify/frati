@@ -48,6 +48,12 @@
             "show_gift_card_recipient": true
           }
         },
+        "where_to_buy_RabwYN": {
+          "type": "where_to_buy",
+          "settings": {
+            "where_to_buy_label": "Dove aquistarlo"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -94,12 +100,6 @@
             "content": "<p>{{ product.metafields.custom.conservation_tips | metafield_tag }}<\/p>",
             "page": ""
           }
-        },
-        "where_to_buy_RabwYN": {
-          "type": "where_to_buy",
-          "settings": {
-            "where_to_buy_label": "Dove aquistarlo"
-          }
         }
       },
       "block_order": [
@@ -110,13 +110,13 @@
         "quantity_selector",
         "variant_picker",
         "buy_buttons",
+        "where_to_buy_RabwYN",
         "share",
         "description",
         "collapsible_tab_Jchztx",
         "collapsible_tab_NKYjda",
         "collapsible_tab_nWYgQU",
-        "collapsible_tab_C8R4qp",
-        "where_to_buy_RabwYN"
+        "collapsible_tab_C8R4qp"
       ],
       "settings": {
         "enable_sticky_info": true,
