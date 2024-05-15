@@ -89,7 +89,7 @@
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                   {{ block.shopify_attributes }}
                 >
-                  {{ product.collections[0].title }}!
+                  {{ product.collections[0].title }}
                 </p>
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
@@ -184,10 +184,10 @@
                     {%- endif -%}
                   {%- endif -%}
                 </p>
-              {%- when 'description' -%}
-                {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
+              {%- when 'caption' -%}
+                {%- if product.metafields.custom.caption != blank -%}
+                  <div class="product__description rte quick-add-hidden h4" {{ block.shopify_attributes }}>
+                    {{ product.metafields.custom.caption }}
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}
@@ -202,24 +202,38 @@
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
-              {%- when 'collapsible_tab' -%}
-                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                  <details id="Details-{{ block.id }}-{{ section.id }}">
-                    <summary>
-                      <div class="summary__title">
-                        {% render 'icon-accordion', icon: block.settings.icon %}
-                        <h2 class="h4 accordion__title inline-richtext">
-                          {{ block.settings.heading | default: block.settings.page.title | escape }}
-                        </h2>
-                      </div>
-                      {% render 'icon-caret' %}
-                    </summary>
-                    <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                      {{ block.settings.content }}
-                      {{ block.settings.page.content }}
-                    </div>
-                  </details>
+              {%- when 'where_to_buy' -%}
+                <div class="grid">
+                  <h4 class="product__where-to-buy__header">Dove acquistarlo</h4>
+                  <div class="product__where-to-but__list">
+                    <p>CORCAGNANO</p>
+                    <p>QUARTIERE MONTANARA</p>
+                    <p>FOGNANO</p>
+                    <p>MARZOLARA DI CALESTANO</p>
+                  </div>
                 </div>
+
+                {% comment %}
+                  {%- when 'collapsible_tab' -%}
+                  <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                    <details id="Details-{{ block.id }}-{{ section.id }}">
+                      <summary>
+                        <div class="summary__title">
+                          {% render 'icon-accordion', icon: block.settings.icon %}
+                          <h2 class="h4 accordion__title inline-richtext">
+                            {{ block.settings.heading | default: block.settings.page.title | escape }}
+                          </h2>
+                        </div>
+
+                        {% render 'icon-caret' %}
+                      </summary>
+                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                        {{ block.settings.content }}
+                        {{ block.settings.page.content }}
+                      </div>
+                    </details>
+                  </div>
+                {% endcomment %}
               {%- when 'quantity_selector' -%}
                 <div
                   id="Quantity-Form-{{ section.id }}"
@@ -500,6 +514,7 @@
                     </p>
                   </div>
                 {%- endif -%}
+
               {%- when 'complementary' -%}
                 <product-recommendations
                   class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}"
@@ -639,11 +654,37 @@
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
           {%- endfor -%}
+
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
             {% render 'icon-arrow' %}
           </a>
         </product-info>
+      </div>
+      <div class="product__details-container">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'description' -%}
+              <div class="product__details quick-add-hidden grid" {{ block.shopify_attributes }}>
+                <h4 class="h4 inline-richtext grid__item product__details__heading">
+                  {{ block.settings.type | default: 'Descrizione' }}
+                </h4>
+                <div class="grid__item product__details__content">
+                  {{ product.description }}
+                </div>
+              </div>
+            {%- when 'collapsible_tab' -%}
+              <div class="product__details quick-add-hidden grid" {{ block.shopify_attributes }}>
+                <h4 class="h4 inline-richtext grid__item product__details__heading">
+                  {{ block.settings.heading | default: block.settings.page.title | escape }}
+                </h4>
+                <div class="grid__item product__details__content">
+                  {{ block.settings.content }}
+                  {{ block.settings.page.content }}
+                </div>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
       </div>
       {%- if section.settings.media_position == 'right' -%}
         {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
@@ -944,6 +985,19 @@
       ]
     },
     {
+      "type": "where_to_buy",
+      "name": "t:sections.main-product.blocks.where_to_buy.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "where_to_buy_label",
+          "label": "t:sections.main-product.blocks.where_to_buy.name",
+          "default": "Dove aquistarlo"
+        }
+      ]
+    },
+    {
       "type": "buy_buttons",
       "name": "t:sections.main-product.blocks.buy_buttons.name",
       "limit": 1,
@@ -967,6 +1021,11 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
+      "limit": 1
+    },
+    {
+      "type": "caption",
+      "name": "caption",
       "limit": 1
     },
     {

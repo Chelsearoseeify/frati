@@ -14,37 +14,6 @@
                     "type": "title",
                     "settings": {}
                 },
-                "vendor": {
-                    "type": "text",
-                    "settings": {
-                        "text": "{{ product.metafields.custom.caption.value }}",
-                        "text_style": "subtitle"
-                    }
-                },
-                "price": {
-                    "type": "price",
-                    "settings": {}
-                },
-                "quantity_selector": {
-                    "type": "quantity_selector",
-                    "disabled": true,
-                    "settings": {}
-                },
-                "variant_picker": {
-                    "type": "variant_picker",
-                    "settings": {
-                        "picker_type": "button",
-                        "swatch_shape": "circle"
-                    }
-                },
-                "buy_buttons": {
-                    "type": "buy_buttons",
-                    "disabled": true,
-                    "settings": {
-                        "show_dynamic_checkout": true,
-                        "show_gift_card_recipient": true
-                    }
-                },
                 "share": {
                     "type": "share",
                     "settings": {
@@ -53,6 +22,10 @@
                 },
                 "description": {
                     "type": "description",
+                    "settings": {}
+                },
+                "where_to_buy":{
+                    "type": "where_to_buy",
                     "settings": {}
                 },
                 "collapsible_tab_Jchztx": {
@@ -95,13 +68,9 @@
             "block_order": [
                 "text_aGnBT8",
                 "title",
-                "vendor",
-                "price",
-                "quantity_selector",
-                "variant_picker",
-                "buy_buttons",
-                "share",
                 "description",
+                "where_to_buy",
+                "share",
                 "collapsible_tab_Jchztx",
                 "collapsible_tab_NKYjda",
                 "collapsible_tab_nWYgQU",

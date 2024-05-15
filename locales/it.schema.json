@@ -1666,6 +1666,9 @@
             }
           }
         },
+        "where_to_buy":{
+          "name": "Dove acquistarlo"
+        },
         "buy_buttons": {
           "name": "Buy button",
           "settings": {

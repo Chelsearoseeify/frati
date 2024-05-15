@@ -877,6 +877,9 @@
             }
           }
         },
+        "where_to_buy":{
+          "name": "Where to buy it"
+        },
         "buy_buttons": {
           "name": "Buy buttons",
           "settings": {
