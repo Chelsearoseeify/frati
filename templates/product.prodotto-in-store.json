@@ -22,6 +22,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
           }
         },
@@ -154,7 +155,7 @@
       "type": "page",
       "settings": {
         "page": "materia-viva",
-        "heading_size": "h2",
+        "heading_size": "h3",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
