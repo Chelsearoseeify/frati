@@ -6,7 +6,7 @@
         ".article_heading {display: flex; justify-content: space-around; border-bottom: 1px solid black;}"
       ],
       "settings": {
-        "custom_liquid": "<div class=\"article_heading\">\n<span>\nFOCUS\n<\/span>\n<span>\nPARMA, GIOVEDÌ, APRILE 18, 2024<\/span>\n<span>N. 04<\/span>\n<\/div>",
+        "custom_liquid": "<div class=\"article_heading\">\n<span>\nEVENTO\n<\/span>\n<span>\nPARMA, GIOVEDÌ, APRILE 18, 2024<\/span>\n<span>N. 04<\/span>\n<\/div>",
         "color_scheme": "",
         "padding_top": 44,
         "padding_bottom": 0
