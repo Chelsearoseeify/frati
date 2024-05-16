@@ -3,16 +3,21 @@
         "main": {
             "type": "main-product",
             "blocks": {
-                "text_aGnBT8": {
-                    "type": "text",
+                "collection_UbPWDh": {
+                    "type": "collection",
                     "settings": {
-                        "text": "Collection",
-                        "text_style": "uppercase"
+                        "text": "Collection"
                     }
                 },
                 "title": {
                     "type": "title",
                     "settings": {}
+                },
+                "caption_FRikDB": {
+                    "type": "caption",
+                    "settings": {
+                        "text": "{{ product.metafields.custom.caption.value }}"
+                    }
                 },
                 "vendor": {
                     "type": "text",
@@ -91,9 +96,9 @@
                 }
             },
             "block_order": [
-                "text_aGnBT8",
+                "collection_UbPWDh",
                 "title",
-                "vendor",
+                "caption_FRikDB",
                 "price",
                 "quantity_selector",
                 "variant_picker",
@@ -138,10 +143,21 @@
                 "padding_top": 36,
                 "padding_bottom": 36
             }
+        },
+        "page_7DCMwF": {
+            "type": "page",
+            "settings": {
+                "page": "materia-viva",
+                "heading_size": "h3",
+                "color_scheme": "",
+                "padding_top": 36,
+                "padding_bottom": 36
+            }
         }
     },
     "order": [
         "main",
+        "page_7DCMwF",
         "related-products"
     ]
 }
