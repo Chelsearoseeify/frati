@@ -78,7 +78,7 @@
           "settings": {
             "heading": "Consumazione",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.conservation_tips | metafield_tag }}<\/p>",
+            "content": "",
             "page": ""
           }
         },
