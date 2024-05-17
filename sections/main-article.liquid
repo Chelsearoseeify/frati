@@ -47,8 +47,15 @@
           class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           {{ block.shopify_attributes }}
         >
+          <div class="article-template__heading">
+            <span class="article-template__heading-tag">{{ blog.tags[0] }}</span>
+            <span class="article-template__heading-tag">
+              {{- article.metafields.custom.city }}, {{ article.metafields.custom.date | date: '%a, %b %d, %y' -}}
+            </span>
+            <span class="article-template__heading-tag">N. {{ article.metafields.custom.identifier }}</span>
+          </div>
           <h1
-            class="article-template__title"
+            class="article-template__title h2"
             itemprop="headline"
           >
             {{ article.title | escape }}

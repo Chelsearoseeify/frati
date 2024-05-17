@@ -33,12 +33,12 @@
         >
           {%- render 'article-card',
             article: article,
+            show_excerpt: section.settings.show_excerpt,
             media_height: section.settings.image_height,
             media_aspect_ratio: article.image.aspect_ratio,
             show_image: section.settings.show_image,
             show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
-            show_excerpt: true
+            show_author: section.settings.show_author
           -%}
         </div>
       {%- endfor -%}
@@ -82,6 +82,12 @@
       "id": "show_image",
       "default": true,
       "label": "t:sections.main-blog.settings.show_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "default": false,
+      "label": "t:sections.main-blog.settings.show_excerpt.label"
     },
     {
       "type": "select",
