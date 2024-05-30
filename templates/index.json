@@ -202,6 +202,33 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_yUPkAz": {
+      "type": "rich-text",
+      "blocks": {
+        "button_L7hw7j": {
+          "type": "button",
+          "settings": {
+            "button_label": "leggi più articoli",
+            "button_link": "shopify:\/\/blogs\/la-nostra-rivista",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_L7hw7j"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -210,6 +237,7 @@
     "image_banner_way7yp",
     "image_banner_zNYUVX",
     "image_with_text_qXw7qP",
-    "featured_blog_ezFYnt"
+    "featured_blog_ezFYnt",
+    "rich_text_yUPkAz"
   ]
 }
