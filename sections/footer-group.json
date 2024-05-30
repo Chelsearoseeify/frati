@@ -1,5 +1,5 @@
 {
-  "name": "t:sections.footer.name",
+  "name": "custom-footer",
   "type": "footer",
   "sections": {
     "footer-slogan": {
@@ -37,13 +37,20 @@
       }
     },
     "footer": {
-      "type": "footer",
+      "type": "custom-footer",
       "blocks": {
         "text_mbrRiN": {
           "type": "text",
           "settings": {
             "heading": "",
-            "subtext": "<h4>Copyright © 2024 Frati Parma 1947<\/h4><h4>All rights are reserved.<\/h4><h4>Via Raffaello Sanzio 11, 43124 Parma<\/h4><h4>P.IVA: IT02913340341<\/h4>"
+            "subtext": "<h4>Copyright © 2024 Frati Parma 1947. All rights are reserved.<\/h4>"
+          }
+        },
+          "text_mbrRiP": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<h4>Via Raffaello Sanzio 11, 43124 Parma.P.IVA: IT02913340341<\/h4>"
           }
         },
         "link_list_6FfTmf": {
@@ -63,8 +70,9 @@
       },
       "block_order": [
         "text_mbrRiN",
-        "link_list_6FfTmf",
-        "link_list_TgyXbh"
+         "text_mbrRiP",
+        "link_list_TgyXbh",
+        "link_list_6FfTmf"
       ],
       "settings": {
         "color_scheme": "scheme-1",
