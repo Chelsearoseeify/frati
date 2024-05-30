@@ -22,7 +22,7 @@
         "show_price": false,
         "show_collection": false,
         "enable_quick_add": false,
-        "enable_filtering": false,
+        "enable_filtering": true,
         "filter_type": "drawer",
         "enable_sorting": false,
         "columns_mobile": "2",
