@@ -8,6 +8,45 @@
         "color_scheme": "scheme-1"
       }
     },
+    "rich_text_WX8XeF": {
+      "type": "rich-text",
+      "blocks": {
+        "button_kKqWnD": {
+          "type": "button",
+          "settings": {
+            "button_label": "Lievitati",
+            "button_link": "shopify:\/\/collections\/lievitati",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "button_4WbMD8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Pasticceria",
+            "button_link": "shopify:\/\/collections\/pasticceria",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_kKqWnD",
+        "button_4WbMD8"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -22,7 +61,7 @@
         "show_price": false,
         "show_collection": false,
         "enable_quick_add": false,
-        "enable_filtering": true,
+        "enable_filtering": false,
         "filter_type": "drawer",
         "enable_sorting": false,
         "columns_mobile": "2",
@@ -33,6 +72,7 @@
   },
   "order": [
     "banner",
+    "rich_text_WX8XeF",
     "product-grid"
   ]
 }
