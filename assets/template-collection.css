@@ -63,7 +63,7 @@
   }
 }
 
-.collection__description > * {
+.collection__description>* {
   margin: 0;
 }
 
@@ -96,4 +96,33 @@
 
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
+}
+
+
+.filter-and-products__wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.product-grid-container {
+  flex-grow: 1;
+}
+
+.filter-button {
+  text-decoration: none;
+}
+
+.collections-list__buttons {
+  display: inline-flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  max-width: 45rem;
+  word-break: break-word;
+}
+
+.collections-list__buttons:first-of-type {
+  margin-bottom: 4rem;
 }
