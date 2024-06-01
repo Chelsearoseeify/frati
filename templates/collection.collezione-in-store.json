@@ -8,9 +8,20 @@
         "color_scheme": "scheme-1"
       }
     },
-
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "button_NpMUwL": {
+          "type": "button",
+          "settings": {
+            "button_label": "Vedi tutti",
+            "button_link": "shopify:\/\/collections\/tutti-i-prodotti"
+          }
+        }
+      },
+      "block_order": [
+        "button_NpMUwL"
+      ],
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
