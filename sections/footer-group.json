@@ -46,11 +46,18 @@
             "subtext": "<h4>Copyright © 2024 Frati Parma 1947. All rights are reserved.<\/h4>"
           }
         },
-          "text_mbrRiP": {
+        "text_mbrRiP": {
           "type": "text",
           "settings": {
             "heading": "",
             "subtext": "<h4>Via Raffaello Sanzio 11, 43124 Parma.P.IVA: IT02913340341<\/h4>"
+          }
+        },
+        "link_list_TgyXbh": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Seguici su",
+            "menu": "socials"
           }
         },
         "link_list_6FfTmf": {
@@ -60,19 +67,20 @@
             "menu": "footer"
           }
         },
-        "link_list_TgyXbh": {
-          "type": "link_list",
+        "text_gGfiUM": {
+          "type": "text",
           "settings": {
-            "heading": "Seguici su",
-            "menu": "socials"
+            "heading": "",
+            "subtext": "<p>design: Alessandro Pigoni<br\/>Copywriting: Lisa PELagatti<br\/>coding: Selene Malosso<\/p>"
           }
         }
       },
       "block_order": [
         "text_mbrRiN",
-         "text_mbrRiP",
+        "text_mbrRiP",
         "link_list_TgyXbh",
-        "link_list_6FfTmf"
+        "link_list_6FfTmf",
+        "text_gGfiUM"
       ],
       "settings": {
         "color_scheme": "scheme-1",
