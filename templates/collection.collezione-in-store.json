@@ -17,10 +17,18 @@
             "button_label": "Vedi tutti",
             "button_link": "shopify:\/\/collections\/tutti-i-prodotti"
           }
+        },
+        "button_dcjfeg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Torrone",
+            "button_link": "shopify:\/\/collections\/torrone"
+          }
         }
       },
       "block_order": [
-        "button_NpMUwL"
+        "button_NpMUwL",
+        "button_dcjfeg"
       ],
       "settings": {
         "products_per_page": 24,
