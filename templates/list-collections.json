@@ -3,7 +3,7 @@
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "title": "Collections",
+        "title": "I nostri prodotti",
         "sort": "alphabetical",
         "image_ratio": "adapt",
         "columns_desktop": 1,
