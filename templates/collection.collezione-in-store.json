@@ -24,11 +24,19 @@
             "button_label": "Torrone",
             "button_link": "shopify:\/\/collections\/torrone"
           }
+        },
+        "button_8WazM3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Lievitati",
+            "button_link": "shopify:\/\/collections\/lievitati"
+          }
         }
       },
       "block_order": [
         "button_NpMUwL",
-        "button_dcjfeg"
+        "button_dcjfeg",
+        "button_8WazM3"
       ],
       "settings": {
         "products_per_page": 24,
