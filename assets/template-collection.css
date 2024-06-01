@@ -111,6 +111,12 @@
 
 .filter-button {
   text-decoration: none;
+  opacity: 50%;
+}
+
+.filter-button.active {
+  opacity: 100%;
+  cursor: default;
 }
 
 .collections-list__buttons {

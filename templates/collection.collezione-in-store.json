@@ -8,46 +8,7 @@
         "color_scheme": "scheme-1"
       }
     },
-    "rich_text_WX8XeF": {
-      "type": "collections-list",
-      "blocks": {
-         "button_kKqWnE": {
-          "type": "button",
-          "settings": {
-            "button_label": "Vedi tutti",
-            "button_link": "shopify:\/\/collections\/torrone"
-   
-          }
-        },
-        "button_kKqWnD": {
-          "type": "button",
-          "settings": {
-            "button_label": "Torrone",
-            "button_link": "shopify:\/\/collections\/torrone"
-          }
-        },
-        "button_4WbMD8": {
-          "type": "button",
-          "settings": {
-            "button_label": "Pasticceria",
-            "button_link": "shopify:\/\/collections\/pasticceria"
-          }
-        }
-      },
-      "block_order": [
-        "button_kKqWnE",
-        "button_kKqWnD",
-        "button_4WbMD8"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
+
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -73,7 +34,6 @@
   },
   "order": [
     "banner",
-    "rich_text_WX8XeF",
     "product-grid"
   ]
 }
