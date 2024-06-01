@@ -133,6 +133,9 @@
   align-items: flex-end;
   margin-top: 3rem;
   gap: 1rem;
+
+  flex-direction: column;
+  height: 100%;
 }
 
 .footer-block--newsletter:only-child {
@@ -192,7 +195,8 @@
   /* Pushes other components to the right of the flexbox */
   .footer-block__newsletter:not(:only-child) {
     text-align: left;
-    margin-right: auto;
+    width: -webkit-fill-available;
+    /* margin-right: auto; */
   }
 
   .footer-block__newsletter:not(:only-child) .footer__newsletter {
@@ -330,6 +334,8 @@
 }
 
 .footer-block__details-content {
+  color: rgba(var(--color-foreground), 1);
+  font-size: 1.4rem;
   margin-bottom: 0;
 }
 
