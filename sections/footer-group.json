@@ -53,6 +53,13 @@
             "subtext": "<h4>Via Raffaello Sanzio 11, 43124 Parma.P.IVA: IT02913340341<\/h4>"
           }
         },
+        "text_gGfiUM": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": "<p>design: Alessandro Pigoni<br\/>Copywriting: Lisa PELagatti<br\/>coding: Selene Malosso<\/p>"
+          }
+        },
         "link_list_TgyXbh": {
           "type": "link_list",
           "settings": {
@@ -66,21 +73,14 @@
             "heading": "Policies",
             "menu": "footer"
           }
-        },
-        "text_gGfiUM": {
-          "type": "text",
-          "settings": {
-            "heading": "",
-            "subtext": "<p>design: Alessandro Pigoni<br\/>Copywriting: Lisa PELagatti<br\/>coding: Selene Malosso<\/p>"
-          }
         }
       },
       "block_order": [
         "text_mbrRiN",
         "text_mbrRiP",
+        "text_gGfiUM",
         "link_list_TgyXbh",
-        "link_list_6FfTmf",
-        "text_gGfiUM"
+        "link_list_6FfTmf"
       ],
       "settings": {
         "color_scheme": "scheme-1",
