@@ -17,7 +17,8 @@
 
 @media screen and (min-width: 750px) {
   .product__column-sticky {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: sticky;
     top: 3rem;
     z-index: 2;
@@ -165,7 +166,7 @@
   flex: 0 0 100%;
   padding: 0;
   margin: 0 0 1.2rem 0;
-  max-width: 44rem;
+  max-width: 16rem;
   min-width: fit-content;
   border: none;
 }
@@ -1519,7 +1520,7 @@ a.product__text {
 
 .product__details-container {
   width: 100%;
-  margin-left: 35%;
+  margin-left: 25%;
 }
 
 .product__details__heading {
@@ -1542,4 +1543,12 @@ a.product__text {
 
 .product__collection {
   text-transform: uppercase;
+}
+
+.price__container {
+  font-size: 6rem;
+}
+
+.variant-buy-section {
+  display: flex;
 }
