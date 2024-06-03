@@ -10,6 +10,10 @@
 
 }
 
+.collections-list__wrapper-fixed {
+  position: fixed;
+}
+
 .collections-list:not(.collections-list--full-width) .collections-list__wrapper {
   margin: auto;
   width: calc(100% - 8rem / var(--font-body-scale));
