@@ -3523,3 +3523,12 @@ details-disclosure>details {
     /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
+.shopify-policy__container {
+  max-width: 100ch;
+  margin-bottom: 10rem;
+}
+
+.logo {
+  fill: rgba(var(--color-foreground));
+}
