@@ -421,7 +421,21 @@
     }
 
     onScroll() {
+      //HERE
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      this.headerWrapper= document.querySelector('.header-wrapper');
+      console.log(scrollTop)
+      console.log(this.headerWrapper)
+
+      if(scrollTop > 200){
+        console.log('changing theme');
+        this.headerWrapper.classList.remove("color-scheme-6");
+        this.headerWrapper.classList.add("color-scheme-1");
+      }else {
+        this.headerWrapper.classList.remove("color-scheme-1"); 
+        this.headerWrapper.classList.add("color-scheme-6");
+      }
+
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 

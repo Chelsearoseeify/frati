@@ -497,7 +497,7 @@ class HeaderDrawer extends MenuDrawer {
       `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`
     );
     this.header.classList.add('menu-open');
-    this.headerWrapper.classList.remove('color-scheme-1')
+    this.headerWrapper.classList.remove('color-scheme-6')
     this.headerWrapper.classList.add('color-scheme-2')
     console.log(this.headerWrapper);
 
@@ -515,7 +515,7 @@ class HeaderDrawer extends MenuDrawer {
     if (!elementToFocus) return;
     super.closeMenuDrawer(event, elementToFocus);
     this.header.classList.remove('menu-open');
-     this.headerWrapper.classList.add('color-scheme-1')
+     this.headerWrapper.classList.add('color-scheme-6')
     this.headerWrapper.classList.remove('color-scheme-2')
     window.removeEventListener('resize', this.onResize);
   }
