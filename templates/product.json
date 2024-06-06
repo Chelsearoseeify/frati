@@ -126,7 +126,7 @@
     "page_7DCMwF": {
       "type": "page",
       "settings": {
-        "page": "materia-viva",
+        "page": "{{ product.metafields.custom.product_info_page.value }}",
         "heading_size": "h3",
         "color_scheme": "",
         "padding_top": 36,
