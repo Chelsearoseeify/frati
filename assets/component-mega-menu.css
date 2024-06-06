@@ -42,7 +42,7 @@
 }
 
 .mega-menu__link {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
   display: block;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
   padding-bottom: 0.6rem;
@@ -63,7 +63,7 @@
   column-gap: 0;
 }
 
-.header--top-center .mega-menu__list > li {
+.header--top-center .mega-menu__list>li {
   width: 16%;
   padding-right: 2.4rem;
 }

@@ -113,12 +113,20 @@ details[open].menu-opening>.menu-drawer__submenu {
   margin-bottom: 0.2rem;
 }
 
+.menu-drawer__menu:hover>li>.menu-drawer__menu-item {
+  opacity: 0.2;
+}
+
 .menu-drawer__menu-item {
   padding: 1.1rem 3rem;
   text-decoration: none;
   font-size: calc(var(--font-heading-scale) * 14rem);
   font-family: var(--font-heading-family);
-  opacity: 0.2;
+  /* opacity: 0.2; */
+}
+
+.menu-drawer__menu-item:hover {
+  opacity: 1 !important;
 }
 
 .no-js .menu-drawer__menu-item {

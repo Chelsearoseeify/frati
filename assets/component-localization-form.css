@@ -124,7 +124,7 @@ noscript .localization-selector.link {
   color: #000000;
 }
 
-.localization-selector + .disclosure__list-wrapper {
+.localization-selector+.disclosure__list-wrapper {
   opacity: 1;
   animation: animateLocalization var(--duration-default) ease;
 }
@@ -154,8 +154,7 @@ noscript .localization-selector.link {
   z-index: 2;
   background-color: rgb(var(--color-background));
   border-radius: var(--popup-corner-radius);
-  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--popup-shadow-opacity));
+  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
   max-height: 27.5rem;
 }
 
@@ -248,7 +247,7 @@ noscript .localization-selector.link {
 }
 
 @media screen and (max-width: 749px) {
-  .disclosure__list-wrapper.country-selector:not([hidden]) + .country-selector__overlay:empty {
+  .disclosure__list-wrapper.country-selector:not([hidden])+.country-selector__overlay:empty {
     display: block;
   }
 
@@ -330,7 +329,7 @@ noscript .localization-selector.link {
   padding: 0.9rem 1.5rem;
   text-decoration: none;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
   word-break: break-word;
 }
 
@@ -390,7 +389,7 @@ noscript .localization-selector.link {
   justify-content: flex-end;
 }
 
-.desktop-localization-wrapper .localization-selector + .disclosure__list-wrapper {
+.desktop-localization-wrapper .localization-selector+.disclosure__list-wrapper {
   animation: animateMenuOpen var(--duration-default) ease;
 }
 
@@ -412,14 +411,14 @@ noscript .localization-selector.link {
   margin: 0;
 }
 
-.header-localization:not(.menu-drawer__localization).localization-form__select > span {
+.header-localization:not(.menu-drawer__localization).localization-form__select>span {
   max-width: 20ch;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.header-localization:not(.menu-drawer__localization) localization-form:only-child .localization-form__select > span {
+.header-localization:not(.menu-drawer__localization) localization-form:only-child .localization-form__select>span {
   max-width: 26ch;
 }
 
@@ -459,7 +458,7 @@ noscript .localization-selector.link {
   margin: 0;
 }
 
-.menu-drawer__localization + .list-social {
+.menu-drawer__localization+.list-social {
   margin-top: 1rem;
 }
 
