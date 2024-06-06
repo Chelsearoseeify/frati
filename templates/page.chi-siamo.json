@@ -1,29 +1,5 @@
 {
   "sections": {
-    "rich_text_hUEG4K": {
-      "type": "rich-text",
-      "blocks": {
-       
-        "text_CkzpJH": {
-          "type": "text",
-          "settings": {
-            "text": "<h3>Esistiamo per coronare il vostro quotidiano<br\/>con semplicità, genuina e raffinata.<br\/>Con una bontà che si esprime attraverso<br\/>il gusto.<\/h3>",
-            "desktop_content_alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "text_CkzpJH"
-      ],
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "scheme-3",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "image_banner_kznGTb": {
       "type": "image-banner",
       "blocks": {
@@ -40,7 +16,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Screenshotfrom2024-04-1919-23-35_724b83b8-904d-46f1-9ff5-c74200b21af1.png",
-       "image_overlay_opacity": 0,
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "top-left",
         "show_text_box": true,
@@ -50,6 +26,32 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
+      }
+    },
+    "rich_text_hUEG4K": {
+      "type": "rich-text",
+      "blocks": {
+        "text_CkzpJH": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Esistiamo per coronare il vostro quotidiano<br\/>con semplicità, genuina e raffinata.<br\/>Con una bontà che si esprime attraverso<br\/>il gusto.<\/h3>",
+            "desktop_content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "text_CkzpJH"
+      ],
+      "custom_css": [
+        ".rich-text__text {height: 50vh; justify-content: center; display: flex; align-items: center;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_3LAHXa": {
