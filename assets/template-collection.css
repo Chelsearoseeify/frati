@@ -124,7 +124,7 @@
 }
 
 .collections-list__wrapper-fixed {
-  border-top: 1px solid black;
+  border-top: 1px solid rgba(var(--color-foreground), 1);
   padding-top: 2rem;
   margin-top: 1.5rem;
 
@@ -132,7 +132,7 @@
 
 .fixed {
   position: fixed;
-  top: 0;
+  top: 10rem;
 }
 
 .collections-list__buttons {

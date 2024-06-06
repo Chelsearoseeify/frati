@@ -296,6 +296,7 @@ h5,
 
 .h0 {
   font-size: calc(var(--font-heading-scale) * 4rem);
+  letter-spacing: -6px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -3527,6 +3528,7 @@ details-disclosure>details {
 .shopify-policy__container {
   max-width: 100ch;
   margin-bottom: 10rem;
+  padding-top: 11rem;
 }
 
 .logo {
@@ -3535,4 +3537,13 @@ details-disclosure>details {
 
 .content-for-layout {
   margin-top: -11rem;
+
+}
+
+.content-for-layout>section:first-of-type>div {
+  padding-top: 11rem;
+}
+
+.page-first-section {
+  padding-top: 11rem;
 }

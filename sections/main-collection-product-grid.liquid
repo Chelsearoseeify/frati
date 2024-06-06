@@ -118,36 +118,39 @@
         </aside>
       {%- endif -%}
       <div class="filter-and-products__wrapper page-width">
-        <div class="collections-list__wrapper">
-          <div id="collections-list__fixed-menu" class="collections-list__wrapper-fixed">
-            {%- for block in section.blocks -%}
-              {%- case block.type -%}
-                {%- when 'button' -%}
-                  <div
-                    class="collections-list__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} collections-list__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                    {{ block.shopify_attributes }}
-                    {% if settings.animations_reveal_on_scroll %}
-                      data-cascade
-                      style="--animation-order: {{ forloop.index }};"
-                    {% endif %}
-                  >
-                    {%- if block.settings.button_label != blank -%}
-                      <a
-                        {% if block.settings.button_link == blank %}
-                          role="link" aria-disabled="true"
-                        {% else %}
-                          href="{{ block.settings.button_link }}"
-                        {% endif %}
-                        class="filter-button h4 {% if page_reference == block.settings.button_label %} active{% endif %}"
-                      >
-                        {{- block.settings.button_label | escape -}}
-                      </a>
-                    {%- endif -%}
-                  </div>
-              {%- endcase -%}
-            {%- endfor -%}
+        {%- if section.blocks.size > 0 -%}
+          <div class="collections-list__wrapper">
+            {{ section.blocks.size }}
+            <div id="collections-list__fixed-menu" class="collections-list__wrapper-fixed">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'button' -%}
+                    <div
+                      class="collections-list__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} collections-list__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {{ block.shopify_attributes }}
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                      {%- if block.settings.button_label != blank -%}
+                        <a
+                          {% if block.settings.button_link == blank %}
+                            role="link" aria-disabled="true"
+                          {% else %}
+                            href="{{ block.settings.button_link }}"
+                          {% endif %}
+                          class="filter-button h4 {% if page_reference == block.settings.button_label %} active{% endif %}"
+                        >
+                          {{- block.settings.button_label | escape -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
           </div>
-        </div>
+        {%- endif -%}
         <div
           class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           id="ProductGridContainer"
