@@ -4,8 +4,8 @@ const section2Top = section2.offsetTop;
 const section2Height = section2.offsetHeight;
 
 window.onscroll = function (e) {
-
-    if (window.scrollY >= section2Top && window.scrollY + 200 < (section2Top + section2Height)) {
+   
+    if (window.scrollY >= section2Top-100 && window.scrollY + 200 < (section2Top + section2Height)) {
         menu.classList.add('fixed');
     } else {
         menu.classList.remove('fixed');

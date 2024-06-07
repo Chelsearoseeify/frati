@@ -499,7 +499,6 @@ class HeaderDrawer extends MenuDrawer {
     this.header.classList.add('menu-open');
     this.headerWrapper.classList.remove('color-scheme-6')
     this.headerWrapper.classList.add('color-scheme-2')
-    console.log(this.headerWrapper);
 
     setTimeout(() => {
       this.mainDetailsToggle.classList.add('menu-opening');

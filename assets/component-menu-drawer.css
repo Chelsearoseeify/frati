@@ -74,6 +74,10 @@ details[open].menu-opening>.menu-drawer__submenu {
   }
 }
 
+#menu-drawer {
+  margin-top: -1px;
+}
+
 .menu-drawer__inner-container {
   position: relative;
   height: 100%;
