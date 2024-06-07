@@ -3540,7 +3540,9 @@ details-disclosure>details {
 
 }
 
-.content-for-layout>section:first-of-type>div {
+.content-for-layout>section:first-of-type>div,
+.content-for-layout>section:first-of-type>article,
+.content-for-layout>div:first-of-type>cart-items {
   padding-top: 11rem;
 }
 
