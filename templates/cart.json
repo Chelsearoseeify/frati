@@ -34,6 +34,9 @@
     },
     "featured_collection_bz9KDn": {
       "type": "featured-collection",
+      "custom_css": [
+        ".gradient {padding-top: 6rem;}"
+      ],
       "settings": {
         "title": "Scopri anche",
         "heading_size": "h2",
