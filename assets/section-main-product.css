@@ -205,14 +205,20 @@
   margin: 0;
 }
 
-.product__where-to-but__list {
+.product__where-to-buy__list {
   margin-top: 1rem;
 }
 
 
-.product__where-to-but__list>p {
+.product__where-to-buy__list>p {
   margin: 0;
   font-size: 1.6rem;
+  text-transform: uppercase;
+  opacity: 0.5
+}
+
+.product__where-to-buy__list-item.available {
+  opacity: 1;
 }
 
 @media screen and (forced-colors: active) {

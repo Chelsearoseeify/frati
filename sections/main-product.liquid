@@ -219,12 +219,22 @@
                 {{ block.settings.custom_liquid }}
               {%- when 'where_to_buy' -%}
                 <div class="grid">
-                  <h4 class="product__where-to-buy__header">Dove acquistarlo</h4>
-                  <div class="product__where-to-but__list">
-                    <p>CORCAGNANO</p>
-                    <p>QUARTIERE MONTANARA</p>
-                    <p>FOGNANO</p>
-                    <p>MARZOLARA DI CALESTANO</p>
+                  <h4 class="product__where-to-buy__header">{{ block.settings.where_to_buy_label }}</h4>
+                  <div class="product__where-to-buy__list">
+                    {%- for availability in product.selected_or_first_available_variant.store_availabilities -%}
+                      {%- if availability.available -%}
+                        <p class="product__where-to-buy__list-item available">
+                          {{ availability.location.name }}
+                        </p>
+                      {%- endif %}
+                    {%- endfor -%}
+                    {%- for availability in product.selected_or_first_available_variant.store_availabilities -%}
+                      {%- if availability.available == false -%}
+                        <p class="product__where-to-buy__list-item ">
+                          {{ availability.location.name }}
+                        </p>
+                      {%- endif %}
+                    {%- endfor -%}
                   </div>
                 </div>
                 {% comment %}
