@@ -1,28 +1,28 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
-    "17184714413b0f8e8a": {
-      "type": "apps",
-      "blocks": {
-        "locations_star_rating_WhkU77": {
-          "type": "shopify:\/\/apps\/locations\/blocks\/star_rating\/31edfd06-addc-45f9-aeb9-8a692935ceba",
-          "settings": {
-            "product": "",
-            "colour": "#ff0000"
-          }
-        }
-      },
-      "block_order": [
-        "locations_star_rating_WhkU77"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "main": {
       "type": "main-page",
       "settings": {
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "custom_liquid_rFLRxr": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script>\n  const queryParams = new URLSearchParams({\n    requestId: \"69a68c40-2f26-11ef-8862-6bc0246f4d3d\",\n  });\n  fetch('\/apps\/apiease\/integration\/caller\/call?' + queryParams).\n    then(function(response) {return response.json();}).\n    then(function(jsonResponse) {console.log(jsonResponse);});\n<\/script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_R6HM7a": {
@@ -268,8 +268,8 @@
     }
   },
   "order": [
-    "17184714413b0f8e8a",
     "main",
+    "custom_liquid_rFLRxr",
     "rich_text_R6HM7a",
     "store",
     "store_tDdgDF",
