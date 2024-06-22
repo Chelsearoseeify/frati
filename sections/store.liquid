@@ -25,6 +25,48 @@
     .then(function (jsonResponse) {
       console.log(jsonResponse);
       displayLocations(jsonResponse);
+      // Extract locations from the response
+      const locations = jsonResponse.data.data.locations.edges;
+      console.log(locations);
+      // Map each location to a fetch promise for the image data
+      let fetchPromises = locations.map((location) => {
+        // Find the metafield with key 'image'
+        const imageMetafield = location.node.metafields.edges.find((metafield) => metafield.node.key === 'image');
+        if (imageMetafield) {
+          const imageId = imageMetafield.node.value;
+          const queryParamsEmbeddedVar = JSON.stringify({
+            query: `{ node(id: "${imageId}") { ... on MediaImage { image { url}} }}`,
+          });
+          const queryParamsForImage = new URLSearchParams({
+            requestId: '681be2a0-2fec-11ef-8b20-07a5d38eb884',
+            queryParamsEmbedded: queryParamsEmbeddedVar,
+          });
+          fetch('/apps/apiease/integration/caller/call?' + queryParamsForImage)
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (jsonResponse) {
+              console.log(jsonResponse);
+              console.log(imageId);
+
+              const imageContainer = document.getElementById(`store__media-container--${imageId}`);
+              console.log(`store__media-container--${imageId}`);
+              console.log(imageContainer);
+
+              const imageUrl = jsonResponse.data.data.node.image.url;
+              console.log(imageUrl);
+              var imgElement = document.createElement('img');
+              // Set the src attribute to the image URL
+              imgElement.src = imageUrl;
+              imageContainer.appendChild(imgElement);
+            });
+        } else {
+          // If no image metafield, return a resolved promise with null or an empty object
+          return Promise.resolve(null);
+        }
+      });
+
+      return Promise.all(fetchPromises);
     });
 
   function displayDayTime(day, time) {
@@ -43,17 +85,9 @@
                     </div>`;
   }
 
-  function displayLocationName(apiResponse) {
-    const locationsContainer = document.getElementById('locations-container');
-    const locations = apiResponse.data.data.locations.edges;
-
-    return locations[0].node.name;
-  }
-
   function displayLocations(apiResponse) {
     const locationsContainer = document.getElementById('locations-container');
     const locations = apiResponse.data.data.locations.edges;
-    console.log(locations);
 
     locations.forEach((locationEdge) => {
       const location = locationEdge.node;
@@ -70,8 +104,12 @@
       locationAddress.textContent = `${address.address1}, ${address.city}, ${address.country} (${address.zip})`;
       locationPhone.textContent = `Phone: ${address.phone}`;
 
+      let imageId = '';
       metafields.forEach((metafieldEdge) => {
         const metafield = metafieldEdge.node;
+        if (metafield.key === 'image') {
+          imageId = metafield.value;
+        }
         const metafieldItem = document.createElement('div');
         metafieldItem.style.display = 'flex';
         metafieldItem.style.marginBootom = '2rem';
@@ -84,7 +122,7 @@
 <div class="store__grid grid grid--gapless grid--1-col grid--2-col-tablet" style="margin-top: 1rem">
 
   <div class="store__media-item store__media-item--medium store__media-item--top grid__item">
-  <div class="store__media store__media--adapt global-media-settings background-transparent store__media--placeholder placeholder animate--">
+  <div id="store__media-container--${imageId}" class="store__media store__media--adapt global-media-settings background-transparent store__media--placeholder placeholder animate--">
   
   </div>
 
