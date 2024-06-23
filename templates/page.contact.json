@@ -134,6 +134,7 @@
       ],
       "settings": {
         "address_label": "{{ page.metafields.custom.address.value }}",
+        "days_label": "{{ page.metafields.custom.days_label | metafield_text }}",
         "phone_label": "{{ page.metafields.custom.phone_label.value }}",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -240,6 +241,7 @@
       ],
       "settings": {
         "address_label": "Indirizzo",
+        "days_label": "",
         "phone_label": "Telefono",
         "height": "adapt",
         "desktop_image_width": "medium",
