@@ -292,7 +292,7 @@
 
 @media screen and (min-width: 990px) {
   .store__content {
-    padding: 6rem 7rem 7rem;
+    padding: 0 2rem;
   }
 }
 
@@ -370,4 +370,10 @@
   .multirow__inner {
     row-gap: var(--grid-desktop-vertical-spacing);
   }
+}
+
+.location-container {
+  margin-top: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgb(var(--color-foreground));
 }

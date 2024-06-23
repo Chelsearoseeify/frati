@@ -15,19 +15,18 @@
 {%- endstyle -%}
 
 <script>
+  window.sectionSettings = {{ section.settings | json }};
+
+  console.log(window.sectionSettings)
   const queryParams = new URLSearchParams({
     requestId: 'cd7f6740-2f2c-11ef-a586-356c126d6285',
   });
   fetch('/apps/apiease/integration/caller/call?' + queryParams)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (jsonResponse) {
-      console.log(jsonResponse);
+    .then((response) => response.json())
+    .then((jsonResponse) => {
       displayLocations(jsonResponse);
-      // Extract locations from the response
       const locations = jsonResponse.data.data.locations.edges;
-      console.log(locations);
+
       // Map each location to a fetch promise for the image data
       let fetchPromises = locations.map((location) => {
         // Find the metafield with key 'image'
@@ -46,15 +45,10 @@
               return response.json();
             })
             .then(function (jsonResponse) {
-              console.log(jsonResponse);
-              console.log(imageId);
-
               const imageContainer = document.getElementById(`store__media-container--${imageId}`);
-              console.log(`store__media-container--${imageId}`);
-              console.log(imageContainer);
 
               const imageUrl = jsonResponse.data.data.node.image.url;
-              console.log(imageUrl);
+
               var imgElement = document.createElement('img');
               // Set the src attribute to the image URL
               imgElement.src = imageUrl;
@@ -105,67 +99,60 @@
       locationPhone.textContent = `Phone: ${address.phone}`;
 
       let imageId = '';
+      let locationDescription = '';
+      console.log(metafields);
       metafields.forEach((metafieldEdge) => {
         const metafield = metafieldEdge.node;
         if (metafield.key === 'image') {
           imageId = metafield.value;
+        } else if (metafield.key === 'description') {
+          locationDescription = metafield.value;
+        } else {
+          const metafieldItem = document.createElement('div');
+          metafieldItem.style.display = 'flex';
+          metafieldItem.style.marginBootom = '2rem';
+          metafieldItem.innerHTML = displayDayTime(metafield.key, metafield.value);
+          metafieldsList.appendChild(metafieldItem);
         }
-        const metafieldItem = document.createElement('div');
-        metafieldItem.style.display = 'flex';
-        metafieldItem.style.marginBootom = '2rem';
-        metafieldItem.innerHTML = displayDayTime(metafield.key, metafield.value);
-        metafieldsList.appendChild(metafieldItem);
       });
+      console.log(address);
+      const longitude = '9.162771150000001';
+      const latitude = '45.5076664';
 
       locationDiv.innerHTML = `
-
-<div class="store__grid grid grid--gapless grid--1-col grid--2-col-tablet" style="margin-top: 1rem">
-
-  <div class="store__media-item store__media-item--medium store__media-item--top grid__item">
-  <div id="store__media-container--${imageId}" class="store__media store__media--adapt global-media-settings background-transparent store__media--placeholder placeholder animate--">
-  
-  </div>
-
-  </div>
-
-      <div class="store__text-item grid__item">
-      <div class="store__content store__content--top store__content--desktop-left store__content--mobile-left store__content--adapt content-container background-transparent">
-        <h2 class="store__heading inline-richtext h2">${location.name}</h2>
-        <div
-            style="
-              display: flex;
-              gap: 2rem;
-              margin-bottom: 1rem;
-              "
-              >
-                <div style="min-width: 10rem;">Indirizzo</div>
-                <div
-                  class=""
-                >
-                  ${address.address1}, ${address.city}, ${address.country} (${address.zip})
-                </div>
-        </div> 
-        <div
-            style="
-              display: flex;
-              gap: 2rem;
-              margin-bottom: 1rem;
-              "
-              >
-                <div style="min-width: 10rem;">Telefono</div>
-                <div
-                  class=""
-                >
-                  ${address.phone}
-                </div>   
-                
-              </div>  
-              ${metafieldsList.innerHTML}
-            </div>
-          
-
+      <div id='${location.name.replaceAll(
+        ' ',
+        '_'
+      )}' class="store__grid grid grid--gapless grid--1-col grid--2-col-tablet location-container">
+        <div class="store__media-item store__media-item--medium store__media-item--top grid__item">
+          <div id="store__media-container--${imageId}" class="store__media store__media--adapt global-media-settings background-transparent store__media--placeholder placeholder animate--">
           </div>
-                `;
+        </div>
+        <div class="store__text-item grid__item">
+          <div class="store__content store__content--top store__content--desktop-left store__content--mobile-left store__content--adapt content-container background-transparent">
+            <h2 class="store__heading inline-richtext h2">${location.name}</h2>
+            <h4 class="h4">${locationDescription}</h4>
+            <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+              <div style="min-width: 10rem;">Indirizzo</div>
+              <div class="">${address.address1}, ${address.city}, ${address.country} (${address.zip})</div>
+            </div> 
+            <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+              <div style="min-width: 10rem;">Telefono</div>
+              <div class="">${address.phone}</div>   
+            </div>  
+            ${metafieldsList.innerHTML}   
+          <div>
+            <h4 class="h4">Indicazioni</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11184.479309743765!2d${
+              address.longitude
+            }!3d${
+        address.latitude
+      }!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1719052180205!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>  
+          </div>
+       
+        </div>
+      `;
 
       locationsContainer.appendChild(locationDiv);
     });
@@ -316,6 +303,18 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "text",
+      "id": "address_label",
+      "label": "Address Label",
+      "default": "Indirizzo"
+    },
+    {
+      "type": "text",
+      "id": "phone_label",
+      "label": "Phone Label",
+      "default": "Telefono"
     },
     {
       "type": "select",
