@@ -15,12 +15,15 @@
 {%- endstyle -%}
 
 <script>
-  window.sectionSettings = {{ section.settings | json }};
-
-  console.log(window.sectionSettings)
   const queryParams = new URLSearchParams({
     requestId: 'cd7f6740-2f2c-11ef-a586-356c126d6285',
   });
+
+  window.sectionSettings = {{ section.settings | json }};
+
+  console.log(window.sectionSettings)
+
+ 
   fetch('/apps/apiease/integration/caller/call?' + queryParams)
     .then((response) => response.json())
     .then((jsonResponse) => {
@@ -119,6 +122,8 @@
       const longitude = '9.162771150000001';
       const latitude = '45.5076664';
 
+      const sectionSettings = window.sectionSettings;
+
       locationDiv.innerHTML = `
       <div id='${location.name.replaceAll(
         ' ',
@@ -133,7 +138,7 @@
             <h2 class="store__heading inline-richtext h2">${location.name}</h2>
             <h4 class="h4">${locationDescription}</h4>
             <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
-              <div style="min-width: 10rem;">Indirizzo</div>
+              <div style="min-width: 10rem;">${sectionSettings.address_label}</div>
               <div class="">${address.address1}, ${address.city}, ${address.country} (${address.zip})</div>
             </div> 
             <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
@@ -312,59 +317,51 @@
     },
     {
       "type": "text",
-      "id": "days_label",
-      "label": "Days Labels"
-    },
-    {
-      "type": "text",
       "id": "phone_label",
       "label": "Phone Label",
       "default": "Telefono"
     },
     {
-      "type": "select",
-      "id": "height",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.image-with-text.settings.height.options__1.label"
-        },
-        {
-          "value": "small",
-          "label": "t:sections.image-with-text.settings.height.options__2.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.image-with-text.settings.height.options__3.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.image-with-text.settings.height.options__4.label"
-        }
-      ],
-      "default": "adapt",
-      "label": "t:sections.image-with-text.settings.height.label"
+      "type": "text",
+      "id": "monday_label",
+      "label": "Monday Label",
+      "default": "Monday"
     },
     {
-      "type": "select",
-      "id": "desktop_image_width",
-      "options": [
-        {
-          "value": "small",
-          "label": "t:sections.image-with-text.settings.desktop_image_width.options__1.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.image-with-text.settings.desktop_image_width.options__2.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.image-with-text.settings.desktop_image_width.options__3.label"
-        }
-      ],
-      "default": "medium",
-      "label": "t:sections.image-with-text.settings.desktop_image_width.label",
-      "info": "t:sections.image-with-text.settings.desktop_image_width.info"
+      "type": "text",
+      "id": "tuesday_label",
+      "label": "Tuesday Label",
+      "default": "Tuesday"
+    },
+    {
+      "type": "text",
+      "id": "wednesday_label",
+      "label": "Wednesday Label",
+      "default": "Wednesday"
+    },
+    {
+      "type": "text",
+      "id": "thursday_label",
+      "label": "Thursday Label",
+      "default": "Thursday"
+    },
+    {
+      "type": "text",
+      "id": "friday_label",
+      "label": "Friday Label",
+      "default": "Friday"
+    },
+    {
+      "type": "text",
+      "id": "saturday_label",
+      "label": "Saturday Label",
+      "default": "Saturday"
+    },
+    {
+      "type": "text",
+      "id": "sunday_label",
+      "label": "Sunday Label",
+      "default": "Sunday"
     },
     {
       "type": "select",
