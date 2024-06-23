@@ -273,6 +273,7 @@
     "header": {
       "announcement": "Annuncio",
       "menu": "Menu",
+      "close": "Chiudi",
       "cart_count": {
         "one": "{{ count }} articolo",
         "other": "{{ count }} articoli",
