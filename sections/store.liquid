@@ -67,6 +67,9 @@
     });
 
   function displayDayTime(day, time) {
+    const sectionSettings = window.sectionSettings;
+    console.log(sectionSettings[`${day}_label`])
+
     return ` <div
                     class="day-time-schedule"
                     style="
@@ -75,7 +78,7 @@
                     "
                   >
                     <div class="day-time-schedule__day" style="min-width: 10rem;">
-                      ${day}
+                      ${sectionSettings[`${day}_label`]}
                     </div>
                     <div class="day-time-schedule__time">
                       ${time}
@@ -103,7 +106,7 @@
 
       let imageId = '';
       let locationDescription = '';
-      console.log(metafields);
+     
       metafields.forEach((metafieldEdge) => {
         const metafield = metafieldEdge.node;
         if (metafield.key === 'image') {
