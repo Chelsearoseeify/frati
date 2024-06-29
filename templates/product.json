@@ -78,7 +78,7 @@
           "settings": {
             "heading": "Consumazione",
             "icon": "none",
-            "content": "",
+            "content": "{{ product.metafields.custom.eating_tips | metafield_tag }}",
             "page": ""
           }
         },
