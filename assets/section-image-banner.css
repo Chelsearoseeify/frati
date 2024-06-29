@@ -91,7 +91,14 @@
   }
 
   .banner--medium:not(.banner--adapt) {
-    min-height: 56rem;
+    min-height: 67vh;
+    margin: 5rem 10rem 30rem 10rem;
+    position: relative;
+  }
+
+  .banner--medium:not(.banner--adapt)>.banner__content {
+    position: absolute;
+    bottom: -40%;
   }
 
   .banner--large:not(.banner--adapt) {
