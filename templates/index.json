@@ -106,7 +106,7 @@
         "image": "shopify:\/\/shop_images\/Screenshotfrom2024-04-1919-23-35_724b83b8-904d-46f1-9ff5-c74200b21af1.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "bottom-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-6",
