@@ -59,6 +59,29 @@
         "padding_bottom": 100
       }
     },
+    "rich_text_X7gPLG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HjthJF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Le nostre sedi",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HjthJF"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "store": {
       "type": "store",
       "blocks": {
@@ -295,6 +318,7 @@
   "order": [
     "main",
     "multicolumn_xbkgCG",
+    "rich_text_X7gPLG",
     "store",
     "store_tDdgDF",
     "form"
