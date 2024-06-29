@@ -216,6 +216,7 @@
   },
   "templates": {
     "search": {
+      "search": "Cerca",
       "no_results": "Nessun risultato per \"{{ terms }}\". Controlla l'ortografia o usa una parola o una frase diversa.",
       "page": "Pagina",
       "results_with_count": {

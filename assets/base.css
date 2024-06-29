@@ -503,12 +503,14 @@ h6:empty {
   display: inline-block;
   border: none;
   box-shadow: none;
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-  color: rgb(var(--color-link));
+  text-decoration: none;
+  /*  text-underline-offset: 0.3rem; */
+  /*   color: rgb(var(--color-link)); */
   background-color: transparent;
   font-size: 1.4rem;
   font-family: inherit;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground))
 }
 
 .link--text {
@@ -1607,8 +1609,10 @@ details[open]>.share-button__fallback {
 .field:before,
 .select:before,
 .customer .field:before,
-.customer select:before,
-.localization-form__select:before {
+.customer select:before
+
+/* .localization-form__select:before  */
+  {
   pointer-events: none;
   content: '';
   position: absolute;
@@ -1624,8 +1628,10 @@ details[open]>.share-button__fallback {
 .field:after,
 .select:after,
 .customer .field:after,
-.customer select:after,
-.localization-form__select:after {
+.customer select:after
+
+/* .localization-form__select:after  */
+  {
   pointer-events: none;
   content: '';
   position: absolute;
@@ -2588,14 +2594,13 @@ product-info .loading__spinner:not(.hidden)~*,
 
 .header__icon,
 .header__icon--cart .icon {
-  height: 4.4rem;
-  width: 4.4rem;
+  /*   height: 4.4rem;
+  width: 4.4rem; */
   padding: 0;
 }
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
 }
 
 .header__icon--menu[aria-expanded='true']::before {
@@ -2606,6 +2611,7 @@ product-info .loading__spinner:not(.hidden)~*,
   width: 100%;
   display: block;
   position: absolute;
+
   background: rgba(var(--color-foreground), 0.5);
 }
 
@@ -2745,6 +2751,8 @@ details[open] .modal-overlay::after {
 .header__icon--menu .icon {
   display: block;
   position: absolute;
+  left: 3%;
+  top: 40%;
   opacity: 1;
   transform: scale(1);
   transition: transform 150ms ease, opacity 150ms ease;

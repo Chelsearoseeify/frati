@@ -8,16 +8,16 @@
 <div class="disclosure">
   <button
     type="button"
-    class="disclosure__button localization-form__select localization-selector link link--text caption-large"
+    class="{% comment %} disclosure__button {% endcomment %}localization-form__select localization-selector  link link--text caption-large"
     aria-expanded="false"
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
     <span>{{ localization.language.endonym_name | capitalize }}</span>
-    {% render 'icon-caret' %}
+    {% comment %} {% render 'icon-caret' %} {% endcomment %}
   </button>
   <div class="disclosure__list-wrapper" hidden>
-    <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled">
+    <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled color-scheme-1">
       {%- for language in localization.available_languages -%}
         <li class="disclosure__item" tabindex="-1">
           <a

@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   flex: auto 1 0;
-  padding: 1rem;
-  margin: 0 auto;
+  /*  padding: 1rem;
+  margin: 0 auto; */
 }
 
 .localization-form:only-child {
@@ -15,13 +15,13 @@
 
 .localization-form:only-child .button,
 .localization-form:only-child .localization-form__select {
-  margin: 1rem 1rem 0.5rem;
+  /*  margin: 1rem 1rem 0.5rem; */
   flex-grow: 1;
 }
 
 @media screen and (min-width: 750px) {
   .localization-form {
-    padding: 1rem 2rem 1rem 0;
+    /*  padding: 1rem 2rem 1rem 0; */
   }
 
   .localization-form:first-of-type {
@@ -31,12 +31,13 @@
   .localization-form:only-child {
     justify-content: start;
     width: auto;
-    margin: 0 1rem 0 0;
+    padding: 0;
+    margin: 0;
   }
 
   .localization-form:only-child .button,
   .localization-form:only-child .localization-form__select {
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
   }
 }
 
@@ -70,15 +71,15 @@
 .localization-form__select {
   border-radius: var(--inputs-radius-outset);
   position: relative;
-  margin-bottom: 1.5rem;
-  padding-left: 1rem;
+  /*  margin-bottom: 1.5rem;
+  padding-left: 1rem; */
   text-align: left;
-  min-height: calc(4rem + var(--inputs-border-width) * 2);
+  /* min-height: calc(4rem + var(--inputs-border-width) * 2); */
   min-width: calc(7rem + var(--inputs-border-width) * 2);
 }
 
 .disclosure__button.localization-form__select {
-  padding: calc(2rem + var(--inputs-border-width));
+  /* padding: calc(2rem + var(--inputs-border-width)); */
   background: rgb(var(--color-background));
 }
 
@@ -107,8 +108,8 @@ noscript .localization-form__select {
   -moz-appearance: none;
   color: rgb(var(--color-foreground));
   width: 100%;
-  padding-right: 4rem;
-  padding-bottom: 1.5rem;
+  /*  padding-right: 4rem;
+  padding-bottom: 1.5rem; */
 }
 
 noscript .localization-selector.link {
@@ -117,7 +118,7 @@ noscript .localization-selector.link {
 }
 
 .disclosure .localization-form__select {
-  padding-top: 1.5rem;
+  /* padding-top: 1.5rem; */
 }
 
 .localization-selector option {
@@ -151,7 +152,7 @@ noscript .localization-selector.link {
   position: absolute;
   bottom: 100%;
   transform: translateY(-1rem);
-  z-index: 2;
+  z-index: 10;
   background-color: rgb(var(--color-background));
   border-radius: var(--popup-corner-radius);
   box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));

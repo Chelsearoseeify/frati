@@ -158,14 +158,13 @@
     endif
   -%}
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+    
     {%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
       endif
 
-      if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
-      endif
+  
     -%}
 
     {%- if section.settings.logo_position != 'middle-center' -%}
@@ -311,18 +310,18 @@
             {%- endform -%}
           </noscript>
 
-          <localization-form class="small-hide medium-hide no-js-hidden" data-prevent-hide>
+         {% comment %}  <localization-form class="small-hide medium-hide no-js-hidden" data-prevent-hide>
             {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
               <div>
                 <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
                 {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
               </div>
             {%- endform -%}
-          </localization-form>
+          </localization-form> {% endcomment %}
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
-
+      {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
+     
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
           {% render 'icon-account' %}

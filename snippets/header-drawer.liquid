@@ -123,6 +123,24 @@
               {%- endfor -%}
             </ul>
           </nav>
+          <div
+            style="padding: 0 3.5rem;display: flex;justify-content: space-between;"
+          >
+            <a
+              href="{{ routes.search_url }}"
+              class="link{% comment %} menu-drawer__account  focus-inset h5 medium-hide large-up-hide {% endcomment %}"
+            >
+              {% render 'icon-search' %}
+            </a>
+            <localization-form class="small-hide medium-hide no-js-hidden" data-prevent-hide>
+              {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+                <div>
+                  <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+                  {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+                </div>
+              {%- endform -%}
+            </localization-form>
+          </div>
           <div class="menu-drawer__utility-links">
             {%- if shop.customer_accounts_enabled -%}
               <a
