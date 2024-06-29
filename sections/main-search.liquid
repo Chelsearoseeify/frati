@@ -20,8 +20,9 @@
   }
 
   .template-search__search {
-    margin: 0 auto 3.5rem;
-    max-width: 74.1rem;
+   {% comment %}  margin: 0 auto 3.5rem;{% endcomment %}
+   {% comment %} min-width:90rem; {% endcomment %}
+    {% comment %} max-width: 74.1rem; {% endcomment %}
   }
 
   .template-search__search .search {
@@ -32,14 +33,19 @@
     padding-bottom: 18rem;
   }
 
+  .search__button .icon {
+    height: 1.8rem;
+  }
+
   @media screen and (min-width: 750px) {
     .template-search__header {
       margin-bottom: 5rem;
+      margin-top: 5rem;
     }
-  }
 
-  .search__button .icon {
-    height: 1.8rem;
+    .search__button .icon {
+      visibility: hidden;
+    }
   }
 </style>
 
@@ -66,7 +72,7 @@
 {% paginate search.results by 24 %}
   <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      <h1 class="h2 center">
+      <h1 class="link center">
         {%- if search.performed -%}
           {{- 'templates.search.title' | t -}}
         {%- else -%}
@@ -79,53 +85,70 @@
         {%- endif -%}
         <main-search>
           <form action="{{ routes.search_url }}" method="get" role="search" class="search">
-            <div class="field">
+            <div class="{% comment %} field {% endcomment %} search-field">
               <input
-                class="search__input field__input"
-                id="Search-In-Template"
+                class="search-field__input h2"
                 type="search"
                 name="q"
+                id="Search-In-Template"
                 value="{{ search.terms | escape }}"
-                placeholder="{{ 'general.search.search' | t }}"
-                {%- if settings.predictive_search_enabled -%}
-                  role="combobox"
-                  aria-expanded="false"
-                  aria-owns="predictive-search-results"
-                  aria-controls="predictive-search-results"
-                  aria-haspopup="listbox"
-                  aria-autocomplete="list"
-                  autocorrect="off"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  spellcheck="false"
-                {%- endif -%}
+                placeholder="{{ 'general.search.placeholder' | t }}"
               >
-              <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
-              <input name="options[prefix]" type="hidden" value="last">
-
-              {%- if settings.predictive_search_enabled -%}
-                <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
-                  {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
-                </div>
-
-                <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-              {%- endif -%}
-
-              <button
-                type="reset"
-                class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
-                aria-label="{{ 'general.search.reset' | t }}"
-              >
-                <svg class="icon icon-close" aria-hidden="true" focusable="false">
-                  <use xlink:href="#icon-reset">
-                </svg>
-              </button>
               <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
                 <svg class="icon icon-search" aria-hidden="true" focusable="false">
                   <use xlink:href="#icon-search">
                 </svg>
               </button>
             </div>
+            {% comment %}
+              <div class="field">
+                <input
+                  class="search__input field__input"
+                  id="Search-In-Template"
+                  type="search"
+                  name="q"
+                  value="{{ search.terms | escape }}"
+                  placeholder="{{ 'general.search.placeholder' | t }}"
+                  {%- if settings.predictive_search_enabled -%}
+                    role="combobox"
+                    aria-expanded="false"
+                    aria-owns="predictive-search-results"
+                    aria-controls="predictive-search-results"
+                    aria-haspopup="listbox"
+                    aria-autocomplete="list"
+                    autocorrect="off"
+                    autocomplete="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                  {%- endif -%}
+                >
+                <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+                <input name="options[prefix]" type="hidden" value="last">
+
+                {%- if settings.predictive_search_enabled -%}
+                  <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+                    {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
+                  </div>
+
+                  <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+                {%- endif -%}
+
+                <button
+                  type="reset"
+                  class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+                  aria-label="{{ 'general.search.reset' | t }}"
+                >
+                  <svg class="icon icon-close" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-reset">
+                  </svg>
+                </button>
+                <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                  <svg class="icon icon-search" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-search">
+                  </svg>
+                </button>
+              </div>
+            {% endcomment %}
           </form>
         </main-search>
         {%- if settings.predictive_search_enabled -%}

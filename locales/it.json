@@ -37,6 +37,7 @@
     },
     "search": {
       "search": "Cerca",
+      "placeholder": "Scrivi qui cosa vuoi cercare...",
       "reset": "Cancella termine ricerca"
     },
     "cart": {

@@ -1719,6 +1719,21 @@ details[open]>.share-button__fallback {
 
 /* Field */
 
+.search-field {
+  position: relative;
+}
+
+.search-field__input,
+.search-field__input:focus-visible {
+  background: transparent !important;
+  border: none !important;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+
+}
+
+
 .field {
   position: relative;
   width: 100%;
@@ -2552,7 +2567,6 @@ product-info .loading__spinner:not(.hidden)~*,
   display: flex;
   grid-area: icons;
   justify-self: end;
-  padding-right: 0.8rem;
 }
 
 .header__icons .shopify-app-block {
@@ -2751,7 +2765,7 @@ details[open] .modal-overlay::after {
 .header__icon--menu .icon {
   display: block;
   position: absolute;
-  left: 3%;
+  left: 2.2%;
   top: 40%;
   opacity: 1;
   transform: scale(1);
