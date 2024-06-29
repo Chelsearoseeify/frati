@@ -52,7 +52,7 @@
         "text_CkzpJH"
       ],
       "custom_css": [
-        ".rich-text__text {height: 10vh; justify-content: center; display: flex; align-items: center;}"
+        ".rich-text__text {height: 90vh; justify-content: center; display: flex; align-items: center;}"
       ],
       "settings": {
         "desktop_content_position": "left",
