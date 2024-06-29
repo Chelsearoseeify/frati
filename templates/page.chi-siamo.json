@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "image_banner_kznGTb": {
@@ -43,7 +52,7 @@
         "text_CkzpJH"
       ],
       "custom_css": [
-        ".rich-text__text {height: 50vh; justify-content: center; display: flex; align-items: center;}"
+        ".rich-text__text {height: 10vh; justify-content: center; display: flex; align-items: center;}"
       ],
       "settings": {
         "desktop_content_position": "left",
