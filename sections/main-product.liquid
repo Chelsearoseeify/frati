@@ -714,6 +714,10 @@
                 </div>
               </div>
             {%- when 'collapsible_tab' -%}
+              {%- if block.settings.content == '' -%}
+                {{ block.settings.heading }} hasn't content {{ block.settings.content }}
+                {{ block.settings.page.content }}
+              {%- endif %}
               {%- if block.settings.page.content or block.settings.content -%}
                 <div class="product__details quick-add-hidden grid" {{ block.shopify_attributes }}>
                   <h4 class="h4 inline-richtext grid__item product__details__heading">
