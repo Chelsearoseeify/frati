@@ -263,12 +263,14 @@
               <div class="title-wrapper center">
                 <h2 class="title title--primary">
                   {{ 'sections.collection_template.empty' | t -}}
-                  <br>
+                </h2>
+                <br>
+                <h4>
                   {{
                     'sections.collection_template.use_fewer_filters_html'
-                    | t: link: search_url, class: 'underlined-link link'
+                    | t: link: search_url, class: 'underlined-link'
                   }}
-                </h2>
+                </h4>
               </div>
             </div>
           {%- else -%}
