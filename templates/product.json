@@ -96,7 +96,7 @@
           "settings": {
             "heading": "Packaging",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.conservation_tips | metafield_tag }}<\/p>",
+            "content": "{{ product.metafields.custom.packaging | metafield_tag }}",
             "page": ""
           }
         }
