@@ -97,7 +97,7 @@
             "heading": "Packaging",
             "icon": "none",
             "content": "{{ product.metafields.custom.packaging | metafield_tag }}",
-            "page": ""
+            "page": "materia-viva"
           }
         }
       },
