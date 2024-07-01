@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -78,7 +87,7 @@
           "settings": {
             "heading": "Consumazione",
             "icon": "none",
-            "content": "",
+            "content": "{{ product.metafields.custom.eating_tips | metafield_tag }}",
             "page": ""
           }
         },
@@ -96,7 +105,7 @@
           "settings": {
             "heading": "Packaging",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.conservation_tips | metafield_tag }}<\/p>",
+            "content": "{{ product.metafields.custom.packaging | metafield_tag }}",
             "page": ""
           }
         }
@@ -133,6 +142,16 @@
         "padding_bottom": 12
       }
     },
+    "page_7DCMwF": {
+      "type": "page",
+      "settings": {
+        "page": "materia-viva",
+        "heading_size": "h3",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -146,17 +165,8 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "show_price": false,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "page_7DCMwF": {
-      "type": "page",
-      "settings": {
-        "page": "materia-viva",
-        "heading_size": "h3",
-        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -166,6 +176,5 @@
     "main",
     "page_7DCMwF",
     "related-products"
-    
   ]
 }
