@@ -714,15 +714,28 @@
                 </div>
               </div>
             {%- when 'collapsible_tab' -%}
-              <div class="product__details quick-add-hidden grid" {{ block.shopify_attributes }}>
-                <h4 class="h4 inline-richtext grid__item product__details__heading">
-                  {{ block.settings.heading | default: block.settings.page.title | escape }}
-                </h4>
-                <div class="grid__item product__details__content">
-                  {{ block.settings.content }}
-                  {{ block.settings.page.content }}
+              {%- if block.settings.page.content or block.settings.content -%}
+                <div class="product__details quick-add-hidden grid" {{ block.shopify_attributes }}>
+                  <h4 class="h4 inline-richtext grid__item product__details__heading">
+                    {{ block.settings.heading | default: block.settings.page.title | escape }}
+                  </h4>
+                  <div class="grid__item product__details__content">
+                    {{ block.settings.content }}
+                    {{ block.settings.page.content }}
+                  </div>
                 </div>
-              </div>
+                {% comment %}
+                  {%- elseif block.settings.page.content %}
+                  <div class="product__details quick-add-hidden grid" {{ block.shopify_attributes }}>
+                    <h4 class="h4 inline-richtext grid__item product__details__heading">
+                      {{ block.settings.heading | default: block.settings.page.title | escape }}
+                    </h4>
+                    <div class="grid__item product__details__content">
+                      {{ block.settings.page.content }}
+                    </div>
+                  </div>
+                {% endcomment %}
+              {%- endif %}
           {%- endcase -%}
         {%- endfor -%}
       </div>
