@@ -375,3 +375,7 @@
     row-gap: var(--grid-desktop-vertical-spacing);
   }
 }
+
+body {
+  font-size: 2.4rem;
+}
