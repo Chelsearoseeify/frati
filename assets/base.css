@@ -1732,6 +1732,7 @@ details[open]>.share-button__fallback {
   outline: none;
   box-shadow: none;
   width: 100%;
+  margin-top: -3rem;
 
 }
 

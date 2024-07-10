@@ -1,3 +1,7 @@
+.list-menu__item--link {
+  text-transform: uppercase;
+}
+
 .footer-slogan {
   position: relative;
   padding-top: 10rem;
