@@ -198,6 +198,18 @@
         "padding_bottom": 100
       }
     },
+    "custom_liquid_PXwyTz": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".divider {border-top: 1px solid black; width: 50%; height: 1px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"divider\"><\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_blog_ezFYnt": {
       "type": "featured-blog",
       "settings": {
@@ -249,6 +261,7 @@
     "image_banner_way7yp",
     "image_banner_zNYUVX",
     "image_with_text_qXw7qP",
+    "custom_liquid_PXwyTz",
     "featured_blog_ezFYnt",
     "rich_text_yUPkAz"
   ]
