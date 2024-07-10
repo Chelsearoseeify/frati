@@ -143,7 +143,7 @@
         "image_height": "medium",
         "desktop_image_width": "medium",
         "heading_size": "h1",
-        "text_style": "body",
+        "text_style": "subtitle",
         "button_style": "secondary",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
