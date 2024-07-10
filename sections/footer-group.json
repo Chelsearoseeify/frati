@@ -14,7 +14,7 @@
     "custom_liquid_jhbRb7": {
       "type": "custom-liquid",
       "custom_css": [
-        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 90%; height: 20px;}"
+        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 96%; height: 20px;}"
       ],
       "settings": {
         "custom_liquid": "<div class=\"divider\">\n<\/div>",
@@ -60,7 +60,7 @@
     "custom_liquid_49V99J": {
       "type": "custom-liquid",
       "custom_css": [
-        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 90%; height: 20px;}"
+        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 96%; height: 20px;}"
       ],
       "settings": {
         "custom_liquid": "<div class=\"divider\">\n<\/div>",
