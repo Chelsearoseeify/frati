@@ -11,6 +11,18 @@
   "name": "custom-footer",
   "type": "footer",
   "sections": {
+    "custom_liquid_jhbRb7": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 90%; height: 20px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"divider\">\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "footer-slogan": {
       "type": "footer-slogan",
       "blocks": {
@@ -43,6 +55,18 @@
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "custom_liquid_49V99J": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 90%; height: 20px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"divider\">\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "footer": {
@@ -95,8 +119,8 @@
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "newsletter_heading": "Join our Newsletter",
-        "enable_follow_on_shop": true,
-        "show_social": true,
+        "enable_follow_on_shop": false,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
@@ -108,7 +132,9 @@
     }
   },
   "order": [
+    "custom_liquid_jhbRb7",
     "footer-slogan",
+    "custom_liquid_49V99J",
     "footer"
   ]
 }
