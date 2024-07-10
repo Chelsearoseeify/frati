@@ -201,10 +201,10 @@
     "custom_liquid_PXwyTz": {
       "type": "custom-liquid",
       "custom_css": [
-        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 80%;}"
+        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 80%; height: 20px;}"
       ],
       "settings": {
-        "custom_liquid": "<div class=\"divider\">\n<button>ohi<\/button><\/div>",
+        "custom_liquid": "<div class=\"divider\">\n<\/div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
