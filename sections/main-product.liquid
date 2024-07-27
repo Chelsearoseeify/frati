@@ -218,7 +218,7 @@
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'where_to_buy' -%}
-                <div class="grid">
+                <div class="product__where-to-buy grid">
                   <h4 class="product__where-to-buy__header">{{ block.settings.where_to_buy_label }}</h4>
                   <div class="product__where-to-buy__list">
                     {%- for availability in product.selected_or_first_available_variant.store_availabilities -%}

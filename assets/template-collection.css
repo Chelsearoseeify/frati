@@ -106,7 +106,11 @@
 }
 
 .product-grid-container {
-  flex-grow: 1;
+  width: 75%
+}
+
+.collections-list__wrapper {
+  width: 25%;
 }
 
 .filter-button {
@@ -119,9 +123,6 @@
   cursor: default;
 }
 
-.collections-list__wrapper {
-  width: 30%;
-}
 
 .collections-list__wrapper-fixed {
   border-top: 1px solid rgba(var(--color-foreground), 1);

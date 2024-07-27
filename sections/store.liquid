@@ -116,7 +116,7 @@
         } else {
           const metafieldItem = document.createElement('div');
           metafieldItem.style.display = 'flex';
-          metafieldItem.style.marginBootom = '2rem';
+          metafieldItem.style.marginBottom = '-2px';
           metafieldItem.innerHTML = displayDayTime(metafield.key, metafield.value);
           metafieldsList.appendChild(metafieldItem);
         }
@@ -138,8 +138,8 @@
         </div>
         <div class="store__text-item grid__item">
           <div class="store__content store__content--top store__content--desktop-left store__content--mobile-left store__content--adapt content-container background-transparent">
-            <h2 class="store__heading inline-richtext h2">${location.name}</h2>
-            <h4 class="h4">${locationDescription}</h4>
+            <h3 class="store__heading inline-richtext h3">${location.name}</h2>
+            <h4 class="h4" style="margin: 2rem 0">${locationDescription}</h4>
             <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
               <div style="min-width: 10rem;">${sectionSettings.address_label}</div>
               <div class="">${address.address1}, ${address.city}, ${address.country} (${address.zip})</div>
@@ -149,13 +149,13 @@
               <div class="">${address.phone}</div>   
             </div>  
             ${metafieldsList.innerHTML}   
-          <div>
-            <h4 class="h4">Indicazioni</h4>
+          <div style="display: flex; gap: 2rem; margin-top: 2rem">
+            <h4 class="h4" style="margin-top: 0">Indicazioni</h4>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11184.479309743765!2d${
               address.longitude
             }!3d${
         address.latitude
-      }!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1719052180205!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      }!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1719052180205!5m2!1sit!2sit" width="410" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>  
           </div>
        

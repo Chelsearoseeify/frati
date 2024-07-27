@@ -46,6 +46,8 @@
 
   .article-template__hero-medium {
     height: 55rem;
+    margin: auto;
+    width: 65rem;
   }
 
   .article-template__hero-large {
@@ -104,6 +106,10 @@
   margin-bottom: 3rem;
   border-bottom: 1px solid black;
   padding-bottom: 3rem;
+}
+
+.article-template__content>p {
+  font-size: 24px;
 }
 
 .article-template__content>h3 {
