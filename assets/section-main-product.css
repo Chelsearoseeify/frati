@@ -393,7 +393,16 @@ a.product__text {
 }
 
 .product-form__buttons {
-  max-width: 44rem;
+  /*  max-width: 44rem; */
+
+}
+
+.product-form__buttons>button {
+  height: 72px;
+}
+
+.product-form__buttons>button>span {
+  font-size: 24px;
 }
 
 .product--no-media .product__info-container>modal-opener {
