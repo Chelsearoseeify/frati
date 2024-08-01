@@ -1575,3 +1575,9 @@ a.product__text {
   display: flex;
   align-items: flex-end;
 }
+
+.share-section {
+  display: flex;
+  align-items: baseline;
+  gap: 6rem;
+}
