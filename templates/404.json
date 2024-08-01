@@ -50,7 +50,8 @@
         "button_yqpAnC"
       ],
       "custom_css": [
-        ".rich-text__blocks {width: 90%;}"
+        ".rich-text__blocks {width: 90%;}",
+        ".rich-text__blocks > .rich-text__buttons {margin-top: 12rem;}"
       ],
       "settings": {
         "desktop_content_position": "center",
