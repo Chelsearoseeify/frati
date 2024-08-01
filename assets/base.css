@@ -847,7 +847,8 @@ summary::-webkit-details-marker {
   }
 
   .title--primary {
-    margin: 2rem 0;
+    margin: 5rem 0;
+    padding: 0 4rem;
   }
 
   .title-wrapper-with-link {

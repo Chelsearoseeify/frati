@@ -8,7 +8,9 @@
 
 @media screen and (min-width: 750px) {
   .main-page-title {
+    margin-top: 5rem;
     margin-bottom: 4rem;
+    padding: 0 1rem;
   }
 }
 
