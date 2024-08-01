@@ -22,14 +22,14 @@
           "type": "heading",
           "settings": {
             "heading": "Oh no!",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
         "heading_DtbezQ": {
           "type": "heading",
           "settings": {
             "heading": "Qualcuno ha fatto colazione con questa pagina.",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
         "button_yqpAnC": {
@@ -58,7 +58,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 100,
-        "padding_bottom": 52
+        "padding_bottom": 100
       }
     }
   },
