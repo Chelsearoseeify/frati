@@ -65,7 +65,7 @@
                 {%- if block.settings.button_label != blank -%}
                   <a
                     {% if block.settings.button_link == blank %}
-                      role="link" aria-disabled="true"
+                      href="/"
                     {% else %}
                       href="{{ block.settings.button_link }}"
                     {% endif %}
