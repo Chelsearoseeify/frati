@@ -64,12 +64,14 @@
     padding-right: 2.7rem;
   }
 
+  
+
   .list-menu__item {
     display: flex;
     align-items: center;
     {% comment %} line-height: calc(1 + 0.1 / var(--font-body-scale)); {% endcomment %}
     line-height: calc(var(--font-body-scale)*0.7);
-    justify-content:center;
+    justify-content:flex-start;
     text-transform: capitalize;
   }
 
@@ -81,6 +83,12 @@
   }
 
   @media screen and (min-width: 750px) {
+
+
+    .list-menu__item {
+      justify-content:center;
+    }
+
     .list-menu__item--link {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;

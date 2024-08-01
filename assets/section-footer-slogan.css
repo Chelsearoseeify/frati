@@ -2,9 +2,19 @@
   text-transform: uppercase;
 }
 
+
 .footer-slogan {
   position: relative;
+  
+  padding-top: 4rem;
+}
+@media only screen and (min-width: 750px) {
+
+.footer-slogan {
+  
   padding-top: 10rem;
+}
+
 }
 
 .footer-slogan__heading-container {
@@ -22,23 +32,37 @@
 
 }
 
+
 .footer-slogan__image_container {
   position: relative;
+  height: 40rem;
+}
+@media only screen and (min-width: 750px) {
+
+.footer-slogan__image_container {
   height: 60rem;
+}
+
 }
 
 .footer-slogan__image {
   position: absolute;
+  
 
+}
+
+.footer-slogan__image > img {
+  height: 15rem;
+  width: 15rem;
 }
 
 .image-1 {
-  top: -5%;
-  left: 10%;
+  top: -10%;
+  left: 0%;
 }
 
 .image-2 {
-  top: 40%;
+  top: 35%;
   left: 5%;
   transform: translate(-50%, -50%);
 }
@@ -50,18 +74,62 @@
 }
 
 .image-4 {
-  top: -5%;
-  right: 12%;
+  top: -20%;
+  right: 2%;
 
 }
 
 .image-5 {
   right: 0;
-  top: 20%;
+    top: 10%;
 
 }
 
 .image-6 {
-  bottom: 0;
+  bottom: 5%;
   right: 0;
+}
+
+@media only screen and (min-width: 750px) {
+
+  .footer-slogan__image> img {
+   height: 26rem;
+   width: 26rem;
+  
+  }
+
+  .image-1 {
+    top: -5%;
+    left: 10%;
+  }
+  
+  .image-2 {
+    top: 40%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .image-3 {
+    bottom: 0;
+    left: 0;
+  
+  }
+  
+  .image-4 {
+    top: -5%;
+    right: 12%;
+  
+  }
+  
+  .image-5 {
+    right: 0;
+    top: 20%;
+  
+  }
+  
+  .image-6 {
+    bottom: 0;
+    right: 0;
+  }
+  
 }

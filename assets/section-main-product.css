@@ -202,8 +202,19 @@
 }
 
 .product__where-to-buy {
-  height: 40vh;
-  align-items: end;
+  padding-top: 2rem;
+  align-items: start;
+  flex-direction: column;
+  row-gap: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .product__where-to-buy {
+    height: 40vh;
+    align-items: end;
+    flex-direction: row;
+    row-gap: var(--grid-mobile-vertical-spacing);
+  }
 }
 
 .product__where-to-buy__header {
@@ -1542,7 +1553,14 @@ a.product__text {
 
 .product__details-container {
   width: 100%;
-  margin-left: 25%;
+  margin-left: 0%;
+}
+
+@media screen and (min-width: 750px) {
+  .product__details-container {
+    width: 100%;
+    margin-left: 25%;
+  }
 }
 
 .product__details__heading {
