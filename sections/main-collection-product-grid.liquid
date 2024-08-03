@@ -117,39 +117,82 @@
           %}
         </aside>
       {%- endif -%}
+
       <div class="filter-and-products__wrapper page-width">
-        {%- if section.blocks.size > 0 -%}
+        {%- if section.settings.show_filter -%}
           <div class="collections-list__wrapper">
             <div id="collections-list__fixed-menu" class="collections-list__wrapper-fixed">
-              {%- for block in section.blocks -%}
-                {%- case block.type -%}
-                  {%- when 'button' -%}
-                    <div
-                      class="collections-list__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} collections-list__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                      {{ block.shopify_attributes }}
-                      {% if settings.animations_reveal_on_scroll %}
-                        data-cascade
-                        style="--animation-order: {{ forloop.index }};"
-                      {% endif %}
+              <div
+                class="collections-list__buttons {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                <a
+                  href="/collections/tutti-i-prodotti"
+                  class="filter-button h4 {% if page_reference == section.settings.see_all_label %} active{% endif %}"
+                >
+                  {{ section.settings.see_all_label }}
+                </a>
+              </div>
+              {%- for collection in collections -%}
+                {% if collection.tags contains 'Online Store' and collection.title != 'Tutti i prodotti' %}
+                  <div
+                    class="collections-list__buttons {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    <a
+                      href="/collections/{{ collection.title | escape }}"
+                      class="filter-button h4 {% if page_reference ==  collection.title %} active{% endif %}"
                     >
-                      {%- if block.settings.button_label != blank -%}
-                        <a
-                          {% if block.settings.button_link == blank %}
-                            role="link" aria-disabled="true"
-                          {% else %}
-                            href="{{ block.settings.button_link }}"
-                          {% endif %}
-                          class="filter-button h4 {% if page_reference == block.settings.button_label %} active{% endif %}"
-                        >
-                          {{- block.settings.button_label | escape -}}
-                        </a>
-                      {%- endif -%}
-                    </div>
-                {%- endcase -%}
+                      {{- collection.title | escape | downcase -}}
+                    </a>
+                  </div>
+                {%- endif -%}
               {%- endfor -%}
             </div>
           </div>
         {%- endif -%}
+        {% comment %}
+          {%- if section.blocks.size > 0 -%}
+            <div class="collections-list__wrapper">
+              <div id="collections-list__fixed-menu" class="collections-list__wrapper-fixed">
+                {%- for block in section.blocks -%}
+                  {%- case block.type -%}
+                    {%- when 'button' -%}
+                      <div
+                        class="collections-list__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} collections-list__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                        {{ block.shopify_attributes }}
+                        {% if settings.animations_reveal_on_scroll %}
+                          data-cascade
+                          style="--animation-order: {{ forloop.index }};"
+                        {% endif %}
+                      >
+                        {%- if block.settings.button_label != blank -%}
+                          <a
+                            {% if block.settings.button_link == blank %}
+                              role="link" aria-disabled="true"
+                            {% else %}
+                              href="{{ block.settings.button_link }}"
+                            {% endif %}
+                            class="filter-button h4 {% if page_reference == block.settings.button_label %} active{% endif %}"
+                          >
+                            {{- block.settings.button_label | escape -}}
+                          </a>
+                        {%- endif -%}
+                      </div>
+                  {%- endcase -%}
+                {%- endfor -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {% endcomment %}
         <div
           class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           id="ProductGridContainer"
@@ -321,6 +364,20 @@
       "default": "default",
       "label": "t:sections.all.image_shape.label",
       "info": "t:sections.all.image_shape.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filter",
+      "default": true,
+      "label": "Mostra il filtro",
+      "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+    },
+    {
+      "type": "text",
+      "id": "see_all_label",
+      "default": "Vedi tutti",
+      "label": "Etichetta 'Vedi tutti'",
+      "info": "t:sections.rich-text.blocks.buttons.settings.button_label_1.info"
     },
     {
       "type": "checkbox",
