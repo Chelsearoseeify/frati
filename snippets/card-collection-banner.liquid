@@ -44,63 +44,72 @@
 </style>
 
 <div class="card-wrapper {% if wrapper_class and wrapper_class != 'none' %}{{ wrapper_class }}{% else %}collection-card-wrapper{% endif %}">
-  <div
-    class="card color-{{ card_color_scheme }}"
+  <a
+    {% if card_collection == blank %}
+      role="link" aria-disabled="true"
+    {% else %}
+      href="{{ card_collection.url }}"
+    {% endif %}
+    class="full-unstyled-link"
   >
     <div
-      class="card__inner color-{{ card_color_scheme }} ratio"
-      style="--ratio-percent: 20%;"
+      class="card color-{{ card_color_scheme }}"
     >
-      <div class="card__media">
-        {%- if card_collection.featured_image -%}
-          <div class="media media--transparent media--hover-effect">
-            <img
-              srcset="
-                {%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
-                {%- if card_collection.featured_image.width >= 330 -%}{{ card_collection.featured_image | image_url: width: 330 }} 330w,{%- endif -%}
-                {%- if card_collection.featured_image.width >= 535 -%}{{ card_collection.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
-                {%- if card_collection.featured_image.width >= 750 -%}{{ card_collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
-                {%- if card_collection.featured_image.width >= 1000 -%}{{ card_collection.featured_image | image_url: width: 1000 }} 1000w,{%- endif -%}
-                {%- if card_collection.featured_image.width >= 1500 -%}{{ card_collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                {%- if card_collection.featured_image.width >= 3000 -%}{{ card_collection.featured_image | image_url: width: 3000 }} 3000w,{%- endif -%}
-                {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w
-              "
-              src="{{ card_collection.featured_image | image_url: width: 1500 }}"
-              sizes="
-                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
-                (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
-                calc(100vw - 3rem)
-              "
-              alt="{{ card_collection.featured_image.alt | escape }}"
-              height="{{ card_collection.featured_image.height }}"
-              width="{{ card_collection.featured_image.width }}"
-              loading="lazy"
-              class="motion-reduce"
-            >
-          </div>
-        {%- endif -%}
+      <div
+        class="card__inner color-{{ card_color_scheme }} ratio"
+        style="--ratio-percent: 20%;"
+      >
+        <div class="card__media">
+          {%- if card_collection.featured_image -%}
+            <div class="media media--transparent media--hover-effect">
+              <img
+                srcset="
+                  {%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if card_collection.featured_image.width >= 330 -%}{{ card_collection.featured_image | image_url: width: 330 }} 330w,{%- endif -%}
+                  {%- if card_collection.featured_image.width >= 535 -%}{{ card_collection.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
+                  {%- if card_collection.featured_image.width >= 750 -%}{{ card_collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if card_collection.featured_image.width >= 1000 -%}{{ card_collection.featured_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                  {%- if card_collection.featured_image.width >= 1500 -%}{{ card_collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if card_collection.featured_image.width >= 3000 -%}{{ card_collection.featured_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                  {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w
+                "
+                src="{{ card_collection.featured_image | image_url: width: 1500 }}"
+                sizes="
+                  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+                  (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+                  calc(100vw - 3rem)
+                "
+                alt="{{ card_collection.featured_image.alt | escape }}"
+                height="{{ card_collection.featured_image.height }}"
+                width="{{ card_collection.featured_image.width }}"
+                loading="lazy"
+                class="motion-reduce"
+              >
+            </div>
+          {%- endif -%}
+        </div>
       </div>
-    </div>
 
-    <div class="card__content">
-      <div class="card__information">
-        <h2 class="card__heading">
-          <a
-            {% if card_collection == blank %}
-              role="link" aria-disabled="true"
-            {% else %}
-              href="{{ card_collection.url }}"
-            {% endif %}
-            class="full-unstyled-link"
-          >
-            {%- if card_collection.title != blank -%}
-              {{- card_collection.title | escape -}}
-            {%- else -%}
-              {{ 'onboarding.collection_title' | t }}
-            {%- endif -%}
-          </a>
-        </h2>
+      <div class="card__content">
+        <div class="card__information">
+          <h2 class="card__heading">
+            <span
+              {% if card_collection == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ card_collection.url }}"
+              {% endif %}
+              class="full-unstyled-link"
+            >
+              {%- if card_collection.title != blank -%}
+                {{- card_collection.title | escape -}}
+              {%- else -%}
+                {{ 'onboarding.collection_title' | t }}
+              {%- endif -%}
+            </span>
+          </h2>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
