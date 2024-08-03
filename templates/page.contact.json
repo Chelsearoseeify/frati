@@ -176,7 +176,7 @@
         "day_time_schedule_CYgBaT"
       ],
       "settings": {
-        "address_label": "{{ page.metafields.custom.address.value }}",
+        "address_label": "{{ page.metafields.custom.address_label.value }}",
         "phone_label": "{{ page.metafields.custom.phone_label.value }}",
         "monday_label": "{{ page.metafields.custom.monday_label.value }}",
         "tuesday_label": "{{ page.metafields.custom.tuesday_label.value }}",
