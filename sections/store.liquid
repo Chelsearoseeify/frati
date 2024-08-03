@@ -16,13 +16,10 @@
 
 <script>
   const queryParams = new URLSearchParams({
-    requestId: 'cd7f6740-2f2c-11ef-a586-356c126d6285',
+    requestId: '818346e0-4fd4-11ef-85b2-c36c6653257c',
   });
 
   window.sectionSettings = {{ section.settings | json }};
-
-  console.log(window.sectionSettings)
-
  
   fetch('/apps/apiease/integration/caller/call?' + queryParams)
     .then((response) => response.json())
@@ -40,7 +37,7 @@
             query: `{ node(id: "${imageId}") { ... on MediaImage { image { url}} }}`,
           });
           const queryParamsForImage = new URLSearchParams({
-            requestId: '681be2a0-2fec-11ef-8b20-07a5d38eb884',
+            requestId: 'f68ecef1-4fd4-11ef-85b2-c36c6653257c',
             queryParamsEmbedded: queryParamsEmbeddedVar,
           });
           fetch('/apps/apiease/integration/caller/call?' + queryParamsForImage)
