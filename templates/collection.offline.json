@@ -28,6 +28,8 @@
         "color_scheme": "scheme-1",
         "image_ratio": "portrait",
         "image_shape": "default",
+        "show_filter": false,
+        "see_all_label": "Vedi tutti",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
