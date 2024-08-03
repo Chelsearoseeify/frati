@@ -148,10 +148,10 @@
                     {% endif %}
                   >
                     <a
-                      href="/collections/{{ collection.title | escape }}"
+                      href="/collections/{{ collection.title | escape | downcase }}"
                       class="filter-button h4 {% if page_reference ==  collection.title %} active{% endif %}"
                     >
-                      {{- collection.title | escape | downcase -}}
+                      {{- collection.title | escape -}}
                     </a>
                   </div>
                 {%- endif -%}
