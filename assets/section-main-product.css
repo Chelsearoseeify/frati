@@ -210,7 +210,7 @@
 
 @media screen and (min-width: 750px) {
   .product__where-to-buy {
-    height: 40vh;
+  /*   height: 40vh; */
     align-items: end;
     flex-direction: row;
     row-gap: var(--grid-mobile-vertical-spacing);
@@ -256,7 +256,7 @@
 /* Product info */
 
 .product__info-container>*+* {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0 0;
 }
 
 .product__info-container iframe {
@@ -1596,6 +1596,7 @@ a.product__text {
 
 .share-section {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   gap: 6rem;
+  height: 40vh; 
 }
