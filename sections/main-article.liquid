@@ -50,7 +50,7 @@
           <div class="article-template__heading">
             <span class="article-template__heading-tag">{{ blog.tags[0] }}</span>
             <span class="article-template__heading-tag">
-              {{- article.metafields.custom.city }}, {{ article.metafields.custom.date | date: '%a, %b %d, %y' -}}
+              {{- article.metafields.custom.city }}, {{ article.created_at | date: '%A, %b %d, %Y' }}
             </span>
             <span class="article-template__heading-tag">N. {{ article.metafields.custom.identifier }}</span>
           </div>

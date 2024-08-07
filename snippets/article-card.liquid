@@ -75,7 +75,7 @@
           </div>
         {%- endif -%}
         <div class="card__content">
-          <div class="article-card__tag">{{ article.tags }}</div>
+          {% comment %}  <div class="article-card__tag">{{ article.tags }}</div> {% endcomment %}
           <div class="card__information">
             <h4 class="article-card__heading card__heading{% if show_excerpt %} h4{% endif %}">
               <a href="{{ article.url }}" class="full-unstyled-link">
