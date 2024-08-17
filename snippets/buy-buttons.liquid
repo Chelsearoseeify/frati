@@ -10,7 +10,7 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<div {{ block.shopify_attributes }} style="width: -webkit-fill-available">
+<div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
@@ -55,7 +55,10 @@
           type="hidden"
           name="id"
           value="{{ product.selected_or_first_available_variant.id }}"
-          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+          {% if product.selected_or_first_available_variant.available == false
+            or quantity_rule_soldout
+            or product.selected_or_first_available_variant == null
+          %}
             disabled
           {% endif %}
           class="product-variant-id"
@@ -80,12 +83,17 @@
             type="submit"
             name="add"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+            {% if product.selected_or_first_available_variant.available == false
+              or quantity_rule_soldout
+              or product.selected_or_first_available_variant == null
+            %}
               disabled
             {% endif %}
           >
             <span>
-              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+              {%- if product.selected_or_first_available_variant == null -%}
+                {{ 'products.product.unavailable' | t }}
+              {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
@@ -120,30 +128,29 @@
     {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
       | where: 'pick_up_enabled', true
     -%}
-    {% comment %}
-      <pickup-availability
-        class="product__pickup-availabilities no-js-hidden quick-add-hidden"
-        {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
-          available
-        {% endif %}
-        data-root-url="{{ routes.root_url }}"
-        data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-        data-has-only-default-variant="{{ product.has_only_default_variant }}"
-        data-product-page-color-scheme="gradient color-{{ section.settings.color_scheme }}"
-      >
-        <template>
-          <pickup-availability-preview class="pickup-availability-preview">
-            {% render 'icon-unavailable' %}
-            <div class="pickup-availability-info">
-              <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
-              <button class="pickup-availability-button link link--text underlined-link">
-                {{ 'products.product.pickup_availability.refresh' | t }}
-              </button>
-            </div>
-          </pickup-availability-preview>
-        </template>
-      </pickup-availability>
-    {% endcomment %}
+
+    <pickup-availability
+      class="product__pickup-availabilities quick-add-hidden"
+      {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
+        available
+      {% endif %}
+      data-root-url="{{ routes.root_url }}"
+      data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+      data-has-only-default-variant="{{ product.has_only_default_variant }}"
+      data-product-page-color-scheme="gradient color-{{ section.settings.color_scheme }}"
+    >
+      <template>
+        <pickup-availability-preview class="pickup-availability-preview">
+          {% render 'icon-unavailable' %}
+          <div class="pickup-availability-info">
+            <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+            <button class="pickup-availability-button link link--text underlined-link">
+              {{ 'products.product.pickup_availability.refresh' | t }}
+            </button>
+          </div>
+        </pickup-availability-preview>
+      </template>
+    </pickup-availability>
 
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}

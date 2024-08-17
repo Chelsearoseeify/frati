@@ -39,7 +39,7 @@
         <a
           href="{{ routes.cart_url }}"
           id="cart-notification-button"
-          class="button {% comment %} button--secondary  {% endcomment %}button--full-width"
+          class="button button--secondary button--full-width"
         >
           {{- 'general.cart.view_empty_cart' | t -}}
         </a>
@@ -53,7 +53,6 @@
     </div>
   </div>
 </cart-notification>
-
 {% style %}
   .cart-notification {
     display: none;
