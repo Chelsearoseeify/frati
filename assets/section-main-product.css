@@ -334,12 +334,26 @@ a.product__text {
     /* max-width: 60rem; */
   }
 
+  .product__info-container > *:first-child {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1727px) {
   .product__info-container .price--on-sale .price-item--regular {
     font-size: 1.6rem;
   }
+}
 
-  .product__info-container > *:first-child {
-    margin-top: 0;
+@media only screen and (min-width: 1728px) and (max-width: 1919px) {
+  .product__info-container .price--on-sale .price-item--regular {
+    font-size: 1.9rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .product__info-container .price--on-sale .price-item--regular {
+    font-size: 2.1rem;
   }
 }
 
@@ -1581,6 +1595,27 @@ a.product__text {
   line-height: 24px;
 }
 
+@media only screen and (min-width: 750px) and (max-width: 1727px) {
+  .product__details__content {
+    font-size: 1.6rem;
+    line-height: 24px;
+  }
+}
+
+@media only screen and (min-width: 1728px) and (max-width: 1919px) {
+  .product__details__content {
+    font-size: 1.9rem;
+    line-height: 28px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .product__details__content {
+    font-size: 2.1rem;
+    line-height: 32px;
+  }
+}
+
 .product__details {
   margin-top: 2.5rem;
   margin-bottom: 0;
@@ -1596,6 +1631,24 @@ a.product__text {
   font-size: 6rem;
 }
 
+@media only screen and (min-width: 750px) and (max-width: 1727px) {
+  .price__container {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1728px) and (max-width: 1919px) {
+  .price__container {
+    font-size: 7.2rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .price__container {
+    font-size: 8rem;
+  }
+}
+
 .variant-buy-section {
   display: flex;
   align-items: flex-end;
@@ -1606,4 +1659,13 @@ a.product__text {
   align-items: flex-end;
   gap: 6rem;
   height: 40vh;
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1727px) {
+}
+
+@media only screen and (min-width: 1728px) and (max-width: 1919px) {
+}
+
+@media only screen and (min-width: 1920px) {
 }
