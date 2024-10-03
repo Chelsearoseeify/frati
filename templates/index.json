@@ -24,7 +24,6 @@
         "heading_LQQMUJ"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshotfrom2024-04-1919-23-35_724b83b8-904d-46f1-9ff5-c74200b21af1.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-left",
@@ -32,9 +31,9 @@
         "desktop_content_alignment": "left",
         "color_scheme": "",
         "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
     "image_with_text_ktrLdg": {
@@ -50,7 +49,7 @@
         "text_maJ6qn": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         },
@@ -58,7 +57,7 @@
           "type": "button",
           "settings": {
             "button_label": "Cosa ci rende unici",
-            "button_link": "shopify:\/\/pages\/chi-siamo-1",
+            "button_link": "shopify://pages/chi-siamo-1",
             "button_style_secondary": false
           }
         }
@@ -69,7 +68,6 @@
         "button_eAgtiY"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshotfrom2024-04-1919-23-35_724b83b8-904d-46f1-9ff5-c74200b21af1.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -91,7 +89,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Scopri tutti i prodotti",
-            "button_link_1": "shopify:\/\/collections",
+            "button_link_1": "shopify://collections",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -103,7 +101,6 @@
         "buttons_V34zXU"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshotfrom2024-04-1919-23-35_724b83b8-904d-46f1-9ff5-c74200b21af1.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "bottom-center",
@@ -123,7 +120,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Vai al negozio online",
-            "button_link_1": "shopify:\/\/collections\/tutti-i-prodotti",
+            "button_link_1": "shopify://collections/tutti-i-prodotti",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -135,7 +132,6 @@
         "buttons_AUCaKp"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshotfrom2024-04-1919-23-35_724b83b8-904d-46f1-9ff5-c74200b21af1.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -161,7 +157,7 @@
         "text_7C9GMp": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         },
@@ -169,7 +165,7 @@
           "type": "button",
           "settings": {
             "button_label": "Scopri le nostre sedi",
-            "button_link": "shopify:\/\/pages\/contact",
+            "button_link": "shopify://pages/contact",
             "button_style_secondary": false
           }
         }
@@ -183,7 +179,6 @@
 
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshotfrom2024-04-1919-23-35_724b83b8-904d-46f1-9ff5-c74200b21af1.png",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -204,7 +199,7 @@
         ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 70%; height: 20px;}"
       ],
       "settings": {
-        "custom_liquid": "<div class=\"divider\">\n<\/div>",
+        "custom_liquid": "<div class=\"divider\">\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -234,7 +229,7 @@
           "type": "button",
           "settings": {
             "button_label": "leggi più articoli",
-            "button_link": "shopify:\/\/blogs\/la-nostra-rivista",
+            "button_link": "shopify://blogs/la-nostra-rivista",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
