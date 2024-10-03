@@ -11,11 +11,10 @@
       class="header__icon header__icon--menu header__icon--summary link focus-inset"
       aria-label="{{ 'sections.header.menu' | t }}"
     >
-      <span>
-        {% render 'icon-hamburger' %}
-        {% render 'icon-close' %}
-      </span>
+      {% render 'icon-hamburger' %}
+      {% render 'icon-close' %}
     </summary>
+
     <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">

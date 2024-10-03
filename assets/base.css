@@ -589,6 +589,24 @@ h6:empty {
   color: rgba(var(--color-foreground));
 }
 
+@media only screen and (min-width: 750px) and (max-width: 1727px) {
+  .link {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1728px) and (max-width: 1919px) {
+  .link {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .link {
+    font-size: 1.9rem;
+  }
+}
+
 .link--text {
   color: rgb(var(--color-foreground));
 }
@@ -1323,7 +1341,25 @@ button.shopify-payment-button__button--unbranded,
 .customer button,
 button.shopify-payment-button__button--unbranded {
   min-width: calc(12rem + var(--buttons-border-width) * 2);
-  min-height: calc(4.5rem + var(--buttons-border-width) * 2);
+  min-height: calc(5rem + var(--buttons-border-width) * 2);
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1727px) {
+  .button {
+    min-height: calc(6rem + var(--buttons-border-width) * 2);
+  }
+}
+
+@media only screen and (min-width: 1728px) and (max-width: 1919px) {
+  .button {
+    min-height: calc(7.2rem + var(--buttons-border-width) * 2);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .button {
+    min-height: calc(8rem + var(--buttons-border-width) * 2);
+  }
 }
 
 .shopify-payment-button__button--branded {
@@ -1436,6 +1472,27 @@ button.shopify-payment-button__button--unbranded {
   font-size: 1.6rem;
   line-height: 16px;
   text-transform: uppercase;
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1727px) {
+  .button {
+    font-size: 1.6rem;
+    line-height: 24px;
+  }
+}
+
+@media only screen and (min-width: 1728px) and (max-width: 1919px) {
+  .button {
+    font-size: 1.9rem;
+    line-height: 28px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .button {
+    font-size: 2.1rem;
+    line-height: 32px;
+  }
 }
 
 .button--tertiary {
@@ -2064,6 +2121,24 @@ input[type='checkbox'] {
   flex-grow: 1;
   -webkit-appearance: none;
   appearance: none;
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1727px) {
+  .quantity__input {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 1728px) and (max-width: 1919px) {
+  .quantity__input {
+    font-size: 1.9rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .quantity__input {
+    font-size: 2.1rem;
+  }
 }
 
 .quantity__button {
@@ -2868,10 +2943,24 @@ details[open] .modal-overlay::after {
   transition: transform 150ms ease, opacity 150ms ease;
 }
 
-@media screen and (min-width: 750px) {
+@media only screen and (min-width: 750px) and (max-width: 1727px) {
   .header__icon--menu .icon {
     left: 2.2%;
-    top: 40%;
+    top: 39%;
+  }
+}
+
+@media only screen and (min-width: 1728px) and (max-width: 1919px) {
+  .header__icon--menu .icon {
+    left: 2.2%;
+    top: 36%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .header__icon--menu .icon {
+    left: 2.2%;
+    top: 35%;
   }
 }
 
