@@ -31,11 +31,24 @@
     min-height: 20vh;
   }
 
+  @media only screen and (max-width: 750px) {
+    .collection-list__item.grid__item {
+      height: 16rem;
+    }
+  }
+
   .card__content {
     width: fit-content;
     position: absolute;
-    bottom: 10%;
+    top: 10%;
     left: 10%;
+  }
+
+  @media only screen and (min-width: 750px) {
+    .card__content {
+      bottom: 10%;
+      left: 10%;
+    }
   }
 
   .full-unstyled-link {

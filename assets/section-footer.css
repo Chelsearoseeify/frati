@@ -333,6 +333,21 @@
   margin-bottom: 2rem;
 }
 
+.footer-block__details-content.rte > .footer-block--credits {
+  display: none;
+}
+
+/* .footer-block__details-content.rte.mobile > * {
+  display: none;
+}
+.footer-block__details-content.rte.mobile > .footer-block--credits {
+  display: block;
+} */
+
+.footer-block__details-content > h4 {
+  line-height: 3.5rem;
+}
+
 @media only screen and (min-width: 750px) and (max-width: 1727px) {
   .footer-block__details-content {
     font-weight: semibold;
