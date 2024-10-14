@@ -6,6 +6,11 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  p {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -20,6 +25,7 @@
   });
 
   window.sectionSettings = {{ section.settings | json }};
+  console.log(window.sectionSettings);
  
   fetch('/apps/apiease/integration/caller/call?' + queryParams)
     .then((response) => response.json())
@@ -66,19 +72,17 @@
   function displayDayTime(day, time) {
     const sectionSettings = window.sectionSettings;
     console.log(sectionSettings[`${day}_label`])
+    console.log('uh')
 
     return ` <div
                     class="day-time-schedule"
-                    style="
-                      display: flex;
-                      gap: 2rem;
-                    "
                   >
-                    <div class="day-time-schedule__day" style="min-width: 10rem;">
+                    <p class="day-time-schedule__day" style="min-width: 10rem;">
                       ${sectionSettings[`${day}_label`]}
-                    </div>
-                    <div class="day-time-schedule__time">
+                    </p>
+                    <p class="day-time-schedule__time">
                       ${time}
+                    </p>
                     </div>`;
   }
 
@@ -138,12 +142,12 @@
             <h3 class="store__heading inline-richtext h3">${location.name}</h2>
             <h4 class="h4" style="margin: 2rem 0">${locationDescription}</h4>
             <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
-              <div style="min-width: 10rem;">${sectionSettings.address_label}</div>
-              <div class="">${address.address1}, ${address.city}, ${address.country} (${address.zip})</div>
+              <p style="min-width: 10rem;">${sectionSettings.address_label}</p>
+              <p class="">${address.address1}, ${address.city}, ${address.country} (${address.zip})</p>
             </div> 
             <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
-              <div style="min-width: 10rem;">Telefono</div>
-              <div class="">${address.phone}</div>   
+              <p style="min-width: 10rem;">${sectionSettings.phone_label}</p>
+              <p class="">${address.phone}</p>   
             </div>  
             ${metafieldsList.innerHTML}   
           <div style="display: flex; gap: 2rem; margin-top: 2rem">
