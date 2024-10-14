@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -48,21 +48,21 @@
           "type": "button",
           "settings": {
             "button_label": "Vedi tutti",
-            "button_link": "shopify:\/\/collections\/tutti-i-prodotti"
+            "button_link": "shopify://collections/tutti-i-prodotti"
           }
         },
         "button_dcjfeg": {
           "type": "button",
           "settings": {
             "button_label": "Torrone",
-            "button_link": "shopify:\/\/collections\/torrone"
+            "button_link": "shopify://collections/torrone"
           }
         },
         "button_8WazM3": {
           "type": "button",
           "settings": {
             "button_label": "Colombe",
-            "button_link": "shopify:\/\/collections\/colombe"
+            "button_link": "shopify://collections/colombe"
           }
         }
       },
@@ -77,6 +77,8 @@
         "color_scheme": "scheme-1",
         "image_ratio": "portrait",
         "image_shape": "default",
+        "show_filter": true,
+        "see_all_label": "Vedi tutti",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
@@ -86,7 +88,7 @@
         "enable_filtering": false,
         "filter_type": "drawer",
         "enable_sorting": false,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "padding_top": 0,
         "padding_bottom": 36
       }
