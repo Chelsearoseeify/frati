@@ -1,22 +1,68 @@
 {{ 'component-store.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  p {
-    font-size: 1.6rem;
-    margin: 0;
-  }
-
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    iframe {
+      width: 100vw;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+
+      margin: 0;
+    }
+
+    @media only screen and (min-width: 750px) and (max-width: 1727px) {
+    p {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+
+     iframe {
+      width: 35vw;
+      height: 30vw;
+    }
+
+  }
+
+  @media only screen and (min-width: 1728px) and (max-width: 1919px) {
+    p {
+      font-size: 1.9rem;
+      line-height: 2.8rem;
+    }
+     iframe {
+      width: 35vw;
+      height: 30vw;
     }
   }
+
+  @media only screen and (min-width: 1920px) {
+    p {
+      font-size: 2.1rem;
+      line-height: 3.2rem;
+    }
+     iframe {
+      width: 35vw;
+      height: 30vw;
+    }
+  }
+
+    .day-time-schedule {
+      display: flex;
+      gap: 2rem;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
 {%- endstyle -%}
 
 <script>
@@ -25,7 +71,6 @@
   });
 
   window.sectionSettings = {{ section.settings | json }};
-  console.log(window.sectionSettings);
  
   fetch('/apps/apiease/integration/caller/call?' + queryParams)
     .then((response) => response.json())
@@ -71,8 +116,6 @@
 
   function displayDayTime(day, time) {
     const sectionSettings = window.sectionSettings;
-    console.log(sectionSettings[`${day}_label`])
-    console.log('uh')
 
     return ` <div
                     class="day-time-schedule"
@@ -122,7 +165,6 @@
           metafieldsList.appendChild(metafieldItem);
         }
       });
-      console.log(address);
       const longitude = '9.162771150000001';
       const latitude = '45.5076664';
 

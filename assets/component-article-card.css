@@ -20,7 +20,17 @@
 .article-card {
   padding: 1rem 0;
   border-top: 1px solid rgb(var(--color-foreground));
+}
+
+/* .article-card:last-of-type {
   border-bottom: 1px solid rgb(var(--color-foreground));
+} */
+
+@media only screen and (min-width: 834px) {
+  .article-card {
+    border-top: 1px solid rgb(var(--color-foreground));
+    border-bottom: 1px solid rgb(var(--color-foreground));
+  }
 }
 
 .article-card__image-wrapper > a {
