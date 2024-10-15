@@ -136,26 +136,30 @@
                 >
                   {{ section.settings.see_all_label }}
                 </a>
+                <button class="expand-button ">
+                  {% if page_reference == section.settings.see_all_label %} + {% endif %}
+                </button>
               </div>
-              {%- for collection in collections -%}
-                {% if collection.tags contains 'Online Store' and collection.title != 'Tutti i prodotti' %}
-                  <div
-                    class="collections-list__buttons {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-
-                    {% if settings.animations_reveal_on_scroll %}
-                      data-cascade
-                      style="--animation-order: {{ forloop.index }};"
-                    {% endif %}
-                  >
-                    <a
-                      href="/collections/{{ collection.title | escape | downcase }}"
-                      class="filter-button h4 {% if page_reference ==  collection.title %} active{% endif %}"
+              <div class="filter-buttons-container">
+                {%- for collection in collections -%}
+                  {% if collection.tags contains 'Online Store' and collection.title != 'Tutti i prodotti' %}
+                    <div
+                      class="collections-list__buttons {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
                     >
-                      {{- collection.title | escape -}}
-                    </a>
-                  </div>
-                {%- endif -%}
-              {%- endfor -%}
+                      <a
+                        href="/collections/{{ collection.title | escape | downcase }}"
+                        class="filter-button h4 {% if page_reference ==  collection.title %} active{% endif %}"
+                      >
+                        {{- collection.title | escape -}}
+                      </a>
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
             </div>
           </div>
         {%- endif -%}
@@ -269,6 +273,21 @@
     {% render 'mask-arch' %}
   {%- endif -%}
 </div>
+
+<script>
+  let expandButton = document.getElementsByClassName('expand-button')[0];
+  expandButton.addEventListener('click', () => {
+    let collectionsList = document.getElementsByClassName('filter-buttons-container')[0];
+    if (collectionsList) {
+      collectionsList.classList.toggle('visible');
+    }
+    if (collectionsList.classList.contains('visible')) {
+      console.log('visible');
+      expandButton.innerHTML = '-';
+    } else expandButton.innerHTML = '+';
+    console.log(collectionsList);
+  });
+</script>
 
 {% schema %}
 {
