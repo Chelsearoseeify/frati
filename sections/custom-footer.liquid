@@ -214,6 +214,24 @@
                 {%- if section.settings.show_social and has_social_icons -%}
                   {%- render 'social-icons', class: 'footer__list-social' -%}
                 {%- endif -%}
+                <div class="footer-block__link-list">
+                  <ul class="footer-block__details-content list-unstyled">
+                    <li>
+                      <span class="link link--text list-menu__item list-menu__item--link"
+                        >Design: Alessandro Pigoni</span
+                      >
+                    </li>
+                    <li>
+                      <span class="link link--text list-menu__item list-menu__item--link"
+                        >Copywriting: Lisa Pelagatti</span
+                      >
+                    </li>
+                    <li>
+                      <span class="link link--text list-menu__item list-menu__item--link">Coding: Selene Malosso</span>
+                    </li>
+                  </ul>
+                </div>
+
                 <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
                   {%- if settings.logo != blank -%}
                     <div class="header__heading-logo-wrapper">
