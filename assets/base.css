@@ -2934,33 +2934,17 @@ details[open] .modal-overlay::after {
 
 /* Header menu drawer */
 .header__icon--menu .icon {
-  display: block;
   position: absolute;
-  left: 32px;
-  top: 37%;
+  left: 3rem;
+  top: 40%;
   opacity: 1;
   transform: scale(1);
   transition: transform 150ms ease, opacity 150ms ease;
 }
 
-@media only screen and (min-width: 750px) and (max-width: 1727px) {
+@media only screen and (min-width: 750px) {
   .header__icon--menu .icon {
-    left: 2.2%;
-    top: 39%;
-  }
-}
-
-@media only screen and (min-width: 1728px) and (max-width: 1919px) {
-  .header__icon--menu .icon {
-    left: 2.2%;
-    top: 36%;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  .header__icon--menu .icon {
-    left: 2.2%;
-    top: 35%;
+    left: 3.2rem;
   }
 }
 
@@ -2968,7 +2952,6 @@ details:not([open]) > .header__icon--menu .icon-close,
 details[open] > .header__icon--menu .icon-hamburger {
   visibility: hidden;
   opacity: 0;
-  transform: scale(0.8);
 }
 
 .js details[open]:not(.menu-opening) > .header__icon--menu .icon-close {
