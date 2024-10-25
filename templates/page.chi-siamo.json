@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner_kznGTb": {
@@ -42,7 +42,7 @@
         "text_CkzpJH": {
           "type": "text",
           "settings": {
-            "text": "<h3>Esistiamo per coronare il vostro quotidiano<br\/>con semplicità, genuina e raffinata.<br\/>Con una bontà che si esprime attraverso<br\/>il gusto.<\/h3>",
+            "text": "<h3>Esistiamo per coronare il vostro quotidiano<br/>con semplicità, genuina e raffinata.<br/>Con una bontà che si esprime attraverso<br/>il gusto.</h3>",
             "desktop_content_alignment": "center"
           }
         }
@@ -104,7 +104,7 @@
           "settings": {
             "caption": "",
             "heading": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -114,7 +114,7 @@
           "settings": {
             "caption": "",
             "heading": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -124,7 +124,7 @@
           "settings": {
             "caption": "",
             "heading": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -187,7 +187,7 @@
         "text_b8NTU4": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         }
@@ -200,7 +200,7 @@
 
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Rectangle_29.png",
+        "image": "shopify://shop_images/Rectangle_29.png",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -221,14 +221,14 @@
         "heading_K6UXYn": {
           "type": "heading",
           "settings": {
-            "heading": "1947",
+            "heading": "1952",
             "heading_size": "h0"
           }
         },
         "text_zAtKdJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         }
@@ -241,7 +241,7 @@
 
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Rectangle_29.png",
+        "image": "shopify://shop_images/Rectangle_29.png",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -262,14 +262,14 @@
         "heading_xCXbXz": {
           "type": "heading",
           "settings": {
-            "heading": "1947",
+            "heading": "1962",
             "heading_size": "h0"
           }
         },
         "text_UFe3xU": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         }
@@ -282,7 +282,7 @@
 
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Rectangle_29.png",
+        "image": "shopify://shop_images/Rectangle_29.png",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
