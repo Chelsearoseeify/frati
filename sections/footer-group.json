@@ -115,6 +115,9 @@
         "link_list_TgyXbh",
         "link_list_6FfTmf"
       ],
+      "custom_css": [
+        "h4 {margin: 0;}"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": false,
