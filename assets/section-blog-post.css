@@ -259,5 +259,11 @@
 .share-section {
   display: flex;
   align-items: baseline;
-  gap: 6rem;
+  gap: 3rem;
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1727px) {
+  .share-section {
+    gap: 6rem;
+  }
 }

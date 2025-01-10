@@ -76,14 +76,14 @@
           "type": "text",
           "settings": {
             "heading": "",
-            "subtext": "<h4>Copyright © 2024 Frati Parma 1947. All rights are reserved.</h4>"
+            "subtext": "<h4>Copyright © 2024 Frati Parma 1947.</h4><h4>All rights are reserved.</h4>"
           }
         },
         "text_CxmBxB": {
           "type": "text",
           "settings": {
             "heading": "",
-            "subtext": "<h4>Via Raffaello Sanzio 11, 43124 Parma.P.IVA: IT02913340341</h4>"
+            "subtext": "<h4>Via Calestano 68, 43035 Felino (PR).</h4><h4>P.IVA: 03094920349</h4>"
           }
         },
         "text_mbrRiP": {
