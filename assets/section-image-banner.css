@@ -441,6 +441,12 @@
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 1728px) {
+  .banner__heading {
+    min-width: 120rem;
+  }
+}
+
 .banner__box .banner__heading + * {
   margin-top: 1rem;
 }
