@@ -46,8 +46,16 @@
 .collection-hero__title {
   margin: 2.5rem 0;
   position: absolute;
-  bottom: 2%;
-  left: 2%;
+
+  bottom: 7%;
+  left: 5%;
+}
+
+@media screen and (min-width: 750px) {
+  .collection-hero__title {
+    bottom: 2%;
+    left: 2%;
+  }
 }
 
 .collection-hero__title + .collection-hero__description {
@@ -90,7 +98,7 @@
 
 @media screen and (max-width: 749px) {
   .collection-hero__image-container {
-    height: 20rem;
+    height: 45vh;
   }
 }
 

@@ -508,6 +508,12 @@ a.product__text {
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
 
+@media screen and (max-width: 750px) {
+  .product__media-list {
+    min-height: 45rem;
+  }
+}
+
 @media screen and (max-width: 749px) {
   .product__media-list {
     margin-left: -2.5rem;
@@ -1635,17 +1641,18 @@ a.product__text {
 
 .product__details__heading {
   width: 10rem !important;
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
 }
 
 .product__details__content {
-  margin-top: 1.5rem;
+  margin-top: 0rem;
   font-size: 1.6rem;
   line-height: 24px;
 }
 
 @media only screen and (min-width: 750px) and (max-width: 1727px) {
   .product__details__content {
+    margin-top: 1.5rem;
     font-size: 1.6rem;
     line-height: 24px;
   }
@@ -1653,6 +1660,7 @@ a.product__text {
 
 @media only screen and (min-width: 1728px) and (max-width: 1919px) {
   .product__details__content {
+    margin-top: 1.5rem;
     font-size: 1.9rem;
     line-height: 28px;
   }
@@ -1660,6 +1668,7 @@ a.product__text {
 
 @media only screen and (min-width: 1920px) {
   .product__details__content {
+    margin-top: 1.5rem;
     font-size: 2.1rem;
     line-height: 32px;
   }

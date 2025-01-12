@@ -3765,3 +3765,8 @@ details-disclosure > details {
 .page-first-section {
   padding-top: 11rem;
 }
+
+.main-blog {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
