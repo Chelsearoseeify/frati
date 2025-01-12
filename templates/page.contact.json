@@ -352,6 +352,18 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
+    },
+    "custom_liquid_GdQGyi": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 96%; height: 20px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"divider\"/>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -361,6 +373,7 @@
     "store",
     "store_tDdgDF",
     "rich_text_mrWJwQ",
-    "image_banner_jTMPFA"
+    "image_banner_jTMPFA",
+    "custom_liquid_GdQGyi"
   ]
 }
