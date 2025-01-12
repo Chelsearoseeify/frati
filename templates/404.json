@@ -49,8 +49,9 @@
         "button_yqpAnC"
       ],
       "custom_css": [
-        ".rich-text__blocks {width: 70%;}",
-        ".rich-text__blocks > .rich-text__buttons {margin-top: 12rem;}"
+        ".rich-text__blocks {width: 100%;}",
+        ".rich-text__blocks > .rich-text__buttons {margin-top: 12rem;}",
+        "@media screen and (min-width: 750px) {.rich-text__blocks {width: 70%;}}"
       ],
       "settings": {
         "desktop_content_position": "center",
