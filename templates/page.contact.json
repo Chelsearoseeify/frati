@@ -327,7 +327,7 @@
         "text_3GYKA3"
       ],
       "custom_css": [
-        ".rich-text__wrapper {margin: 0; width: 100%;}"
+        ".rich-text__wrapper {margin: 0}"
       ],
       "settings": {
         "desktop_content_position": "left",
