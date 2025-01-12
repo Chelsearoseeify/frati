@@ -352,6 +352,9 @@
     },
     "image_banner_jTMPFA": {
       "type": "image-banner",
+      "custom_css": [
+        ".banner__media {margin: 2rem 2rem;}"
+      ],
       "settings": {
         "image_overlay_opacity": 0,
         "image_height": "medium",
