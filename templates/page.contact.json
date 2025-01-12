@@ -353,7 +353,7 @@
     "image_banner_jTMPFA": {
       "type": "image-banner",
       "custom_css": [
-        ".banner__media {margin: 2rem 2rem;}"
+        ".banner__media {margin: 2rem 2rem; margin-bottom: 10rem;}"
       ],
       "settings": {
         "image_overlay_opacity": 0,
