@@ -32,6 +32,9 @@
       "block_order": [
         "heading_RxK3EV"
       ],
+      "custom_css": [
+        ".rich-text__wrapper {margin: 0;}"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
