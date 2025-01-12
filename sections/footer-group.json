@@ -14,7 +14,7 @@
     "custom_liquid_jhbRb7": {
       "type": "custom-liquid",
       "custom_css": [
-        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 96%; height: 20px; margin-top: 10rem;}"
+        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 96%; height: 10px; margin-top: 5rem;}"
       ],
       "settings": {
         "custom_liquid": "<div class=\"divider\">\n</div>",
