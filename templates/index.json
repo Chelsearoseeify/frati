@@ -177,9 +177,7 @@
         "text_7C9GMp",
         "button_aJTmTN"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "height": "large",
         "desktop_image_width": "medium",
@@ -198,7 +196,8 @@
     "custom_liquid_PXwyTz": {
       "type": "custom-liquid",
       "custom_css": [
-        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 70%; height: 20px;}"
+        ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 90%; height: 20px;}",
+        "@media screen and (min-width: 750px) {.divider {margin: auto; width: 70%; }}"
       ],
       "settings": {
         "custom_liquid": "<div class=\"divider\">\n</div>",
