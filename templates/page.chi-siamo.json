@@ -447,6 +447,9 @@
     },
     "image_banner_DPL6CX": {
       "type": "image-banner",
+      "custom_css": [
+        ".banner:not(.banner--stacked) {margin: 3rem 1rem; }"
+      ],
       "settings": {
         "image_overlay_opacity": 0,
         "image_height": "medium",
