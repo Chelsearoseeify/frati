@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -23,7 +23,7 @@
           "type": "column",
           "settings": {
             "title": "Per info generiche:",
-            "text": "<h4>info@fratiparma1947.it<\/h4>",
+            "text": "<h4>info@fratiparma1947.it</h4>",
             "link_label": "",
             "link": ""
           }
@@ -32,7 +32,7 @@
           "type": "column",
           "settings": {
             "title": "Per ordini speciali:",
-            "text": "<h4>ordini@fratiparma1947.it<\/h4>",
+            "text": "<h4>ordini@fratiparma1947.it</h4>",
             "link_label": "",
             "link": ""
           }
@@ -317,7 +317,7 @@
         "text_3GYKA3": {
           "type": "text",
           "settings": {
-            "text": "<h4>amministrazione@fratiparma947.it<\/h4>",
+            "text": "<h4>amministrazione@fratiparma947.it</h4>",
             "desktop_content_alignment": "left"
           }
         }
@@ -325,6 +325,9 @@
       "block_order": [
         "heading_KLnUtQ",
         "text_3GYKA3"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {margin: 0; width: 100%;}"
       ],
       "settings": {
         "desktop_content_position": "left",
