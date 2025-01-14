@@ -10,6 +10,7 @@
         {%- when 'heading' -%}
           <h2
             class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
@@ -21,6 +22,7 @@
         {%- when 'text' -%}
           <div
             class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} rich-text__text__content--desktop-{{ block.settings.desktop_content_alignment }}"
+            style="margin: auto; width: 70%;"
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
@@ -31,6 +33,22 @@
           </div>
       {%- endcase -%}
     {%- endfor -%}
+    <div class="image_container">
+      {%- if section.settings.image_1 != blank -%}
+        <div class="footer-slogan__image image-1">
+          {{ section.settings.image_1 }}
+        </div>
+      {%- else -%}
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+      {%- if section.settings.image_2 != blank -%}
+        <div class="footer-slogan__image image-2">
+          {{ section.settings.image_2 }}
+        </div>
+      {%- else -%}
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
   </div>
 </div>
 
@@ -42,12 +60,12 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "first_image",
+      "id": "image_1",
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
       "type": "image_picker",
-      "id": "second_image",
+      "id": "image_2",
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
