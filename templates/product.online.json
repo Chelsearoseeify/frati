@@ -170,6 +170,8 @@
         "text_dkNqTV"
       ],
       "settings": {
+        "first_image": "{{ product.metafields.custom.materia_viva_image_1.value }}",
+        "second_image": "{{ product.metafields.custom.materia_viva_image_2.value }}",
         "layout": "image_first",
         "desktop_content_position": "top",
         "content_layout": "no-overlap",
