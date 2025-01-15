@@ -1,13 +1,15 @@
 .image_container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 2rem;
   padding-top: 6rem;
+  margin-bottom: 4rem;
 }
 
-.image_container > svg {
+.image_container img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 749px) {
