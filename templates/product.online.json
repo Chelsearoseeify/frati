@@ -151,8 +151,8 @@
         "text_dkNqTV"
       ],
       "settings": {
-        "image_1": "shopify://shop_images/BiancoeCaffe-3.webp",
-        "image_2": "shopify://shop_images/PistacchioeCherry-1.webp",
+        "image_1": "{{ product.metafields.custom.materia_viva_image_1.value }}",
+        "image_2": "{{ product.metafields.custom.materia_viva_image_2.value }}",
         "layout": "image_first",
         "desktop_content_position": "top",
         "content_layout": "no-overlap",
