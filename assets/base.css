@@ -1235,6 +1235,12 @@ summary::-webkit-details-marker {
   }
 }
 
+@media screen and (min-width: 834px) and (max-width: 1197px) {
+  .grid--2-col-tablet .grid__item {
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+  }
+}
+
 /* component-media */
 .media {
   display: block;
