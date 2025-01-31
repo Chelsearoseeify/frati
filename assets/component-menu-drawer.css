@@ -132,7 +132,13 @@ details[open].menu-opening > .menu-drawer__submenu {
   /* opacity: 0.2; */
 }
 
-@media only screen and (min-width: 750px) and (max-width: 1727px) {
+@media only screen and (min-width: 750px) and (max-width: 1194px) {
+  .menu-drawer__menu-item {
+    font-size: calc(var(--font-heading-scale) * 10rem);
+  }
+}
+
+@media only screen and (min-width: 1195px) and (max-width: 1727px) {
   .menu-drawer__menu-item {
     font-size: calc(var(--font-heading-scale) * 14rem);
   }

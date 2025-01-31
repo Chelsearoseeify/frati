@@ -340,7 +340,51 @@ blockquote {
   line-height: calc(1 + 0.7 / var(--font-body-scale));
 }
 
-@media only screen and (min-width: 750px) and (max-width: 1727px) {
+@media only screen and (min-width: 834px) and (max-width: 1194px) {
+  .hxl {
+    font-size: calc(var(--font-heading-scale) * 6.2rem);
+  }
+
+  .h0 {
+    font-size: calc(var(--font-heading-scale) * 13rem);
+    letter-spacing: -6px;
+  }
+
+  h1,
+  .h1 {
+    font-size: calc(var(--font-heading-scale) * 10rem);
+  }
+
+  h2,
+  .h2 {
+    font-size: calc(var(--font-heading-scale) * 7.2rem);
+  }
+
+  h3,
+  .h3 {
+    font-size: calc(var(--font-heading-scale) * 5rem);
+  }
+
+  h4,
+  .h4 {
+    font-size: calc(var(--font-heading-scale) * 3.2rem);
+  }
+
+  h5,
+  .h5 {
+    font-size: calc(var(--font-heading-scale) * 1.3rem);
+  }
+
+  blockquote {
+    padding-left: 1.5rem;
+  }
+
+  .caption {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1195px) and (max-width: 1727px) {
   .hxl {
     font-size: calc(var(--font-heading-scale) * 6.2rem);
   }
@@ -588,8 +632,12 @@ h6:empty {
   text-transform: uppercase;
   color: rgba(var(--color-foreground));
 }
+@media only screen and (min-width: 834px) and (max-width: 1194px) {
+       .link {
+    font-size: 1.6rem;
+  }
 
-@media only screen and (min-width: 750px) and (max-width: 1727px) {
+@media only screen and (min-width: 1195px) and (max-width: 1727px) {
   .link {
     font-size: 1.4rem;
   }
@@ -1354,7 +1402,7 @@ button.shopify-payment-button__button--unbranded {
   min-height: calc(5rem + var(--buttons-border-width) * 2);
 }
 
-@media only screen and (min-width: 750px) and (max-width: 1727px) {
+@media only screen and (min-width: 1195px) and (max-width: 1727px) {
   .button {
     min-height: calc(6rem + var(--buttons-border-width) * 2);
   }
@@ -1484,7 +1532,7 @@ button.shopify-payment-button__button--unbranded {
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 750px) and (max-width: 1727px) {
+@media only screen and (min-width: 1195px) and (max-width: 1727px) {
   .button {
     font-size: 1.6rem;
     line-height: 24px;
@@ -2133,7 +2181,7 @@ input[type='checkbox'] {
   appearance: none;
 }
 
-@media only screen and (min-width: 750px) and (max-width: 1727px) {
+@media only screen and (min-width: 1195px) and (max-width: 1727px) {
   .quantity__input {
     font-size: 1.6rem;
   }
