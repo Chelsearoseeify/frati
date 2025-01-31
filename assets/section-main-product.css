@@ -1736,7 +1736,11 @@ a.product__text {
   gap: 3rem;
 }
 
-@media only screen and (min-width: 750px) and (max-width: 1727px) {
+/* @media screen and (min-width: 834px) and (max-width: 1197px) {
+
+} */
+
+@media only screen and (min-width: 1198px) and (max-width: 1727px) {
   .share-section {
     height: 40vh;
     flex-direction: row;
