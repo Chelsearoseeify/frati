@@ -106,7 +106,7 @@
           "settings": {
             "caption": "",
             "heading": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Crediamo nel lavoro di bottega, che segue un’economia di prossimità e riporta al centro del commercio il ruolo e la sapienza dell’artigiano. Mani sincere danno forma a ogni nostro prodotto.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -116,7 +116,7 @@
           "settings": {
             "caption": "",
             "heading": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Siamo le nostre azioni. Scegliamo con cura le materie prime, rispettando la stagionalità degli ingredienti, privilegiando processi produttivi sostenibili e riducendo al minimo gli sprechi alimentari. </p>",
             "button_label": "",
             "button_link": ""
           }
@@ -126,7 +126,7 @@
           "settings": {
             "caption": "",
             "heading": "",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Il nostro impegno inizia dai sapori genuini della terra e segue metodi di lavorazione accurati. Non è per forza buono ciò che è bello, ma è buono ciò che è fatto bene. Questa è la filosofia che guida il nostro laboratorio.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -189,8 +189,8 @@
         "text_b8NTU4": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
+            "text": "<h6>Lo stesso anno in cui l’Italia si rialza dalla guerra, a Parma il dodicenne Franco Frati inizia a infarinarsi le mani con quella che diventerà la sua passione di tutta una vita. A soli 14 anni, Franco è già un fornaio esperto, formato dal maestro Gino Fontechiari all'Antico Panificio Via Mantova, e dal passaggio al Panificio Conforti. Le sue doti conquistano anche Otello Ferrari, un altro grande maestro panificatore, che lo prende sotto la sua ala e gli affida la guida dell’intera produzione.</h6>",
+            "text_style": "subtitle"
           }
         }
       },
