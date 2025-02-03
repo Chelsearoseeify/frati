@@ -106,7 +106,7 @@
           "settings": {
             "caption": "",
             "heading": "",
-            "text": "<p>Crediamo nel lavoro di bottega, che segue un’economia di prossimità e riporta al centro del commercio il ruolo e la sapienza dell’artigiano. </p><p>Mani sincere danno forma a ogni nostro prodotto.</p>",
+            "text": "<p>Crediamo nel lavoro di bottega, che segue un’economia di prossimità e riporta al centro del commercio il ruolo e la sapienza dell’artigiano. <br/>Mani sincere danno forma a ogni nostro prodotto.</p>",
             "button_label": "",
             "button_link": ""
           }
