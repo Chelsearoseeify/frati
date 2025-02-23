@@ -1,3 +1,7 @@
+.product-origin {
+  min-height: 5rem;
+}
+
 .image_container {
   display: flex;
   justify-content: center;
@@ -8,6 +12,11 @@
 }
 
 .image_container img {
+  width: 100%;
+  height: auto;
+}
+
+.image_container svg {
   width: 100%;
   height: auto;
 }

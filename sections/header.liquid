@@ -116,13 +116,23 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 1439px) {
 
 
     .list-menu__item {
       justify-content:center;
     }
 
+    .list-menu__item--link {
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+  }
+
+   @media screen and (min-width: 834px) {
+    .list-menu__item {
+      justify-content: flex-start;
+    }
     .list-menu__item--link {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;

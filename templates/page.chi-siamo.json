@@ -54,8 +54,8 @@
         "text_CkzpJH"
       ],
       "custom_css": [
-        ".rich-text__text {height: 60vh; justify-content: center; display: flex; align-items: center;}",
-        "@media screen and (min-width: 750px) {.rich-text__text {height: 90vh; }}"
+        ".rich-text__text {height: 50vh; justify-content: center; display: flex; align-items: center;}",
+        "@media screen and (min-width: 750px) and (orientation: landscape) {.rich-text__text {height: 90vh; }}"
       ],
       "settings": {
         "desktop_content_position": "left",
