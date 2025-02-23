@@ -121,6 +121,11 @@
   }
 }
 
+@media screen and (min-width: 834px) and (orientation: portrait) {
+  .footer-block:first-of-type {
+    padding-right: 10rem;
+  }
+}
 .footer-block:empty {
   display: none;
 }

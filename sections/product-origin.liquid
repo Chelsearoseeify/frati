@@ -3,39 +3,68 @@
 {%- style -%}
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
-  <div id="origin-container" class="rich-text__blocks {{ section.settings.content_alignment }} page-width">
-    {%- for block in section.blocks -%}
-      {%- case block.type -%}
-        {%- when 'heading' -%}
-          <h2
-            class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+{%- assign has_text_block = false -%}
 
-            {{ block.shopify_attributes }}
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
-              style="--animation-order: {{ forloop.index }};"
-            {% endif %}
-          >
-            {{ block.settings.heading }}
-          </h2>
-        {%- when 'text' -%}
-          <div
-            class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} rich-text__text__content--desktop-{{ block.settings.desktop_content_alignment }}"
-            style="margin: auto; width: 70%;"
-            {{ block.shopify_attributes }}
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
-              style="--animation-order: {{ forloop.index }};"
-            {% endif %}
-          >
-            {{ block.settings.text }}
-          </div>
-      {%- endcase -%}
-    {%- endfor -%}
-    <div class="image_container">
-      {%- if section.settings.image_1 != blank -%}
-        {%- capture sizes -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'text' and block.settings.text != blank -%}
+    {%- assign has_text_block = true -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+  {%- if has_text_block -%}
+    <div id="origin-container" class="rich-text__blocks {{ section.settings.content_alignment }} page-width">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h2
+              class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+
+              {{ block.shopify_attributes }}
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {{ block.settings.heading }}
+            </h2>
+          {%- when 'text' -%}
+            <div
+              class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} rich-text__text__content--desktop-{{ block.settings.desktop_content_alignment }}"
+              style="margin: auto; width: 70%;"
+              {{ block.shopify_attributes }}
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {{ block.settings.text }}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+      <div class="image_container">
+        {%- if section.settings.image_1 != blank -%}
+          {%- capture sizes -%}
+          (min-width: {{ settings.page_width }}px)
+          {% if section.blocks.size == 1 -%}
+            calc({{ settings.page_width }}px - 100px)
+          {%- else -%}
+            {{- settings.page_width | minus: 100 | times: 0.67 | round }}px
+          {%- endif -%}
+          , (min-width: 750px)
+          {%- if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif -%}
+          , calc(100vw - 30px)
+        {%- endcapture -%}
+          {{
+            section.settings.image_1
+            | image_url: width: 900
+            | image_tag: sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000'
+          }}
+        {%- else -%}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+        {%- if section.settings.image_2 != blank -%}
+          {%- capture sizes -%}
                             (min-width: {{ settings.page_width }}px)
                             {% if section.blocks.size == 1 -%}
                               calc({{ settings.page_width }}px - 100px)
@@ -46,36 +75,17 @@
                             {%- if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif -%}
                             , calc(100vw - 30px)
                           {%- endcapture -%}
-        {{
-          section.settings.image_1
-          | image_url: width: 900
-          | image_tag: sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000'
-        }}
-      {%- else -%}
-        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
-      {%- if section.settings.image_2 != blank -%}
-        {%- capture sizes -%}
-                            (min-width: {{ settings.page_width }}px)
-                            {% if section.blocks.size == 1 -%}
-                              calc({{ settings.page_width }}px - 100px)
-                            {%- else -%}
-                              {{- settings.page_width | minus: 100 | times: 0.67 | round }}px
-                            {%- endif -%}
-                            , (min-width: 750px)
-                            {%- if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif -%}
-                            , calc(100vw - 30px)
-                          {%- endcapture -%}
-        {{
-          section.settings.image_2
-          | image_url: width: 900
-          | image_tag: sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000'
-        }}
-      {%- else -%}
-        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
+          {{
+            section.settings.image_2
+            | image_url: width: 900
+            | image_tag: sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000'
+          }}
+        {%- else -%}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+      </div>
     </div>
-  </div>
+  {%- endif -%}
 </div>
 
 {% schema %}

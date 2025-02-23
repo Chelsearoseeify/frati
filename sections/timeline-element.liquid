@@ -32,26 +32,28 @@
           id="TimelineElement--{{ section.id }}"
           class="timeline-element__content timeline-element__content--{{ section.settings.desktop_content_position }} timeline-element__content--desktop-{{ section.settings.desktop_content_alignment }} timeline-element__content--mobile-{{ section.settings.mobile_content_alignment }} timeline-element__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
         >
-          {%- for block in section.blocks -%}
-            {% case block.type %}
-              {%- when 'heading' -%}
-                <div class="timeline-element__heading-container">
-                  <h2
-                    class="timeline-element__heading inline-richtext {{ block.settings.heading_size }}"
+          <div class="timeline-element__text-container">
+            {%- for block in section.blocks -%}
+              {% case block.type %}
+                {%- when 'heading' -%}
+                  <div class="timeline-element__heading-container">
+                    <h2
+                      class="timeline-element__heading inline-richtext {{ block.settings.heading_size }}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.heading }}
+                    </h2>
+                  </div>
+                {%- when 'text' -%}
+                  <div
+                    class="timeline-element__text rte {{ block.settings.text_style }}"
                     {{ block.shopify_attributes }}
                   >
-                    {{ block.settings.heading }}
-                  </h2>
-                </div>
-              {%- when 'text' -%}
-                <div
-                  class="timeline-element__text rte {{ block.settings.text_style }}"
-                  {{ block.shopify_attributes }}
-                >
-                  {{ block.settings.text }}
-                </div>
-            {%- endcase -%}
-          {%- endfor -%}
+                    {{ block.settings.text }}
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
           <div class="timeline-element__media-item">
             <div
               class="timeline-element__media timeline-element__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} timeline-element__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"

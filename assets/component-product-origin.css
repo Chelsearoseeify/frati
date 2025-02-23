@@ -1,3 +1,7 @@
+.product-origin {
+  min-height: 5rem;
+}
+
 .image_container {
   display: flex;
   justify-content: center;
@@ -10,6 +14,21 @@
 .image_container img {
   width: 100%;
   height: auto;
+}
+
+.image_container svg {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 834px) and (max-width: 1197px) {
+  .image_container {
+    height: 35rem;
+  }
+
+  .image_container svg {
+    height: 100%;
+  }
 }
 
 @media screen and (min-width: 749px) {
