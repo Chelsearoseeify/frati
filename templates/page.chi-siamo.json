@@ -293,6 +293,44 @@
         "padding_bottom": 52
       }
     },
+    "timeline_element_inU8Eq": {
+      "type": "timeline-element",
+      "blocks": {
+        "heading_FVqWqC": {
+          "type": "heading",
+          "settings": {
+            "heading": "1988",
+            "heading_size": "h0"
+          }
+        },
+        "text_rXyq89": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Con il tempo, i figli di Franco, cresciuti in panificio tra sacchi di farina e forni accesi, iniziano ad affiancarlo nel lavoro. Sarebbero anni di spensieratezza e ore piccole, a cui Fausto, il più giovane, si sottrae per seguire i ritmi del mestiere. Ed è con lui che nasce la “pizza del venerdì notte” da Frati: un appuntamento fisso per i tanti amici appena usciti dalla discoteca che passavano a trovarlo. Fausto impasta e sforna senza sosta, sfamando un’intera generazione, che ancora oggi ricorda il profumo di quella pizza fumante.</h6>",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FVqWqC",
+        "text_rXyq89"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/2293_001-2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "timeline_element_piq7VA": {
       "type": "timeline-element",
       "blocks": {
@@ -474,6 +512,7 @@
     "timeline_element_QdzzbY",
     "timeline_element_4KmXEP",
     "timeline_element_q3GpdA",
+    "timeline_element_inU8Eq",
     "timeline_element_piq7VA",
     "timeline_element_GcxJij",
     "timeline_element_tYBnmp",
