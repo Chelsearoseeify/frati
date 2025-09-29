@@ -179,6 +179,7 @@
       ],
       "custom_css": [],
       "settings": {
+        "image": "shopify://shop_images/Frati_Website_Homepage_Sedi.webp",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "text_first",
