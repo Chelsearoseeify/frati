@@ -135,7 +135,7 @@
       "settings": {
         "image": "shopify://shop_images/Frati_Website_Homepage_Negozio_Online.webp",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
