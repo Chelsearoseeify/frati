@@ -105,6 +105,7 @@
         "row_yxBnjc": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/Frati_Website_Chi_Siamo_Mani.webp",
             "caption": "",
             "heading": "",
             "text": "<p>Crediamo nel lavoro di bottega, che segue un’economia di prossimità e riporta al centro del commercio il ruolo e la sapienza dell’artigiano. <br/>Mani sincere danno forma a ogni nostro prodotto.</p>",
@@ -115,6 +116,7 @@
         "row_p9nrbf": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/Frati_Website_Chi_Siamo_Materie_prime.webp",
             "caption": "",
             "heading": "",
             "text": "<p>Siamo le nostre azioni. Scegliamo con cura le materie prime, rispettando la stagionalità degli ingredienti, privilegiando processi produttivi sostenibili e riducendo al minimo gli sprechi alimentari. </p>",
@@ -125,6 +127,7 @@
         "row_YUK8GA": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/Frati_Website_Chi_Siamo_Laboratorio.webp",
             "caption": "",
             "heading": "",
             "text": "<p>Il nostro impegno inizia dai sapori genuini della terra e segue metodi di lavorazione accurati. Non è per forza buono ciò che è bello, ma è buono ciò che è fatto bene. Questa è la filosofia che guida il nostro laboratorio.</p>",
