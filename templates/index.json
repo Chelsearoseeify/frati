@@ -101,7 +101,7 @@
         "buttons_V34zXU"
       ],
       "settings": {
-        "image": "shopify://shop_images/Frati_Website_Homepage_Prodotti-01.webp",
+        "image": "shopify://shop_images/Frati_Website_Homepage_Prodotti.webp",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -133,8 +133,9 @@
         "buttons_AUCaKp"
       ],
       "settings": {
+        "image": "shopify://shop_images/Frati_Website_Homepage_Negozio_Online.webp",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "medium",
         "desktop_content_position": "bottom-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
