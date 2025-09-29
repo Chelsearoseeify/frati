@@ -27,7 +27,7 @@
         ".banner__content {align-items: flex-start;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Frati_Website_Chi_Siamo_Apertura-02.webp",
+        "image": "shopify://shop_images/Frati_Website_Chi_Siamo_Apertura-01.webp",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "top-left",
