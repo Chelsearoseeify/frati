@@ -27,6 +27,7 @@
         ".banner__content {align-items: flex-start;}"
       ],
       "settings": {
+        "image": "shopify://shop_images/Frati_Website_Rivista_Cover-01.webp",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "top-left",
