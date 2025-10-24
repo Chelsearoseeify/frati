@@ -130,17 +130,45 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                <a
-                  href="/collections/tutti-i-prodotti"
-                  class="filter-button h4 {% if page_reference == section.settings.see_all_label %} active{% endif %}"
-                >
-                  {{ section.settings.see_all_label }}
-                </a>
-                <button class="expand-button ">
-                  {% if page_reference == section.settings.see_all_label %} + {% endif %}
-                </button>
+                {%- assign active_collection = '' -%}
+                {%- for collection in collections -%}
+                  {%- if collection.tags contains 'Online Store' and page_reference == collection.title -%}
+                    {%- assign active_collection = collection.title -%}
+                  {%- endif -%}
+                {%- endfor -%}
+
+                {%- if active_collection != '' -%}
+                  <a
+                    href="/collections/{{ active_collection | escape | downcase }}"
+                    class="filter-button h4 active"
+                  >
+                    {{- active_collection | escape -}}
+                  </a>
+                {%- else -%}
+                  <a
+                    href="/collections/tutti-i-prodotti"
+                    class="filter-button h4 {% if page_reference == section.settings.see_all_label %} active{% endif %}"
+                  >
+                    {{ section.settings.see_all_label }}
+                  </a>
+                {%- endif -%}
+                <button class="expand-button ">+</button>
               </div>
               <div class="filter-buttons-container">
+                <div
+                  class="collections-list__buttons {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: 0;"
+                  {% endif %}
+                >
+                  <a
+                    href="/collections/tutti-i-prodotti"
+                    class="filter-button h4 {% if page_reference == section.settings.see_all_label %} active{% endif %}"
+                  >
+                    {{ section.settings.see_all_label }}
+                  </a>
+                </div>
                 {%- for collection in collections -%}
                   {% if collection.tags contains 'Online Store' and collection.title != 'Tutti i prodotti' %}
                     <div

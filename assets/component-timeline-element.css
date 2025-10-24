@@ -6,7 +6,7 @@
 .timeline-element__text-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
   width: 100%;
 }
@@ -61,6 +61,13 @@
   align-items: start;
   flex-grow: 1;
   padding: 2rem 0;
+}
+
+.timeline-element__text > h6 {
+  font-weight: medium;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0%;
 }
 
 .timeline-element__media {
