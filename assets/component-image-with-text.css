@@ -43,6 +43,34 @@
   }
 }
 
+@media screen and (min-width: 1728px) {
+  .image-with-text__media--small {
+    height: 35rem;
+  }
+
+  .image-with-text__media--medium {
+    height: 54rem;
+  }
+
+  .image-with-text__media--large {
+    height: 75rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .image-with-text__media--small {
+    height: 35rem;
+  }
+
+  .image-with-text__media--medium {
+    height: 60rem;
+  }
+
+  .image-with-text__media--large {
+    height: 79rem;
+  }
+}
+
 .image-with-text__media--placeholder {
   position: relative;
   overflow: hidden;
