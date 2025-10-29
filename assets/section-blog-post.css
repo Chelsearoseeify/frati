@@ -22,7 +22,7 @@
 }
 
 .article-template__hero-medium {
-  height: 22rem;
+  height: 25rem;
   margin: 0 1.5rem;
 }
 
@@ -36,7 +36,9 @@
   }
 
   .article-template__hero-medium {
-    height: 44rem;
+    height: 40rem;
+    width: 52rem;
+    margin: auto;
   }
 
   .article-template__hero-large {
