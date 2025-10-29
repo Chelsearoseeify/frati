@@ -61,6 +61,11 @@
 
 @media screen and (min-width: 750px) {
   .store__media--placeholder.store__media--adapt {
+    height: 60rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .store__media--placeholder.store__media--adapt {
     height: 30rem;
   }
 }
@@ -91,6 +96,7 @@
   padding: 4rem calc(1rem / var(--font-body-scale)) 5rem;
   position: relative;
   z-index: 1;
+  padding-left: 0;
 }
 
 .store__content > div:last-of-type {
