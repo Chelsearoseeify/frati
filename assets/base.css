@@ -2804,6 +2804,10 @@ product-info .loading__spinner:not(.hidden) ~ *,
   justify-content: center;
 }
 
+.icon-account {
+  display: none !important;
+}
+
 .header__icon {
   color: rgb(var(--color-foreground));
 }
