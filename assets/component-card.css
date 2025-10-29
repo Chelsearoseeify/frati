@@ -156,6 +156,7 @@
 .card__collection {
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 1);
+  font-size: 1.6rem;
 }
 
 .card:not(.ratio) > .card__content {

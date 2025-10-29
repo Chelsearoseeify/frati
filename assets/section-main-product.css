@@ -232,6 +232,10 @@
   opacity: 0.5;
 }
 
+.product__where-to-buy__list-item {
+  line-height: 3rem;
+}
+
 .product__where-to-buy__list-item.available {
   opacity: 1;
 }

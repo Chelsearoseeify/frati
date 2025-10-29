@@ -2898,6 +2898,15 @@ menu-drawer + .header__search {
   }
 }
 
+@media screen and (min-width: 834px) and (max-width: 1440px) {
+  #menu-drawer {
+    padding-top: 5rem;
+  }
+
+  .menu-drawer__menu-item {
+    padding: 0.5rem 3rem !important;
+  }
+}
 .no-js .predictive-search {
   display: none;
 }

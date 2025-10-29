@@ -28,8 +28,15 @@
 
 @media only screen and (min-width: 834px) {
   .article-card {
-    border-top: 1px solid rgb(var(--color-foreground));
+    border-top: none;
     border-bottom: 1px solid rgb(var(--color-foreground));
+  }
+
+  /* Add top border to first 3 items only */
+  .blog-articles .blog-articles__article:nth-child(1) > div > .article-card,
+  .blog-articles .blog-articles__article:nth-child(2) > div > .article-card,
+  .blog-articles .blog-articles__article:nth-child(3) > div > .article-card {
+    border-top: 1px solid rgb(var(--color-foreground));
   }
 }
 

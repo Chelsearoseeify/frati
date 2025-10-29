@@ -58,7 +58,7 @@
           "type": "button",
           "settings": {
             "button_label": "Cosa ci rende unici",
-            "button_link": "shopify://pages/chi-siamo-1",
+            "button_link": "shopify://pages/chi-siamo",
             "button_style_secondary": false
           }
         }
