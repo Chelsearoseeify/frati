@@ -194,6 +194,12 @@
   margin-top: 1.5rem;
 }
 
+@media screen and (min-width: 750px) {
+  .collections-list__wrapper-fixed {
+    margin-right: 1.5rem;
+  }
+}
+
 .fixed {
   position: fixed;
   top: 11rem;
