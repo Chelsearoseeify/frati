@@ -29,7 +29,7 @@
 {%- liquid
   assign page_reference = page_title | remove: 'View'
   if page_title == 'Tutti i prodotti'
-    assign page_reference = 'Vedi tutti'
+    assign page_reference = section.settings.see_all_label
   endif
 -%}
 
@@ -147,7 +147,7 @@
                 {%- else -%}
                   <a
                     href="/collections/tutti-i-prodotti"
-                    class="filter-button h4 {% if page_reference == section.settings.see_all_label %} active{% endif %}"
+                    class="filter-button h4 active"
                   >
                     {{ section.settings.see_all_label }}
                   </a>
@@ -164,7 +164,7 @@
                 >
                   <a
                     href="/collections/tutti-i-prodotti"
-                    class="filter-button h4 {% if page_reference == section.settings.see_all_label %} active{% endif %}"
+                    class="filter-button h4"
                   >
                     {{ section.settings.see_all_label }}
                   </a>
@@ -180,7 +180,7 @@
                     >
                       <a
                         href="/collections/{{ collection.title | escape | downcase }}"
-                        class="filter-button h4 {% if page_reference ==  collection.title %} active{% endif %}"
+                        class="filter-button h4"
                       >
                         {{- collection.title | escape -}}
                       </a>
