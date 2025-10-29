@@ -3804,11 +3804,18 @@ details-disclosure > details {
 }
 
 .shopify-policy__container > .shopify-policy__title > h1 {
-  font-size: 8.4rem;
+  font-size: 7.7rem;
 }
 
 .shopify-policy__container > .shopify-policy__body {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+@media screen and (min-width: 750px) {
+  .shopify-policy__container > .shopify-policy__title > h1 {
+    font-size: 8.4rem;
+  }
 }
 
 .logo {
