@@ -12,6 +12,12 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .store .grid {
+    gap: 2rem;
+  }
+}
+
 .store__media {
   min-height: 100%;
   overflow: visible;
