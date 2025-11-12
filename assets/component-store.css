@@ -91,6 +91,14 @@
   transform: translate(0);
 }
 
+/* Image sizing for media containers */
+.store__media > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .store__content {
   align-items: flex-start;
   display: flex;
