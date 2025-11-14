@@ -246,15 +246,14 @@
                         </p>
                       {%- endif %}
                     {%- endfor -%}
-                    {% comment %}
-                      {%- for availability in product.selected_or_first_available_variant.store_availabilities -%}
-                        {%- if availability.available == false -%}
-                          <p class="product__where-to-buy__list-item ">
-                            {{ availability.location.name }}
-                          </p>
-                        {%- endif %}
-                      {%- endfor -%}
-                    {% endcomment %}
+
+                    {%- for availability in product.selected_or_first_available_variant.store_availabilities -%}
+                      {%- if availability.available == false -%}
+                        <p class="product__where-to-buy__list-item ">
+                          {{ availability.location.name }}
+                        </p>
+                      {%- endif %}
+                    {%- endfor -%}
                   </div>
                 </div>
 

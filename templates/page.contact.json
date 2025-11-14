@@ -22,7 +22,7 @@
         "column_fBwUjd": {
           "type": "column",
           "settings": {
-            "title": "Per info generiche:",
+            "title": "Per ordini speciali:",
             "text": "<h4>info@fratiparma1947.it</h4>",
             "link_label": "",
             "link": ""
@@ -31,8 +31,8 @@
         "column_KfPwtD": {
           "type": "column",
           "settings": {
-            "title": "Per ordini speciali:",
-            "text": "<h4>ordini@fratiparma1947.it</h4>",
+            "title": "",
+            "text": "<h4></h4>",
             "link_label": "",
             "link": ""
           }
@@ -329,7 +329,7 @@
         "text_3GYKA3": {
           "type": "text",
           "settings": {
-            "text": "<h4>amministrazione@fratiparma947.it</h4>",
+            "text": "<h4>panificiopasticceriafrati@gmail.com</h4>",
             "desktop_content_alignment": "left"
           }
         }
