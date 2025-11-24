@@ -1,3 +1,23 @@
+// Costante per il limite massimo di prodotti nel carrello
+const MAX_CART_QUANTITY = 6;
+
+// Helper function per validare se l'aggiunta eccede il limite
+async function validateCartQuantity(quantityToAdd) {
+  try {
+    const response = await fetch(`${routes.cart_url}.json`);
+    const cartData = await response.json();
+
+    // Calcola il totale dalla risposta JSON di Shopify
+    const totalQty = cartData.cart.items.reduce((sum, item) => sum + item.quantity, 0);
+
+    return (totalQty + quantityToAdd) <= MAX_CART_QUANTITY;
+  } catch (error) {
+    console.error('Errore nel calcolo della quantità totale:', error);
+    // Se c'è un errore, permettiamo l'aggiunta (fallback sicuro)
+    return true;
+  }
+}
+
 if (!customElements.get('product-form')) {
   customElements.define(
     'product-form',
@@ -16,7 +36,7 @@ if (!customElements.get('product-form')) {
         this.hideErrors = this.dataset.hideErrors === 'true';
       }
 
-      onSubmitHandler(evt) {
+      async onSubmitHandler(evt) {
         evt.preventDefault();
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
@@ -25,6 +45,20 @@ if (!customElements.get('product-form')) {
         this.submitButton.setAttribute('aria-disabled', true);
         this.submitButton.classList.add('loading');
         this.querySelector('.loading__spinner').classList.remove('hidden');
+
+        // Validazione del limite massimo di quantità
+        const quantityInput = this.form.querySelector('input[name="quantity"]');
+        const quantityToAdd = parseInt(quantityInput?.value || 1);
+
+        const isValid = await validateCartQuantity(quantityToAdd);
+        if (!isValid) {
+          const errorMsg = `Il numero massimo di prodotti ordinabili per sessione è ${MAX_CART_QUANTITY}. Rimuovi alcuni articoli per procedere.`;
+          this.handleErrorMessage(errorMsg);
+          this.submitButton.classList.remove('loading');
+          this.submitButton.removeAttribute('aria-disabled');
+          this.querySelector('.loading__spinner').classList.add('hidden');
+          return;
+        }
 
         const config = fetchConfig('javascript');
         config.headers['X-Requested-With'] = 'XMLHttpRequest';

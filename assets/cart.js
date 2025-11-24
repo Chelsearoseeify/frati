@@ -1,3 +1,37 @@
+// Costante per il limite massimo di prodotti nel carrello (deve corrispondere a product-form.js)
+const MAX_CART_QUANTITY = 6;
+
+// Helper function per mostrare/nascondere avviso limite carrello
+function updateCartLimitWarning() {
+  const cartItems = document.querySelectorAll('.cart-item');
+  let totalQty = 0;
+
+  cartItems.forEach(item => {
+    const qtyInput = item.querySelector('.quantity');
+    if (qtyInput) {
+      totalQty += parseInt(qtyInput.value || 0);
+    }
+  });
+
+  const warningElement = document.getElementById('cart-quantity-limit-warning');
+
+  if (totalQty >= MAX_CART_QUANTITY) {
+    if (!warningElement) {
+      const errorDiv = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
+      if (errorDiv) {
+        const warning = document.createElement('div');
+        warning.id = 'cart-quantity-limit-warning';
+        warning.setAttribute('role', 'alert');
+        warning.className = 'cart__warning';
+        warning.textContent = `Hai raggiunto il numero massimo di ${MAX_CART_QUANTITY} prodotti per ordine. Rimuovi alcuni articoli per aggiungerne altri.`;
+        errorDiv.parentNode.insertBefore(warning, errorDiv);
+      }
+    }
+  } else if (warningElement) {
+    warningElement.remove();
+  }
+}
+
 class CartRemoveButton extends HTMLElement {
   constructor() {
     super();
@@ -60,6 +94,7 @@ class CartItems extends HTMLElement {
               targetElement.replaceWith(sourceElement);
             }
           }
+          updateCartLimitWarning();
         })
         .catch((e) => {
           console.error(e);
@@ -71,6 +106,7 @@ class CartItems extends HTMLElement {
           const html = new DOMParser().parseFromString(responseText, 'text/html');
           const sourceQty = html.querySelector('cart-items');
           this.innerHTML = sourceQty.innerHTML;
+          updateCartLimitWarning();
         })
         .catch((e) => {
           console.error(e);

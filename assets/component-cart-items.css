@@ -354,3 +354,15 @@ cart-remove-button .icon-remove {
     padding-left: 1.5rem;
   }
 }
+
+/* Cart quantity limit warning */
+.cart__warning {
+  background-color: rgba(255, 193, 7, 0.1);
+  border: 0.1rem solid rgb(255, 193, 7);
+  border-radius: 0.4rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(var(--color-foreground), 0.9);
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
