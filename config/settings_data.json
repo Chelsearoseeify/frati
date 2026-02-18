@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo": "shopify://shop_images/Logo.svg",
@@ -111,7 +111,7 @@
     "brand_image_width": 100,
     "social_facebook_link": "https://www.facebook.com/fratifranco",
     "social_instagram_link": "https://www.instagram.com/fratiparma1947/",
-    "social_youtube_link": "",
+    "social_youtube_link": "https://www.youtube.com/@Fratiparma1947",
     "social_tiktok_link": "",
     "social_twitter_link": "https://x.com/home",
     "social_snapchat_link": "",
@@ -141,9 +141,7 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
         "settings": {
