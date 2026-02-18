@@ -65,281 +65,358 @@
     }
 {%- endstyle -%}
 
-<script>
-  const queryParams = new URLSearchParams({
-    requestId: '818346e0-4fd4-11ef-85b2-c36c6653257c',
-  });
-
-  window.sectionSettings = {{ section.settings | json }};
- 
-  fetch('/apps/apiease/integration/caller/call?' + queryParams)
-    .then((response) => response.json())
-    .then((jsonResponse) => {
-      displayLocations(jsonResponse);
-      const locations = jsonResponse.data.data.locations.edges;
-
-      // Map each location to a fetch promise for the image data
-      let fetchPromises = locations.map((location) => {
-        // Find the metafield with key 'image'
-        const imageMetafield = location.node.metafields.edges.find((metafield) => metafield.node.key === 'image');
-        if (imageMetafield) {
-          const imageId = imageMetafield.node.value;
-          const queryParamsEmbeddedVar = JSON.stringify({
-            query: `{ node(id: "${imageId}") { ... on MediaImage { image { url}} }}`,
-          });
-          const queryParamsForImage = new URLSearchParams({
-            requestId: 'f68ecef1-4fd4-11ef-85b2-c36c6653257c',
-            queryParamsEmbedded: queryParamsEmbeddedVar,
-          });
-          fetch('/apps/apiease/integration/caller/call?' + queryParamsForImage)
-            .then(function (response) {
-              return response.json();
-            })
-            .then(function (jsonResponse) {
-              const imageContainer = document.getElementById(`store__media-container--${imageId}`);
-
-              const imageUrl = jsonResponse.data.data.node.image.url;
-
-              var imgElement = document.createElement('img');
-              // Set the src attribute to the image URL
-              imgElement.src = imageUrl;
-              imageContainer.appendChild(imgElement);
-            });
-        } else {
-          // If no image metafield, return a resolved promise with null or an empty object
-          return Promise.resolve(null);
-        }
-      });
-
-      return Promise.all(fetchPromises);
-    });
-
-  function displayDayTime(day, time) {
-    const sectionSettings = window.sectionSettings;
-
-    return ` <div
-                    class="day-time-schedule"
-                  >
-                    <p class="day-time-schedule__day" style="min-width: 10rem;">
-                      ${sectionSettings[`${day}_label`]}
-                    </p>
-                    <p class="day-time-schedule__time">
-                      ${time}
-                    </p>
-                    </div>`;
-  }
-
-  function displayLocations(apiResponse) {
-    const locationsContainer = document.getElementById('locations-container');
-    const locations = apiResponse.data.data.locations.edges;
-
-    locations.forEach((locationEdge) => {
-      const location = locationEdge.node;
-      const address = location.address;
-      const metafields = location.metafields.edges;
-
-      const locationDiv = document.createElement('div');
-      const locationName = document.createElement('h2');
-      const locationAddress = document.createElement('p');
-      const locationPhone = document.createElement('p');
-      const metafieldsList = document.createElement('div');
-
-      locationName.textContent = location.name;
-      locationAddress.textContent = `${address.address1}, ${address.city}, ${address.country} (${address.zip})`;
-      locationPhone.textContent = `Phone: ${address.phone}`;
-
-      let imageId = '';
-      let locationDescription = '';
-     
-      metafields.forEach((metafieldEdge) => {
-        const metafield = metafieldEdge.node;
-        if (metafield.key === 'image') {
-          imageId = metafield.value;
-        } else if (metafield.key === 'description') {
-          locationDescription = metafield.value;
-        } else {
-          const metafieldItem = document.createElement('div');
-          metafieldItem.style.display = 'flex';
-          metafieldItem.style.marginBottom = '-2px';
-          metafieldItem.innerHTML = displayDayTime(metafield.key, metafield.value);
-          metafieldsList.appendChild(metafieldItem);
-        }
-      });
-      const longitude = '9.162771150000001';
-      const latitude = '45.5076664';
-
-      const sectionSettings = window.sectionSettings;
-
-      locationDiv.innerHTML = `
-      <div id='${location.name.replaceAll(
-        ' ',
-        '_'
-      )}' class="store__grid grid grid--gapless grid--1-col grid--1-col-tablet grid--2-col-desktop location-container">
-        <div class="store__media-item store__media-item--medium store__media-item--top grid__item">
-          <div id="store__media-container--${imageId}" class="store__media store__media--adapt global-media-settings background-transparent store__media--placeholder placeholder animate--">
-          </div>
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    {% comment %}--- CORCAGNANO ---{% endcomment %}
+    <div class="store__grid grid grid--gapless grid--1-col grid--1-col-tablet grid--2-col-desktop location-container">
+      <div class="store__media-item store__media-item--medium store__media-item--top grid__item">
+        <div class="store__media store__media--adapt global-media-settings background-transparent">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0709/8544/9707/files/Frati_Website_Contatti_Sedi_Corcagnano-01.webp?v=1762875051"
+            alt="Corcagnano"
+            height="500"
+            width="800"
+            loading="lazy"
+          >
         </div>
-        <div class="store__text-item grid__item">
-          <div class="store__content store__content--top store__content--desktop-left store__content--mobile-left store__content--adapt content-container background-transparent">
-            <h3 class="store__heading inline-richtext h3">${location.name}</h2>
-            <h4 class="h4" style="margin: 2rem 0">${locationDescription}</h4>
-            <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
-              <p style="min-width: 10rem;">${sectionSettings.address_label}</p>
-              <p class="">${address.address1}, ${address.city}, ${address.country} (${address.zip})</p>
-            </div> 
-            <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
-              <p style="min-width: 10rem;">${sectionSettings.phone_label}</p>
-              <p class="">${address.phone}</p>   
-            </div>  
-            ${metafieldsList.innerHTML}   
+      </div>
+      <div class="store__text-item grid__item">
+        <div class="store__content store__content--top store__content--desktop-left store__content--mobile-left store__content--adapt content-container background-transparent">
+          <h3 class="store__heading inline-richtext h3">Corcagnano</h3>
+          <h4 class="h4" style="margin: 2rem 0">Panificio, pasticceria, caffetteria, pranzi</h4>
+          <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+            <p style="min-width: 10rem;">{{ section.settings.address_label }}</p>
+            <p>Str. Langhirano, 379, 43124 Parma PR</p>
+          </div>
+          <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+            <p style="min-width: 10rem;">{{ section.settings.phone_label }}</p>
+            <p>+39 0521 183 0387</p>
+          </div>
+
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.monday_label }}</p>
+            <p class="day-time-schedule__time">5:30 - 20:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.tuesday_label }}</p>
+            <p class="day-time-schedule__time">5:30 - 20:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.wednesday_label }}</p>
+            <p class="day-time-schedule__time">5:30 - 20:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.thursday_label }}</p>
+            <p class="day-time-schedule__time">5:30 - 20:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.friday_label }}</p>
+            <p class="day-time-schedule__time">5:30 - 20:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.saturday_label }}</p>
+            <p class="day-time-schedule__time">5:30 - 20:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.sunday_label }}</p>
+            <p class="day-time-schedule__time">5:30 - 13:30</p>
+          </div>
           <div style="display: flex; gap: 2rem; margin-top: 2rem; width: 100%">
             <h4 class="h4" style="margin-top: 0; margin-bottom: 0;">Indicazioni</h4>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11184.479309743765!2d${
-              address.longitude
-            }!3d${
-        address.latitude
-      }!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1719052180205!5m2!1sit!2sit" width="405" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>  
-          </div>
-       
-        </div>
-      `;
-
-      locationsContainer.appendChild(locationDiv);
-    });
-  }
-</script>
-
-{%- liquid
-  assign fetch_priority = 'auto'
-  if section.index == 1
-    assign fetch_priority = 'high'
-  endif
-  if section.settings.color_scheme == section.settings.color_scheme and section.settings.content_layout == 'no-overlap'
-    assign remove_color_classes = true
-  endif
--%}
-
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
-  <div id="locations-container" class="page-width">
-    {% comment %}
-      <div class="store store--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == section.settings.color_scheme and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        <div class="store__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} store__grid--reverse{% endif %}">
-          <div class="store__media-item store__media-item--{{ section.settings.desktop_image_width }} store__media-item--{{ section.settings.desktop_content_position }} grid__item">
-            <div
-              class="store__media store__media--{{ section.settings.height }} global-media-settings{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}{% if section.settings.image != blank %} media{% else %} store__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
-              {% if section.settings.height == 'adapt' and section.settings.image != blank %}
-                style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
-              {% endif %}
-            >
-              {%- if section.settings.image != blank -%}
-                {{ section.settings.image | image_url: width: 1500 | image_tag: fetchpriority: fetch_priority }}
-              {%- else -%}
-                {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-              {%- endif -%}
-            </div>
-          </div>
-          <div class="store__text-item grid__item">
-            <div
-              id="Store--{{ section.id }}"
-              class="store__content store__content--{{ section.settings.desktop_content_position }} store__content--desktop-left store__content--mobile-left store__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
-            >
-              {%- for block in section.blocks -%}
-                {% case block.type %}
-                  {%- when 'heading' -%}
-                    <h2
-                      class="store__heading inline-richtext {{ block.settings.heading_size }}"
-                      {{ block.shopify_attributes }}
-                    >
-                      {{ block.settings.heading }}
-                    </h2>
-                  {%- when 'store-type' -%}
-                    <p
-                      class="store__text store__text--subtitle h3"
-                      {{ block.shopify_attributes }}
-                    >
-                      {{ block.settings.store_type | escape }}
-                    </p>
-                  {%- when 'address' -%}
-                    <div
-                      style="
-                        display: flex;
-                        gap: 2rem;
-                        margin-bottom: 1rem;
-                      "
-                    >
-                      <div style="min-width: 10rem;">Indirizzo</div>
-                      <div
-                        class=""
-                        {% comment %} {{ block.shopify_attributes }} {% endcomment %}
-                      >
-                        {{ block.settings.store_address | escape }}
-                      </div>
-                    </div>
-                  {%- when 'phone' -%}
-                    <div
-                      style="
-                        display: flex;
-                        gap: 2rem;
-                        margin-bottom: 1rem;
-                      "
-                    >
-                      <div style="min-width: 10rem;">Phone</div>
-                      <div
-                        class=""
-                        {% comment %} {{ block.shopify_attributes }} {% endcomment %}
-                      >
-                        {{ block.settings.store_phone | escape }}
-                      </div>
-                    </div>
-                  {%- when 'caption' -%}
-                    <h3
-                      class="store__text store__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
-                      {{ block.shopify_attributes }}
-                    >
-                      {{ block.settings.caption | escape }}
-                    </h3>
-                  {%- when 'text' -%}
-                    <div class="store__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                      {{ block.settings.text }}
-                    </div>
-                  {%- when 'day_time-schedule' -%}
-                    <div
-                      class="day-time-schedule"
-                      style="
-                        display: flex;
-                        gap: 2rem;
-                      "
-                    >
-                      <div class="day-time-schedule__day" style="min-width: 10rem;">
-                        {{ block.settings.day }}
-                      </div>
-                      <div class="day-time-schedule__time">
-                        {{ block.settings.time }}
-                      </div>
-                    </div>
-
-                  {%- when 'button' -%}
-                    {%- if block.settings.button_label != blank -%}
-                      <a
-                        {% if block.settings.button_link == blank %}
-                          role="link" aria-disabled="true"
-                        {% else %}
-                          href="{{ block.settings.button_link }}"
-                        {% endif %}
-                        class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                        {{ block.shopify_attributes }}
-                      >
-                        {{ block.settings.button_label | escape }}
-                      </a>
-                    {%- endif -%}
-                {%- endcase -%}
-              {%- endfor -%}
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2834.5924648090786!2d10.30455367618367!3d44.72792828226184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806cdd0ac75a53%3A0xde200829fc021e57!2sStr.%20Langhirano%2C%20379%2C%2043124%20Parma%20PR!5e0!3m2!1sit!2sit!4v1771442819214!5m2!1sit!2sit"
+              width="405"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mappa Corcagnano"
+            ></iframe>
           </div>
         </div>
       </div>
-    {% endcomment %}
+    </div>
+
+    {% comment %}--- FELINO ---{% endcomment %}
+    <div class="store__grid grid grid--gapless grid--1-col grid--1-col-tablet grid--2-col-desktop location-container">
+      <div class="store__media-item store__media-item--medium store__media-item--top grid__item">
+        <div class="store__media store__media--adapt global-media-settings background-transparent">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0709/8544/9707/files/Frati_Website_Contatti_Sedi_Felino-01.webp?v=1762875075"
+            alt="Felino"
+            width="800"
+            height="500"
+            loading="lazy"
+          >
+        </div>
+      </div>
+      <div class="store__text-item grid__item">
+        <div class="store__content store__content--top store__content--desktop-left store__content--mobile-left store__content--adapt content-container background-transparent">
+          <h3 class="store__heading inline-richtext h3">Felino</h3>
+          <h4 class="h4" style="margin: 2rem 0">Gastronomia, pasta fresca, panificio, caffetteria, cucina</h4>
+          <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+            <p style="min-width: 10rem;">{{ section.settings.address_label }}</p>
+            <p>Via Calestano 68, 43035 Felino Parma</p>
+          </div>
+          <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+            <p style="min-width: 10rem;">{{ section.settings.phone_label }}</p>
+            <p>+39 0521 081270</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.monday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 20:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.tuesday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 20:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.wednesday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 20:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.thursday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 20:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.friday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 20:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.saturday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 20:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.sunday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 13:00</p>
+          </div>
+          <div style="display: flex; gap: 2rem; margin-top: 2rem; width: 100%">
+            <h4 class="h4" style="margin-top: 0; margin-bottom: 0;">Indicazioni</h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2836.0328814865693!2d10.226854487841953!3d44.698527609620996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47807073bcf93edd%3A0x5f3f72bb3c96e5c4!2sVia%20Calestano%2C%2068%2C%2043035%20Felino%20PR!5e0!3m2!1sit!2sit!4v1771444837510!5m2!1sit!2sit"
+              width="405"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mappa Felino"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% comment %}--- FOGNANO ---{% endcomment %}
+    <div class="store__grid grid grid--gapless grid--1-col grid--1-col-tablet grid--2-col-desktop location-container">
+      <div class="store__media-item store__media-item--medium store__media-item--top grid__item">
+        <div class="store__media store__media--adapt global-media-settings background-transparent">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0709/8544/9707/files/Frati_Website_Contatti_Sedi_Fognano-02.webp?v=1762440736"
+            alt="Fognano"
+            width="800"
+            height="500"
+            loading="lazy"
+          >
+        </div>
+      </div>
+      <div class="store__text-item grid__item">
+        <div class="store__content store__content--top store__content--desktop-left store__content--mobile-left store__content--adapt content-container background-transparent">
+          <h3 class="store__heading inline-richtext h3">Fognano</h3>
+          <h4 class="h4" style="margin: 2rem 0">Panificio, pasta fresca</h4>
+          <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+            <p style="min-width: 10rem;">{{ section.settings.address_label }}</p>
+            <p>Via Cremonese 61, Parma</p>
+          </div>
+          <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+            <p style="min-width: 10rem;">{{ section.settings.phone_label }}</p>
+            <p>+39 331 820 6731</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.monday_label }}</p>
+            <p class="day-time-schedule__time">8:00 - 13:00 / 15:30 - 19:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.tuesday_label }}</p>
+            <p class="day-time-schedule__time">8:00 - 13:00 / 15:30 - 19:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.wednesday_label }}</p>
+            <p class="day-time-schedule__time">8:00 - 13:00 / 15:30 - 19:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.thursday_label }}</p>
+            <p class="day-time-schedule__time">8:00 - 13:00 / 15:30 - 19:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.friday_label }}</p>
+            <p class="day-time-schedule__time">8:00 - 13:00 / 15:30 - 19:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.saturday_label }}</p>
+            <p class="day-time-schedule__time">8:00 - 13:00 / 15:30 - 19:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.sunday_label }}</p>
+            <p class="day-time-schedule__time">Chiuso</p>
+          </div>
+          <div style="display: flex; gap: 2rem; margin-top: 2rem; width: 100%">
+            <h4 class="h4" style="margin-top: 0; margin-bottom: 0;">Indicazioni</h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1414.9577565492839!2d10.2814746671135!3d44.82328581240383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806b9146d5417f%3A0xeb655d7582e20d92!2sPanificio%20Frati%20Fognano!5e0!3m2!1sit!2sit!4v1771445522591!5m2!1sit!2sit"
+              width="405"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mappa Fognano"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% comment %}--- MARZOLARA ---{% endcomment %}
+    <div class="store__grid grid grid--gapless grid--1-col grid--1-col-tablet grid--2-col-desktop location-container">
+      <div class="store__media-item store__media-item--medium store__media-item--top grid__item">
+        <div class="store__media store__media--adapt global-media-settings background-transparent">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0709/8544/9707/files/Frati_Website_Contatti_Sedi_Marzolara-01.webp?v=1762875107"
+            alt="Marzolara"
+            width="800"
+            height="500"
+            loading="lazy"
+          >
+        </div>
+      </div>
+      <div class="store__text-item grid__item">
+        <div class="store__content store__content--top store__content--desktop-left store__content--mobile-left store__content--adapt content-container background-transparent">
+          <h3 class="store__heading inline-richtext h3">Marzolara</h3>
+          <h4 class="h4" style="margin: 2rem 0">Panificio, pasticceria, caffetteria</h4>
+          <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+            <p style="min-width: 10rem;">{{ section.settings.address_label }}</p>
+            <p>Via Giovanni Battilochi 91, Marzolara Parma</p>
+          </div>
+          <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+            <p style="min-width: 10rem;">{{ section.settings.phone_label }}</p>
+            <p>+39 0525 57199</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.monday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 19:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.tuesday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 19:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.wednesday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 19:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.thursday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 13:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.friday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 19:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.saturday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 19:00</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.sunday_label }}</p>
+            <p class="day-time-schedule__time">6:00 - 13:00</p>
+          </div>
+          <div style="display: flex; gap: 2rem; margin-top: 2rem; width: 100%">
+            <h4 class="h4" style="margin-top: 0; margin-bottom: 0;">Indicazioni</h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2839.411586180852!2d10.168003076178866!3d44.62950418874244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478076d6ffabd4a7%3A0x530dbc71e3718d53!2sPanificio%20Frati%20Marzolara!5e0!3m2!1sit!2sit!4v1771445293088!5m2!1sit!2sit"
+              width="405"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mappa Marzolara"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% comment %}--- MONTANARA ---{% endcomment %}
+    <div class="store__grid grid grid--gapless grid--1-col grid--1-col-tablet grid--2-col-desktop location-container">
+      <div class="store__media-item store__media-item--medium store__media-item--top grid__item">
+        <div class="store__media store__media--adapt global-media-settings background-transparent">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0709/8544/9707/files/Frati_Website_Contatti_Sedi_Montanara-02.webp?v=1762440838"
+            alt="Montanara"
+            width="800"
+            height="500"
+            loading="lazy"
+          >
+        </div>
+      </div>
+      <div class="store__text-item grid__item">
+        <div class="store__content store__content--top store__content--desktop-left store__content--mobile-left store__content--adapt content-container background-transparent">
+          <h3 class="store__heading inline-richtext h3">Montanara</h3>
+          <h4 class="h4" style="margin: 2rem 0">Panificio</h4>
+          <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+            <p style="min-width: 10rem;">{{ section.settings.address_label }}</p>
+            <p>Via Raffaello Sanzio 11, Parma</p>
+          </div>
+          <div style="display: flex; gap: 2rem; margin-bottom: 1rem;">
+            <p style="min-width: 10rem;">{{ section.settings.phone_label }}</p>
+            <p>+39 0521 964013</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.monday_label }}</p>
+            <p class="day-time-schedule__time">6:30 - 13:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.tuesday_label }}</p>
+            <p class="day-time-schedule__time">6:30 - 13:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.wednesday_label }}</p>
+            <p class="day-time-schedule__time">6:30 - 13:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.thursday_label }}</p>
+            <p class="day-time-schedule__time">6:30 - 13:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.friday_label }}</p>
+            <p class="day-time-schedule__time">6:30 - 13:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.saturday_label }}</p>
+            <p class="day-time-schedule__time">6:30 - 13:30</p>
+          </div>
+          <div class="day-time-schedule">
+            <p class="day-time-schedule__day" style="min-width: 10rem;">{{ section.settings.sunday_label }}</p>
+            <p class="day-time-schedule__time">Chiuso</p>
+          </div>
+          <div style="display: flex; gap: 2rem; margin-top: 2rem; width: 100%">
+            <h4 class="h4" style="margin-top: 0; margin-bottom: 0;">Indicazioni</h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418.26208014498786!2d10.317984498567526!3d44.78267133239268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806b11190ff881%3A0xe04cfde10619d603!2sPanificio%20Frati%20Franco!5e0!3m2!1sit!2sit!4v1771445354210!5m2!1sit!2sit"
+              width="405"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mappa Montanara"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

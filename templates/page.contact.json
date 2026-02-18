@@ -84,97 +84,8 @@
     },
     "store": {
       "type": "store",
-      "blocks": {
-        "heading_hDhbYW": {
-          "type": "heading",
-          "settings": {
-            "heading": "Corcagnano",
-            "heading_size": "h2"
-          }
-        },
-        "caption_jGxCae": {
-          "type": "caption",
-          "settings": {
-            "caption": "Panificio, pasticceria, caffetteria, pranzi",
-            "text_style": "subtitle",
-            "text_size": "large"
-          }
-        },
-        "address_T6Cqrr": {
-          "type": "address",
-          "settings": {
-            "store_address": "Strada Langhirano 379 (43124 - PR)"
-          }
-        },
-        "phone_CJ838U": {
-          "type": "phone",
-          "settings": {
-            "store_phone": "+39 0521 1830387"
-          }
-        },
-        "day_time_schedule_fCNLMP": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Monday",
-            "time": "8:00 - 15:00"
-          }
-        },
-        "day_time_schedule_GyPVBy": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Tuesday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_GHkAFE": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Wednesday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_Tabkdc": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Thursday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_wgQUmF": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Friday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_p8YAhJ": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Saturday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_CYgBaT": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Sunday",
-            "time": "8:00 - 18:00"
-          }
-        }
-      },
-      "block_order": [
-        "heading_hDhbYW",
-        "caption_jGxCae",
-        "address_T6Cqrr",
-        "phone_CJ838U",
-        "day_time_schedule_fCNLMP",
-        "day_time_schedule_GyPVBy",
-        "day_time_schedule_GHkAFE",
-        "day_time_schedule_Tabkdc",
-        "day_time_schedule_wgQUmF",
-        "day_time_schedule_p8YAhJ",
-        "day_time_schedule_CYgBaT"
-      ],
+      "blocks": {},
+      "block_order": [],
       "settings": {
         "address_label": "{{ page.metafields.custom.address_label.value }}",
         "phone_label": "{{ page.metafields.custom.phone_label.value }}",
@@ -185,120 +96,6 @@
         "friday_label": "{{ page.metafields.custom.friday_label.value }}",
         "saturday_label": "{{ page.metafields.custom.saturday_label.value }}",
         "sunday_label": "{{ page.metafields.custom.sunday_label.value }}",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-1",
-        "padding_top": 12,
-        "padding_bottom": 0
-      }
-    },
-    "store_tDdgDF": {
-      "type": "store",
-      "blocks": {
-        "heading_hBzT3R": {
-          "type": "heading",
-          "settings": {
-            "heading": "Quartiere Montanara",
-            "heading_size": "h2"
-          }
-        },
-        "caption_4rwmJn": {
-          "type": "caption",
-          "settings": {
-            "caption": "Panificio, pasticceria, caffetteria, pranzi",
-            "text_style": "subtitle",
-            "text_size": "large"
-          }
-        },
-        "address_NRT4pg": {
-          "type": "address",
-          "settings": {
-            "store_address": "Strada Langhirano 379 (43124 - PR)"
-          }
-        },
-        "phone_prUYhf": {
-          "type": "phone",
-          "settings": {
-            "store_phone": "+39 0521 1830387"
-          }
-        },
-        "day_time_schedule_WHTdHW": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Monday",
-            "time": "8:00 - 15:00"
-          }
-        },
-        "day_time_schedule_E8arPA": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Tuesday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_EzdHcq": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Wednesday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_a7jPM4": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Thursday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_RxJK46": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Friday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_mtCUXT": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Saturday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_cCn3jK": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Sunday",
-            "time": "8:00 - 18:00"
-          }
-        }
-      },
-      "block_order": [
-        "heading_hBzT3R",
-        "caption_4rwmJn",
-        "address_NRT4pg",
-        "phone_prUYhf",
-        "day_time_schedule_WHTdHW",
-        "day_time_schedule_E8arPA",
-        "day_time_schedule_EzdHcq",
-        "day_time_schedule_a7jPM4",
-        "day_time_schedule_RxJK46",
-        "day_time_schedule_mtCUXT",
-        "day_time_schedule_cCn3jK"
-      ],
-      "settings": {
-        "address_label": "Indirizzo",
-        "phone_label": "Telefono",
-        "monday_label": "Monday",
-        "tuesday_label": "Tuesday",
-        "wednesday_label": "Wednesday",
-        "thursday_label": "Thursday",
-        "friday_label": "Friday",
-        "saturday_label": "Saturday",
-        "sunday_label": "Sunday",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "content_layout": "no-overlap",
         "color_scheme": "scheme-1",
         "padding_top": 12,
         "padding_bottom": 12
@@ -375,7 +172,6 @@
     "multicolumn_xbkgCG",
     "rich_text_X7gPLG",
     "store",
-    "store_tDdgDF",
     "custom_liquid_GdQGyi",
     "rich_text_mrWJwQ",
     "image_banner_jTMPFA"
