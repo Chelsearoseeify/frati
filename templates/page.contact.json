@@ -82,223 +82,421 @@
         "padding_bottom": 0
       }
     },
-    "store": {
-      "type": "store",
+    "store_corcagnano": {
+      "type": "store-location",
       "blocks": {
-        "heading_hDhbYW": {
-          "type": "heading",
-          "settings": {
-            "heading": "Corcagnano",
-            "heading_size": "h2"
-          }
-        },
-        "caption_jGxCae": {
-          "type": "caption",
-          "settings": {
-            "caption": "Panificio, pasticceria, caffetteria, pranzi",
-            "text_style": "subtitle",
-            "text_size": "large"
-          }
-        },
-        "address_T6Cqrr": {
-          "type": "address",
-          "settings": {
-            "store_address": "Strada Langhirano 379 (43124 - PR)"
-          }
-        },
-        "phone_CJ838U": {
-          "type": "phone",
-          "settings": {
-            "store_phone": "+39 0521 1830387"
-          }
-        },
-        "day_time_schedule_fCNLMP": {
+        "hours_corcagnano_mon": {
           "type": "day_time-schedule",
           "settings": {
             "day": "Monday",
-            "time": "8:00 - 15:00"
+            "time": "5:30 - 20:00"
           }
         },
-        "day_time_schedule_GyPVBy": {
+        "hours_corcagnano_tue": {
           "type": "day_time-schedule",
           "settings": {
             "day": "Tuesday",
-            "time": "8:00 - 18:00"
+            "time": "5:30 - 20:00"
           }
         },
-        "day_time_schedule_GHkAFE": {
+        "hours_corcagnano_wed": {
           "type": "day_time-schedule",
           "settings": {
             "day": "Wednesday",
-            "time": "8:00 - 18:00"
+            "time": "5:30 - 20:00"
           }
         },
-        "day_time_schedule_Tabkdc": {
+        "hours_corcagnano_thu": {
           "type": "day_time-schedule",
           "settings": {
             "day": "Thursday",
-            "time": "8:00 - 18:00"
+            "time": "5:30 - 20:00"
           }
         },
-        "day_time_schedule_wgQUmF": {
+        "hours_corcagnano_fri": {
           "type": "day_time-schedule",
           "settings": {
             "day": "Friday",
-            "time": "8:00 - 18:00"
+            "time": "5:30 - 20:00"
           }
         },
-        "day_time_schedule_p8YAhJ": {
+        "hours_corcagnano_sat": {
           "type": "day_time-schedule",
           "settings": {
             "day": "Saturday",
-            "time": "8:00 - 18:00"
+            "time": "5:30 - 20:00"
           }
         },
-        "day_time_schedule_CYgBaT": {
+        "hours_corcagnano_sun": {
           "type": "day_time-schedule",
           "settings": {
             "day": "Sunday",
-            "time": "8:00 - 18:00"
+            "time": "5:30 - 13:30"
           }
         }
       },
       "block_order": [
-        "heading_hDhbYW",
-        "caption_jGxCae",
-        "address_T6Cqrr",
-        "phone_CJ838U",
-        "day_time_schedule_fCNLMP",
-        "day_time_schedule_GyPVBy",
-        "day_time_schedule_GHkAFE",
-        "day_time_schedule_Tabkdc",
-        "day_time_schedule_wgQUmF",
-        "day_time_schedule_p8YAhJ",
-        "day_time_schedule_CYgBaT"
+        "hours_corcagnano_mon",
+        "hours_corcagnano_tue",
+        "hours_corcagnano_wed",
+        "hours_corcagnano_thu",
+        "hours_corcagnano_fri",
+        "hours_corcagnano_sat",
+        "hours_corcagnano_sun"
       ],
       "settings": {
-        "address_label": "{{ page.metafields.custom.address_label.value }}",
-        "phone_label": "{{ page.metafields.custom.phone_label.value }}",
-        "monday_label": "{{ page.metafields.custom.monday_label.value }}",
-        "tuesday_label": "{{ page.metafields.custom.tuesday_label.value }}",
-        "wednesday_label": "{{ page.metafields.custom.wednesday_label.value }}",
-        "thursday_label": "{{ page.metafields.custom.thursday_label.value }}",
-        "friday_label": "{{ page.metafields.custom.friday_label.value }}",
-        "saturday_label": "{{ page.metafields.custom.saturday_label.value }}",
-        "sunday_label": "{{ page.metafields.custom.sunday_label.value }}",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-1",
-        "padding_top": 12,
-        "padding_bottom": 0
-      }
-    },
-    "store_tDdgDF": {
-      "type": "store",
-      "blocks": {
-        "heading_hBzT3R": {
-          "type": "heading",
-          "settings": {
-            "heading": "Quartiere Montanara",
-            "heading_size": "h2"
-          }
-        },
-        "caption_4rwmJn": {
-          "type": "caption",
-          "settings": {
-            "caption": "Panificio, pasticceria, caffetteria, pranzi",
-            "text_style": "subtitle",
-            "text_size": "large"
-          }
-        },
-        "address_NRT4pg": {
-          "type": "address",
-          "settings": {
-            "store_address": "Strada Langhirano 379 (43124 - PR)"
-          }
-        },
-        "phone_prUYhf": {
-          "type": "phone",
-          "settings": {
-            "store_phone": "+39 0521 1830387"
-          }
-        },
-        "day_time_schedule_WHTdHW": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Monday",
-            "time": "8:00 - 15:00"
-          }
-        },
-        "day_time_schedule_E8arPA": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Tuesday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_EzdHcq": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Wednesday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_a7jPM4": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Thursday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_RxJK46": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Friday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_mtCUXT": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Saturday",
-            "time": "8:00 - 18:00"
-          }
-        },
-        "day_time_schedule_cCn3jK": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Sunday",
-            "time": "8:00 - 18:00"
-          }
-        }
-      },
-      "block_order": [
-        "heading_hBzT3R",
-        "caption_4rwmJn",
-        "address_NRT4pg",
-        "phone_prUYhf",
-        "day_time_schedule_WHTdHW",
-        "day_time_schedule_E8arPA",
-        "day_time_schedule_EzdHcq",
-        "day_time_schedule_a7jPM4",
-        "day_time_schedule_RxJK46",
-        "day_time_schedule_mtCUXT",
-        "day_time_schedule_cCn3jK"
-      ],
-      "settings": {
+        "name": "Corcagnano",
+        "store_type": "Panificio, pasticceria, caffetteria, pranzi",
+        "image": "shopify://shop_images/Frati_Website_Contatti_Sedi_Corcagnano-01.webp",
+        "address": "Str. Langhirano, 379, 43124 Parma PR",
+        "phone": "+39 0521 183 0387",
+        "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2834.5924648090786!2d10.30455367618367!3d44.72792828226184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806cdd0ac75a53%3A0xde200829fc021e57!2sStr.%20Langhirano%2C%20379%2C%2043124%20Parma%20PR!5e0!3m2!1sit!2sit!4v1771442819214!5m2!1sit!2sit",
         "address_label": "Indirizzo",
         "phone_label": "Telefono",
-        "monday_label": "Monday",
-        "tuesday_label": "Tuesday",
-        "wednesday_label": "Wednesday",
-        "thursday_label": "Thursday",
-        "friday_label": "Friday",
-        "saturday_label": "Saturday",
-        "sunday_label": "Sunday",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "content_layout": "no-overlap",
+        "directions_label": "Indicazioni",
+        "monday_label": "Lunedì",
+        "tuesday_label": "Martedì",
+        "wednesday_label": "Mercoledì",
+        "thursday_label": "Giovedì",
+        "friday_label": "Venerdì",
+        "saturday_label": "Sabato",
+        "sunday_label": "Domenica",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "store_felino": {
+      "type": "store-location",
+      "blocks": {
+        "hours_felino_mon": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Monday",
+            "time": "6:00 - 20:30"
+          }
+        },
+        "hours_felino_tue": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Tuesday",
+            "time": "6:00 - 20:30"
+          }
+        },
+        "hours_felino_wed": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Wednesday",
+            "time": "6:00 - 20:30"
+          }
+        },
+        "hours_felino_thu": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Thursday",
+            "time": "6:00 - 20:30"
+          }
+        },
+        "hours_felino_fri": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Friday",
+            "time": "6:00 - 20:30"
+          }
+        },
+        "hours_felino_sat": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Saturday",
+            "time": "6:00 - 20:30"
+          }
+        },
+        "hours_felino_sun": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Sunday",
+            "time": "6:00 - 13:00"
+          }
+        }
+      },
+      "block_order": [
+        "hours_felino_mon",
+        "hours_felino_tue",
+        "hours_felino_wed",
+        "hours_felino_thu",
+        "hours_felino_fri",
+        "hours_felino_sat",
+        "hours_felino_sun"
+      ],
+      "settings": {
+        "name": "Felino",
+        "store_type": "Gastronomia, pasta fresca, panificio, caffetteria, cucina",
+        "image": "shopify://shop_images/Frati_Website_Contatti_Sedi_Felino-01.webp",
+        "address": "Via Calestano 68, 43035 Felino Parma",
+        "phone": "+39 0521 081270",
+        "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2836.0328814865693!2d10.226854487841953!3d44.698527609620996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47807073bcf93edd%3A0x5f3f72bb3c96e5c4!2sVia%20Calestano%2C%2068%2C%2043035%20Felino%20PR!5e0!3m2!1sit!2sit!4v1771444837510!5m2!1sit!2sit",
+        "address_label": "Indirizzo",
+        "phone_label": "Telefono",
+        "directions_label": "Indicazioni",
+        "monday_label": "Lunedì",
+        "tuesday_label": "Martedì",
+        "wednesday_label": "Mercoledì",
+        "thursday_label": "Giovedì",
+        "friday_label": "Venerdì",
+        "saturday_label": "Sabato",
+        "sunday_label": "Domenica",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "store_fognano": {
+      "type": "store-location",
+      "blocks": {
+        "hours_fognano_mon": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Monday",
+            "time": "8:00 - 13:00 / 15:30 - 19:30"
+          }
+        },
+        "hours_fognano_tue": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Tuesday",
+            "time": "8:00 - 13:00 / 15:30 - 19:30"
+          }
+        },
+        "hours_fognano_wed": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Wednesday",
+            "time": "8:00 - 13:00 / 15:30 - 19:30"
+          }
+        },
+        "hours_fognano_thu": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Thursday",
+            "time": "8:00 - 13:00 / 15:30 - 19:30"
+          }
+        },
+        "hours_fognano_fri": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Friday",
+            "time": "8:00 - 13:00 / 15:30 - 19:30"
+          }
+        },
+        "hours_fognano_sat": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Saturday",
+            "time": "8:00 - 13:00 / 15:30 - 19:30"
+          }
+        },
+        "hours_fognano_sun": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Sunday",
+            "time": "Chiuso"
+          }
+        }
+      },
+      "block_order": [
+        "hours_fognano_mon",
+        "hours_fognano_tue",
+        "hours_fognano_wed",
+        "hours_fognano_thu",
+        "hours_fognano_fri",
+        "hours_fognano_sat",
+        "hours_fognano_sun"
+      ],
+      "settings": {
+        "name": "Fognano",
+        "store_type": "Panificio, pasta fresca",
+        "image": "shopify://shop_images/Frati_Website_Contatti_Sedi_Fognano-02.webp",
+        "address": "Via Cremonese 61, Parma",
+        "phone": "+39 331 820 6731",
+        "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1414.9577565492839!2d10.2814746671135!3d44.82328581240383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806b9146d5417f%3A0xeb655d7582e20d92!2sPanificio%20Frati%20Fognano!5e0!3m2!1sit!2sit!4v1771445522591!5m2!1sit!2sit",
+        "address_label": "Indirizzo",
+        "phone_label": "Telefono",
+        "directions_label": "Indicazioni",
+        "monday_label": "Lunedì",
+        "tuesday_label": "Martedì",
+        "wednesday_label": "Mercoledì",
+        "thursday_label": "Giovedì",
+        "friday_label": "Venerdì",
+        "saturday_label": "Sabato",
+        "sunday_label": "Domenica",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "store_marzolara": {
+      "type": "store-location",
+      "blocks": {
+        "hours_marzolara_mon": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Monday",
+            "time": "6:00 - 19:00"
+          }
+        },
+        "hours_marzolara_tue": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Tuesday",
+            "time": "6:00 - 19:00"
+          }
+        },
+        "hours_marzolara_wed": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Wednesday",
+            "time": "6:00 - 19:00"
+          }
+        },
+        "hours_marzolara_thu": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Thursday",
+            "time": "6:00 - 13:00"
+          }
+        },
+        "hours_marzolara_fri": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Friday",
+            "time": "6:00 - 19:00"
+          }
+        },
+        "hours_marzolara_sat": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Saturday",
+            "time": "6:00 - 19:00"
+          }
+        },
+        "hours_marzolara_sun": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Sunday",
+            "time": "6:00 - 13:00"
+          }
+        }
+      },
+      "block_order": [
+        "hours_marzolara_mon",
+        "hours_marzolara_tue",
+        "hours_marzolara_wed",
+        "hours_marzolara_thu",
+        "hours_marzolara_fri",
+        "hours_marzolara_sat",
+        "hours_marzolara_sun"
+      ],
+      "settings": {
+        "name": "Marzolara",
+        "store_type": "Panificio, pasticceria, caffetteria",
+        "image": "shopify://shop_images/Frati_Website_Contatti_Sedi_Marzolara-01.webp",
+        "address": "Via Giovanni Battilochi 91, Marzolara Parma",
+        "phone": "+39 0525 57199",
+        "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2839.411586180852!2d10.168003076178866!3d44.62950418874244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478076d6ffabd4a7%3A0x530dbc71e3718d53!2sPanificio%20Frati%20Marzolara!5e0!3m2!1sit!2sit!4v1771445293088!5m2!1sit!2sit",
+        "address_label": "Indirizzo",
+        "phone_label": "Telefono",
+        "directions_label": "Indicazioni",
+        "monday_label": "Lunedì",
+        "tuesday_label": "Martedì",
+        "wednesday_label": "Mercoledì",
+        "thursday_label": "Giovedì",
+        "friday_label": "Venerdì",
+        "saturday_label": "Sabato",
+        "sunday_label": "Domenica",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "store_montanara": {
+      "type": "store-location",
+      "blocks": {
+        "hours_montanara_mon": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Monday",
+            "time": "6:30 - 13:30"
+          }
+        },
+        "hours_montanara_tue": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Tuesday",
+            "time": "6:30 - 13:30"
+          }
+        },
+        "hours_montanara_wed": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Wednesday",
+            "time": "6:30 - 13:30"
+          }
+        },
+        "hours_montanara_thu": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Thursday",
+            "time": "6:30 - 13:30"
+          }
+        },
+        "hours_montanara_fri": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Friday",
+            "time": "6:30 - 13:30"
+          }
+        },
+        "hours_montanara_sat": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Saturday",
+            "time": "6:30 - 13:30"
+          }
+        },
+        "hours_montanara_sun": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Sunday",
+            "time": "Chiuso"
+          }
+        }
+      },
+      "block_order": [
+        "hours_montanara_mon",
+        "hours_montanara_tue",
+        "hours_montanara_wed",
+        "hours_montanara_thu",
+        "hours_montanara_fri",
+        "hours_montanara_sat",
+        "hours_montanara_sun"
+      ],
+      "settings": {
+        "name": "Montanara",
+        "store_type": "Panificio",
+        "image": "shopify://shop_images/Frati_Website_Contatti_Sedi_Montanara-02.webp",
+        "address": "Via Raffaello Sanzio 11, Parma",
+        "phone": "+39 0521 964013",
+        "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418.26208014498786!2d10.317984498567526!3d44.78267133239268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806b11190ff881%3A0xe04cfde10619d603!2sPanificio%20Frati%20Franco!5e0!3m2!1sit!2sit!4v1771445354210!5m2!1sit!2sit",
+        "address_label": "Indirizzo",
+        "phone_label": "Telefono",
+        "directions_label": "Indicazioni",
+        "monday_label": "Lunedì",
+        "tuesday_label": "Martedì",
+        "wednesday_label": "Mercoledì",
+        "thursday_label": "Giovedì",
+        "friday_label": "Venerdì",
+        "saturday_label": "Sabato",
+        "sunday_label": "Domenica",
         "color_scheme": "scheme-1",
         "padding_top": 12,
         "padding_bottom": 12
@@ -374,8 +572,11 @@
     "main",
     "multicolumn_xbkgCG",
     "rich_text_X7gPLG",
-    "store",
-    "store_tDdgDF",
+    "store_corcagnano",
+    "store_felino",
+    "store_fognano",
+    "store_marzolara",
+    "store_montanara",
     "custom_liquid_GdQGyi",
     "rich_text_mrWJwQ",
     "image_banner_jTMPFA"
