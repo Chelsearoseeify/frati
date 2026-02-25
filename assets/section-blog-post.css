@@ -163,12 +163,12 @@
   }
 }
 
-p[dir='ltr']:has(> iframe) {
+p:has(> iframe) {
   display: block;
   width: 100%;
 }
 
-p[dir='ltr'] > iframe {
+p > iframe {
   display: block;
   width: 100%;
   height: auto;
