@@ -70,16 +70,24 @@
   letter-spacing: 0%;
 }
 
+.timeline-element__media-item {
+  height: 30rem;
+}
+
 .timeline-element__media {
   width: 100%;
-  height: 20rem;
+  height: 100%;
   flex-grow: 1;
 }
 
 @media screen and (min-width: 750px) {
+  .timeline-element__media-item {
+    height: 25rem;
+  }
+
   .timeline-element__media {
     width: 35rem;
-    height: 20rem;
+    height: 100%;
     flex-grow: 1;
   }
 }
