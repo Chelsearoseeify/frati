@@ -82,90 +82,6 @@
         "padding_bottom": 0
       }
     },
-    "store_corcagnano": {
-      "type": "store-location",
-      "blocks": {
-        "hours_corcagnano_mon": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Monday",
-            "time": "5:30 - 20:00"
-          }
-        },
-        "hours_corcagnano_tue": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Tuesday",
-            "time": "5:30 - 20:00"
-          }
-        },
-        "hours_corcagnano_wed": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Wednesday",
-            "time": "5:30 - 20:00"
-          }
-        },
-        "hours_corcagnano_thu": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Thursday",
-            "time": "5:30 - 20:00"
-          }
-        },
-        "hours_corcagnano_fri": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Friday",
-            "time": "5:30 - 20:00"
-          }
-        },
-        "hours_corcagnano_sat": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Saturday",
-            "time": "5:30 - 20:00"
-          }
-        },
-        "hours_corcagnano_sun": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Sunday",
-            "time": "5:30 - 13:30"
-          }
-        }
-      },
-      "block_order": [
-        "hours_corcagnano_mon",
-        "hours_corcagnano_tue",
-        "hours_corcagnano_wed",
-        "hours_corcagnano_thu",
-        "hours_corcagnano_fri",
-        "hours_corcagnano_sat",
-        "hours_corcagnano_sun"
-      ],
-      "settings": {
-        "name": "Corcagnano",
-        "store_type": "Panificio, pasticceria, caffetteria, pranzi",
-        "image": "shopify://shop_images/Frati_Website_Contatti_Sedi_Corcagnano-01.webp",
-        "address": "Str. Langhirano, 379, 43124 Parma PR",
-        "phone": "+39 0521 183 0387",
-        "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250.54541657350018!2d10.307132631595662!3d44.727821621346784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806d9a9ff332ad%3A0xc44dcfd2c50a2710!2sPanificio%20Pasticceria%20Frati%20Corcagnano!5e0!3m2!1sit!2sit!4v1772037489917!5m2!1sit!2sit",
-        "address_label": "Indirizzo",
-        "phone_label": "Telefono",
-        "directions_label": "Indicazioni",
-        "monday_label": "Lunedì",
-        "tuesday_label": "Martedì",
-        "wednesday_label": "Mercoledì",
-        "thursday_label": "Giovedì",
-        "friday_label": "Venerdì",
-        "saturday_label": "Sabato",
-        "sunday_label": "Domenica",
-        "color_scheme": "scheme-1",
-        "padding_top": 12,
-        "padding_bottom": 12
-      }
-    },
     "store_felino": {
       "type": "store-location",
       "blocks": {
@@ -250,6 +166,90 @@
         "padding_bottom": 12
       }
     },
+    "store_corcagnano": {
+      "type": "store-location",
+      "blocks": {
+        "hours_corcagnano_mon": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Monday",
+            "time": "5:30 - 20:00"
+          }
+        },
+        "hours_corcagnano_tue": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Tuesday",
+            "time": "5:30 - 20:00"
+          }
+        },
+        "hours_corcagnano_wed": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Wednesday",
+            "time": "5:30 - 20:00"
+          }
+        },
+        "hours_corcagnano_thu": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Thursday",
+            "time": "5:30 - 20:00"
+          }
+        },
+        "hours_corcagnano_fri": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Friday",
+            "time": "5:30 - 20:00"
+          }
+        },
+        "hours_corcagnano_sat": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Saturday",
+            "time": "5:30 - 20:00"
+          }
+        },
+        "hours_corcagnano_sun": {
+          "type": "day_time-schedule",
+          "settings": {
+            "day": "Sunday",
+            "time": "5:30 - 13:30"
+          }
+        }
+      },
+      "block_order": [
+        "hours_corcagnano_mon",
+        "hours_corcagnano_tue",
+        "hours_corcagnano_wed",
+        "hours_corcagnano_thu",
+        "hours_corcagnano_fri",
+        "hours_corcagnano_sat",
+        "hours_corcagnano_sun"
+      ],
+      "settings": {
+        "name": "Corcagnano",
+        "store_type": "Panificio, pasticceria, caffetteria, pranzi",
+        "image": "shopify://shop_images/Frati_Website_Contatti_Sedi_Corcagnano-01.webp",
+        "address": "Str. Langhirano, 379, 43124 Parma PR",
+        "phone": "+39 0521 183 0387",
+        "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250.54541657350018!2d10.307132631595662!3d44.727821621346784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806d9a9ff332ad%3A0xc44dcfd2c50a2710!2sPanificio%20Pasticceria%20Frati%20Corcagnano!5e0!3m2!1sit!2sit!4v1772037489917!5m2!1sit!2sit",
+        "address_label": "Indirizzo",
+        "phone_label": "Telefono",
+        "directions_label": "Indicazioni",
+        "monday_label": "Lunedì",
+        "tuesday_label": "Martedì",
+        "wednesday_label": "Mercoledì",
+        "thursday_label": "Giovedì",
+        "friday_label": "Venerdì",
+        "saturday_label": "Sabato",
+        "sunday_label": "Domenica",
+        "color_scheme": "scheme-1",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
     "store_fognano": {
       "type": "store-location",
       "blocks": {
@@ -319,90 +319,6 @@
         "address": "Via Cremonese 61, Parma",
         "phone": "+39 331 820 6731",
         "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1414.9577565492839!2d10.2814746671135!3d44.82328581240383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806b9146d5417f%3A0xeb655d7582e20d92!2sPanificio%20Frati%20Fognano!5e0!3m2!1sit!2sit!4v1771445522591!5m2!1sit!2sit",
-        "address_label": "Indirizzo",
-        "phone_label": "Telefono",
-        "directions_label": "Indicazioni",
-        "monday_label": "Lunedì",
-        "tuesday_label": "Martedì",
-        "wednesday_label": "Mercoledì",
-        "thursday_label": "Giovedì",
-        "friday_label": "Venerdì",
-        "saturday_label": "Sabato",
-        "sunday_label": "Domenica",
-        "color_scheme": "scheme-1",
-        "padding_top": 12,
-        "padding_bottom": 12
-      }
-    },
-    "store_marzolara": {
-      "type": "store-location",
-      "blocks": {
-        "hours_marzolara_mon": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Monday",
-            "time": "6:00 - 19:00"
-          }
-        },
-        "hours_marzolara_tue": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Tuesday",
-            "time": "6:00 - 19:00"
-          }
-        },
-        "hours_marzolara_wed": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Wednesday",
-            "time": "6:00 - 19:00"
-          }
-        },
-        "hours_marzolara_thu": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Thursday",
-            "time": "6:00 - 13:00"
-          }
-        },
-        "hours_marzolara_fri": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Friday",
-            "time": "6:00 - 19:00"
-          }
-        },
-        "hours_marzolara_sat": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Saturday",
-            "time": "6:00 - 19:00"
-          }
-        },
-        "hours_marzolara_sun": {
-          "type": "day_time-schedule",
-          "settings": {
-            "day": "Sunday",
-            "time": "6:00 - 13:00"
-          }
-        }
-      },
-      "block_order": [
-        "hours_marzolara_mon",
-        "hours_marzolara_tue",
-        "hours_marzolara_wed",
-        "hours_marzolara_thu",
-        "hours_marzolara_fri",
-        "hours_marzolara_sat",
-        "hours_marzolara_sun"
-      ],
-      "settings": {
-        "name": "Marzolara",
-        "store_type": "Panificio, pasticceria, caffetteria",
-        "image": "shopify://shop_images/Frati_Website_Contatti_Sedi_Marzolara-01.webp",
-        "address": "Via Giovanni Battilochi 91, Marzolara Parma",
-        "phone": "+39 0525 57199",
-        "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2839.411586180852!2d10.168003076178866!3d44.62950418874244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478076d6ffabd4a7%3A0x530dbc71e3718d53!2sPanificio%20Frati%20Marzolara!5e0!3m2!1sit!2sit!4v1771445293088!5m2!1sit!2sit",
         "address_label": "Indirizzo",
         "phone_label": "Telefono",
         "directions_label": "Indicazioni",
@@ -572,10 +488,9 @@
     "main",
     "multicolumn_xbkgCG",
     "rich_text_X7gPLG",
-    "store_corcagnano",
     "store_felino",
+    "store_corcagnano",
     "store_fognano",
-    "store_marzolara",
     "store_montanara",
     "custom_liquid_GdQGyi",
     "rich_text_mrWJwQ",
