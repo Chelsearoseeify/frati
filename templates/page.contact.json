@@ -278,7 +278,7 @@
           "type": "day_time-schedule",
           "settings": {
             "day": "Thursday",
-            "time": "8:00 - 13:00 / 15:30 - 19:30"
+            "time": "8:00 - 13:00"
           }
         },
         "hours_fognano_fri": {
@@ -292,7 +292,7 @@
           "type": "day_time-schedule",
           "settings": {
             "day": "Saturday",
-            "time": "8:00 - 13:00 / 15:30 - 19:30"
+            "time": "8:00 - 13:00"
           }
         },
         "hours_fognano_sun": {
