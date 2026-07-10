@@ -215,7 +215,7 @@
           "type": "day_time-schedule",
           "settings": {
             "day": "Sunday",
-            "time": "5:30 - 13:30"
+            "time": "5:30 - 13:00"
           }
         }
       },
