@@ -83,7 +83,7 @@
           "settings": {
             "heading": "Conservazione",
             "icon": "none",
-            "content": "<p>{{ product.metafields.custom.conservation_tips | metafield_tag }}</p>",
+            "content": "{{ product.metafields.custom.conservation_tips | metafield_tag }}",
             "page": ""
           }
         },
@@ -93,24 +93,6 @@
             "heading": "Packaging",
             "icon": "none",
             "content": "{{ product.metafields.custom.packaging | metafield_tag }}",
-            "page": ""
-          }
-        },
-        "collapsible_tab_6kLeNj": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Deperibilità",
-            "icon": "none",
-            "content": "<p>{{ product.metafields.custom.packaging | metafield_tag }}</p>",
-            "page": ""
-          }
-        },
-        "collapsible_tab_ECJ8Wq": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Deperibilità",
-            "icon": "return",
-            "content": "",
             "page": ""
           }
         }
@@ -128,9 +110,7 @@
         "collapsible_tab_Jchztx",
         "collapsible_tab_NKYjda",
         "collapsible_tab_nWYgQU",
-        "collapsible_tab_C8R4qp",
-        "collapsible_tab_6kLeNj",
-        "collapsible_tab_ECJ8Wq"
+        "collapsible_tab_C8R4qp"
       ],
       "settings": {
         "enable_sticky_info": false,
