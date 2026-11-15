@@ -96,6 +96,15 @@
             "page": ""
           }
         },
+        "collapsible_tab_6kLeNj": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Deperibilità",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.packaging | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
         "collapsible_tab_ECJ8Wq": {
           "type": "collapsible_tab",
           "settings": {
@@ -120,6 +129,7 @@
         "collapsible_tab_NKYjda",
         "collapsible_tab_nWYgQU",
         "collapsible_tab_C8R4qp",
+        "collapsible_tab_6kLeNj",
         "collapsible_tab_ECJ8Wq"
       ],
       "settings": {
