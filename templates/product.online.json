@@ -12,15 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "collapsible_tab_ECJ8Wq": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Deperibilità",
-            "icon": "return",
-            "content": "",
-            "page": ""
-          }
-        },
         "collection_UbPWDh": {
           "type": "collection",
           "settings": {
@@ -104,10 +95,18 @@
             "content": "{{ product.metafields.custom.packaging | metafield_tag }}",
             "page": ""
           }
+        },
+        "collapsible_tab_ECJ8Wq": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Deperibilità",
+            "icon": "return",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
-        "collapsible_tab_ECJ8Wq",
         "collection_UbPWDh",
         "title",
         "caption_FRikDB",
@@ -120,7 +119,8 @@
         "collapsible_tab_Jchztx",
         "collapsible_tab_NKYjda",
         "collapsible_tab_nWYgQU",
-        "collapsible_tab_C8R4qp"
+        "collapsible_tab_C8R4qp",
+        "collapsible_tab_ECJ8Wq"
       ],
       "settings": {
         "enable_sticky_info": false,
