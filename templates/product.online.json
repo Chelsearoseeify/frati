@@ -12,6 +12,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "collapsible_tab_ECJ8Wq": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Deperibilità",
+            "icon": "return",
+            "content": "",
+            "page": ""
+          }
+        },
         "collection_UbPWDh": {
           "type": "collection",
           "settings": {
@@ -98,6 +107,7 @@
         }
       },
       "block_order": [
+        "collapsible_tab_ECJ8Wq",
         "collection_UbPWDh",
         "title",
         "caption_FRikDB",
