@@ -1,0 +1,147 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h1 class="title title-wrapper--no-top-margin {{ section.settings.heading_size }}">
+        {{ section.settings.heading }}
+      </h1>
+    {%- endif -%}
+
+    {%- if section.settings.intro != blank -%}
+      <div class="rte">{{ section.settings.intro }}</div>
+    {%- endif -%}
+
+    <form
+      id="ResoForm-{{ section.id }}"
+      class="isolate"
+      method="post"
+      action="{{ section.settings.endpoint | escape }}"
+      {% if section.settings.endpoint == blank %}data-reso-disabled="true"{% endif %}
+    >
+      <div class="contact__fields">
+        <div class="field">
+          <input class="field__input" type="text" id="ResoForm-{{ section.id }}-first-name" name="first_name" autocomplete="given-name" required placeholder="Nome">
+          <label class="field__label" for="ResoForm-{{ section.id }}-first-name">Nome <span aria-hidden="true">*</span></label>
+        </div>
+        <div class="field">
+          <input class="field__input" type="text" id="ResoForm-{{ section.id }}-last-name" name="last_name" autocomplete="family-name" required placeholder="Cognome">
+          <label class="field__label" for="ResoForm-{{ section.id }}-last-name">Cognome <span aria-hidden="true">*</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <input class="field__input" type="text" id="ResoForm-{{ section.id }}-order" name="order_number" inputmode="numeric" required placeholder="Numero ordine">
+        <label class="field__label" for="ResoForm-{{ section.id }}-order">Numero d'ordine <span aria-hidden="true">*</span></label>
+      </div>
+      <div class="field">
+        <input class="field__input" type="email" id="ResoForm-{{ section.id }}-email" name="email" autocomplete="email" autocapitalize="off" spellcheck="false" required placeholder="Email">
+        <label class="field__label" for="ResoForm-{{ section.id }}-email">Email <span aria-hidden="true">*</span></label>
+      </div>
+
+      {%- if section.settings.note != blank -%}
+        <div class="rte caption">{{ section.settings.note }}</div>
+      {%- endif -%}
+
+      <button type="submit" class="button button--full-width"{% if section.settings.endpoint == blank %} disabled{% endif %}>
+        Conferma richiesta di reso
+      </button>
+
+      {%- if section.settings.endpoint == blank -%}
+        <p class="caption">Il modulo sarà attivo al collegamento del servizio di gestione richieste.</p>
+      {%- endif -%}
+    </form>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Recesso / Reso",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titolo",
+      "default": "Effettua qui il tuo reso"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Medio" },
+        { "value": "h1", "label": "Grande" }
+      ],
+      "default": "h1",
+      "label": "Dimensione titolo"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Testo introduttivo",
+      "default": "<p>Compila il modulo per richiedere il recesso dal tuo ordine. Riceverai subito una email di conferma con i dati della richiesta.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "note",
+      "label": "Nota sotto i campi",
+      "default": "<p>I prodotti deperibili non sono soggetti al diritto di recesso. Il sistema ti indicherà l'esito nell'email di conferma.</p>"
+    },
+    {
+      "type": "text",
+      "id": "endpoint",
+      "label": "Endpoint del servizio di richieste (vuoto = modulo disattivato)",
+      "info": "Da compilare quando il backend è scelto e pronto."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Schema colori",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spaziatura"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding superiore",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding inferiore",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recesso / Reso"
+    }
+  ]
+}
+{% endschema %}
