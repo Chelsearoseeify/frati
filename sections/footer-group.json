@@ -63,7 +63,7 @@
         ".divider {margin: auto; border-top: 1px solid rgba(var(--color-foreground), 1); width: 96%; height: 20px;}"
       ],
       "settings": {
-        "custom_liquid": "<div class=\"divider\">\n</div>",
+        "custom_liquid": "<div class=\"reso-link\" style=\"text-align:center;padding:20px 0\"><a class=\"button button--secondary\" href=\"/pages/reso\">Effettua qui il tuo reso</a></div>\n<div class=\"divider\">\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
